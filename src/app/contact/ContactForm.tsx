@@ -7,10 +7,10 @@ export function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-2xl border border-teal-500/20 bg-teal-500/5 p-8 text-center">
-        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-teal-500/10 mb-4">
+      <div className="rounded-2xl border border-[#4A73D5]/20 bg-[#4A73D5]/5 p-8 text-center">
+        <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#4A73D5]/10 mb-4">
           <svg
-            className="w-6 h-6 text-teal-400"
+            className="w-6 h-6 text-[#6B8FE6]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -47,7 +47,7 @@ export function ContactForm() {
           <input
             type="text"
             required
-            className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-teal-500/30 focus:ring-1 focus:ring-teal-500/20 transition-all"
+            className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-[#4A73D5]/30 focus:ring-1 focus:ring-[#4A73D5]/20 transition-all"
             placeholder="Your name"
           />
         </div>
@@ -58,7 +58,7 @@ export function ContactForm() {
           <input
             type="email"
             required
-            className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-teal-500/30 focus:ring-1 focus:ring-teal-500/20 transition-all"
+            className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-[#4A73D5]/30 focus:ring-1 focus:ring-[#4A73D5]/20 transition-all"
             placeholder="you@company.com"
           />
         </div>
@@ -70,7 +70,7 @@ export function ContactForm() {
         </label>
         <input
           type="text"
-          className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-teal-500/30 focus:ring-1 focus:ring-teal-500/20 transition-all"
+          className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-[#4A73D5]/30 focus:ring-1 focus:ring-[#4A73D5]/20 transition-all"
           placeholder="Company name (optional)"
         />
       </div>
@@ -79,7 +79,7 @@ export function ContactForm() {
         <label className="block text-sm font-medium text-white/60 mb-1.5">
           How many emails/day are you looking to send?
         </label>
-        <select className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white outline-none focus:border-teal-500/30 focus:ring-1 focus:ring-teal-500/20 transition-all">
+        <select className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white outline-none focus:border-[#4A73D5]/30 focus:ring-1 focus:ring-[#4A73D5]/20 transition-all">
           <option value="" className="bg-[#0a0a0a]">
             Select a range
           </option>
@@ -108,14 +108,14 @@ export function ContactForm() {
         <textarea
           rows={4}
           required
-          className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-teal-500/30 focus:ring-1 focus:ring-teal-500/20 transition-all resize-none"
+          className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white placeholder:text-white/30 outline-none focus:border-[#4A73D5]/30 focus:ring-1 focus:ring-[#4A73D5]/20 transition-all resize-none"
           placeholder="Tell us about your needs..."
         />
       </div>
 
       <button
         type="submit"
-        className="w-full rounded-xl bg-gradient-to-r from-teal-500 to-green-500 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30 hover:brightness-110 transition-all"
+        className="w-full rounded-xl bg-[#4A73D5] hover:bg-[#5A83E5] px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#4A73D5]/20 hover:shadow-[#4A73D5]/30 hover:brightness-110 transition-all"
       >
         Send Message
       </button>

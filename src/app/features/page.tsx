@@ -117,11 +117,11 @@ export default function FeaturesPage() {
       {/* Hero */}
       <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal-500/8 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#4A73D5]/8 rounded-full blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/5 px-4 py-1.5 mb-6">
-            <span className="text-sm font-medium text-teal-400">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#4A73D5]/20 bg-[#4A73D5]/5 px-4 py-1.5 mb-6">
+            <span className="text-sm font-medium text-[#6B8FE6]">
               Purpose-built for cold email
             </span>
           </div>
@@ -156,7 +156,7 @@ export default function FeaturesPage() {
                 {feature.details.map((detail, j) => (
                   <li key={j} className="flex items-center gap-3">
                     <svg
-                      className="w-5 h-5 text-teal-400 shrink-0"
+                      className="w-5 h-5 text-[#6B8FE6] shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -176,9 +176,9 @@ export default function FeaturesPage() {
             <div className="flex-1 w-full">
               <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-8 h-full flex items-center justify-center min-h-[200px]">
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500/10 to-green-500/10 mb-4">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#4A73D5]/10 to-[#6B8FE6]/10 mb-4">
                     <svg
-                      className="w-8 h-8 text-teal-400"
+                      className="w-8 h-8 text-[#6B8FE6]"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -235,7 +235,7 @@ export default function FeaturesPage() {
         <div className="mt-8">
           <a
             href="https://app.coldrelay.com/auth/register"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-green-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 hover:brightness-110 transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-full bg-[#4A73D5] hover:bg-[#5A83E5] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#4A73D5]/25 hover:shadow-[#4A73D5]/40 hover:brightness-110 transition-all hover:-translate-y-0.5"
           >
             Get Started Free
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

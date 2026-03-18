@@ -1,3 +1,9 @@
+"use client";
+
+import { useRef, MouseEvent } from "react";
+import { motion } from "framer-motion";
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
+
 const features = [
   {
     icon: (
@@ -62,54 +68,80 @@ const features = [
   },
 ];
 
+function SpotlightCard({ children, className }: { children: React.ReactNode; className?: string }) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  }
+
+  return (
+    <div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      className={`spotlight-card ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
 export function FeaturesSection() {
   return (
     <section className="relative py-24 sm:py-32">
-      {/* Background */}
+      {/* Background decorations */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+        <div className="absolute top-0 left-0 right-0 gradient-divider" />
+        <div className="absolute bottom-0 left-0 right-0 gradient-divider" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/5 px-4 py-1.5 mb-6">
-            <span className="text-sm font-medium text-teal-400">
-              Built for deliverability
-            </span>
+        <ScrollReveal>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#4A73D5]/20 bg-[#4A73D5]/5 px-4 py-1.5 mb-6 backdrop-blur-sm">
+              <span className="text-sm font-medium text-[#6B8FE6]">
+                Built for deliverability
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Infrastructure that{" "}
+              <span className="gradient-text">protects your reputation</span>
+            </h2>
+            <p className="mt-4 text-lg text-white/50">
+              Every component is designed with one goal: getting your cold emails into the primary inbox.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-            Infrastructure that{" "}
-            <span className="gradient-text">protects your reputation</span>
-          </h2>
-          <p className="mt-4 text-lg text-white/50">
-            Every component is designed with one goal: getting your cold emails into the primary inbox.
-          </p>
-        </div>
+        </ScrollReveal>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
-            <div
-              key={i}
-              className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-300"
-            >
-              {/* Hover glow */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-              <div className="relative">
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500/10 to-green-500/10 text-teal-400 mb-4">
-                  {feature.icon}
+            <ScrollReveal key={i} delay={i * 0.1}>
+              <SpotlightCard className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 hover:bg-white/[0.04] hover:border-[#4A73D5]/20 transition-all duration-500 backdrop-blur-sm h-full">
+                <div className="relative z-10">
+                  <motion.div
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#4A73D5]/10 text-[#6B8FE6] mb-4 border border-[#4A73D5]/10"
+                  >
+                    {feature.icon}
+                  </motion.div>
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#6B8FE6] transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-white/50 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-white/50 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
+              </SpotlightCard>
+            </ScrollReveal>
           ))}
         </div>
       </div>

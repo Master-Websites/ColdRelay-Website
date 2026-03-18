@@ -50,11 +50,11 @@ export function PricingContent() {
       {/* Hero */}
       <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal-500/8 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#4A73D5]/8 rounded-full blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/20 bg-teal-500/5 px-4 py-1.5 mb-6">
-            <span className="text-sm font-medium text-teal-400">
+          <div className="inline-flex items-center gap-2 rounded-full border border-[#4A73D5]/20 bg-[#4A73D5]/5 px-4 py-1.5 mb-6">
+            <span className="text-sm font-medium text-[#6B8FE6]">
               Simple volume-based pricing
             </span>
           </div>
@@ -76,12 +76,12 @@ export function PricingContent() {
               key={tier.range}
               className={`relative rounded-2xl border p-6 text-center transition-all ${
                 tier.popular
-                  ? "border-teal-500/30 bg-teal-500/5 glow-teal"
+                  ? "border-[#4A73D5]/30 bg-[#4A73D5]/5 glow-blue"
                   : "border-white/[0.06] bg-white/[0.02] hover:border-white/[0.1]"
               }`}
             >
               {tier.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-teal-500 to-green-500 text-xs font-semibold text-white">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-[#4A73D5] text-xs font-semibold text-white">
                   Most Popular
                 </div>
               )}
@@ -146,7 +146,7 @@ export function PricingContent() {
                   key={i}
                   className={`border-b border-white/[0.04] ${
                     row.highlight
-                      ? "bg-teal-500/5"
+                      ? "bg-[#4A73D5]/5"
                       : ""
                   }`}
                 >
@@ -176,8 +176,8 @@ export function PricingContent() {
                     <span
                       className={
                         row.highlight
-                          ? "font-bold text-teal-400"
-                          : "text-green-400/70"
+                          ? "font-bold text-[#6B8FE6]"
+                          : "text-[#4A73D5]/70"
                       }
                     >
                       {row.savings}
@@ -206,7 +206,7 @@ export function PricingContent() {
               className="flex items-center gap-3 rounded-xl border border-white/[0.04] bg-white/[0.02] px-4 py-3"
             >
               <svg
-                className="w-5 h-5 text-teal-400 shrink-0"
+                className="w-5 h-5 text-[#6B8FE6] shrink-0"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -235,7 +235,7 @@ export function PricingContent() {
         <div className="mt-8">
           <a
             href="https://app.coldrelay.com/auth/register"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-green-500 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 hover:brightness-110 transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-full bg-[#4A73D5] hover:bg-[#5A83E5] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#4A73D5]/25 hover:shadow-[#4A73D5]/40 hover:brightness-110 transition-all hover:-translate-y-0.5"
           >
             Get Started Free
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

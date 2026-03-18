@@ -17,7 +17,7 @@ export default function BlogPage() {
       {/* Hero */}
       <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal-500/8 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#4A73D5]/8 rounded-full blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
@@ -77,11 +77,11 @@ export default function BlogPage() {
                   {post.tags.length > 0 && (
                     <>
                       <span>•</span>
-                      <span className="text-teal-400">{post.tags[0]}</span>
+                      <span className="text-[#6B8FE6]">{post.tags[0]}</span>
                     </>
                   )}
                 </div>
-                <h2 className="text-xl font-bold text-white group-hover:text-teal-400 transition-colors mb-2">
+                <h2 className="text-xl font-bold text-white group-hover:text-[#6B8FE6] transition-colors mb-2">
                   {post.title}
                 </h2>
                 <p className="text-white/50 text-sm leading-relaxed">

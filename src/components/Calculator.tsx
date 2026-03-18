@@ -80,7 +80,7 @@ function useElementWidth(ref: React.RefObject<HTMLDivElement | null>) {
 
 /* ---------------- Icon ---------------- */
 
-function CheckIcon({ color = "#22c55e" }: { color?: string }) {
+function CheckIcon({ color = "#4A73D5" }: { color?: string }) {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
       <circle cx="12" cy="12" r="10" fill={color} opacity="0.18" />
@@ -203,8 +203,8 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
     text = "#F4F4F5",
     muted = "rgba(244,244,245,0.68)",
     dim = "rgba(244,244,245,0.45)",
-    blue = "#2dd4bf",
-    blue2 = "#22c55e",
+    blue = "#4A73D5",
+    blue2 = "#6B8FE6",
     track = "rgba(255,255,255,0.10)",
 
     // Responsive
@@ -385,7 +385,7 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
   const outerGlowStyle: React.CSSProperties = {
     position: "absolute",
     inset: -140,
-    background: `radial-gradient(60% 50% at 25% 30%, rgba(45,212,191,0.14) 0%, rgba(34,197,94,0.08) 32%, rgba(0,0,0,0) 70%)`,
+    background: `radial-gradient(60% 50% at 25% 30%, rgba(74,115,213,0.14) 0%, rgba(107,143,230,0.08) 32%, rgba(0,0,0,0) 70%)`,
     filter: "blur(22px)",
     pointerEvents: "none",
     zIndex: 0,
@@ -542,7 +542,7 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
     borderRadius: 999,
     width: `${percent}%`,
     background: `linear-gradient(90deg,${blue} 0%,${blue2} 100%)`,
-    boxShadow: "0 0 18px rgba(45,212,191,0.45)",
+    boxShadow: "0 0 18px rgba(74,115,213,0.45)",
   };
 
   const thumbStyle: React.CSSProperties = {
@@ -750,15 +750,15 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
     marginTop: SECTION_GAP,
     padding: "14px 16px",
     borderRadius: 16,
-    background: "rgba(25, 135, 84, 0.10)",
-    border: "1px solid rgba(34,197,94,0.18)",
+    background: "rgba(74, 115, 213, 0.08)",
+    border: "1px solid rgba(74, 115, 213, 0.18)",
     display: "flex",
     flexDirection: "column",
     gap: 8,
   };
 
   const discountTitleStyle: React.CSSProperties = {
-    color: "#7DFFAF",
+    color: "#6B8FE6",
     fontSize: 14,
     fontWeight: 900,
     letterSpacing: "-0.01em",
@@ -791,7 +791,7 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
         ? "translateY(-2px)"
         : "translateY(0)",
     boxShadow: ctaHover
-      ? "0 25px 60px rgba(0,0,0,0.40), 0 0 26px rgba(45,212,191,0.22), inset 0 1px 0 rgba(255,255,255,0.25)"
+      ? "0 25px 60px rgba(0,0,0,0.40), 0 0 26px rgba(74,115,213,0.22), inset 0 1px 0 rgba(255,255,255,0.25)"
       : "0 18px 40px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.20)",
     transition:
       "transform 160ms ease, box-shadow 220ms ease, filter 160ms ease",
@@ -1002,7 +1002,7 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
               <div style={discountRowStyle}>
                 <span>
                   {saveLabel}:{" "}
-                  <b style={{ color: "#7DFFAF" }}>${money0(savings)}/mo</b>
+                  <b style={{ color: "#6B8FE6" }}>${money0(savings)}/mo</b>
                 </span>
               </div>
             </div>

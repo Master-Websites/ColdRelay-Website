@@ -13,7 +13,7 @@ export default function ContactPage() {
     <div className="pt-24 pb-16">
       <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal-500/8 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#4A73D5]/8 rounded-full blur-3xl" />
         </div>
         <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
@@ -43,9 +43,9 @@ export default function ContactPage() {
 
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#4A73D5]/10 flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-teal-400"
+                    className="w-5 h-5 text-[#6B8FE6]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   <div className="text-sm text-white/40">Email</div>
                   <a
                     href="mailto:support@coldrelay.com"
-                    className="text-white hover:text-teal-400 transition-colors"
+                    className="text-white hover:text-[#6B8FE6] transition-colors"
                   >
                     support@coldrelay.com
                   </a>
@@ -70,9 +70,9 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#4A73D5]/10 flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-teal-400"
+                    className="w-5 h-5 text-[#6B8FE6]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -92,9 +92,9 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-teal-500/10 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-[#4A73D5]/10 flex items-center justify-center">
                   <svg
-                    className="w-5 h-5 text-teal-400"
+                    className="w-5 h-5 text-[#6B8FE6]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

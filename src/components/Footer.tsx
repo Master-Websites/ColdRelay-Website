@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const footerLinks = {
   Product: [
@@ -19,21 +20,22 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-[#0a0a0a]">
+    <footer className="relative border-t border-white/[0.06] bg-[#0a0a0a]">
+      {/* Top gradient line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4A73D5]/30 to-transparent" />
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="relative w-7 h-7">
-                <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-teal-400 to-green-500 opacity-80" />
-                <div className="absolute inset-[2px] rounded-[5px] bg-[#0a0a0a] flex items-center justify-center">
-                  <span className="text-xs font-bold gradient-text">CR</span>
-                </div>
-              </div>
-              <span className="text-base font-bold tracking-tight text-white">
-                Cold<span className="gradient-text">Relay</span>
-              </span>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/logo.svg"
+                alt="ColdRelay"
+                width={120}
+                height={28}
+                className="h-6 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+              />
             </Link>
             <p className="mt-3 text-sm text-white/40 max-w-xs">
               Cold email infrastructure that actually delivers. Set up at scale, send with confidence.
@@ -50,14 +52,14 @@ export function Footer() {
                     {"external" in link && link.external ? (
                       <a
                         href={link.href}
-                        className="text-sm text-white/40 hover:text-white/70 transition-colors"
+                        className="text-sm text-white/40 hover:text-[#6B8FE6] transition-colors"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-sm text-white/40 hover:text-white/70 transition-colors"
+                        className="text-sm text-white/40 hover:text-[#6B8FE6] transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -76,7 +78,7 @@ export function Footer() {
           <div className="flex items-center gap-4">
             <a
               href="https://twitter.com/coldrelay"
-              className="text-white/30 hover:text-white/60 transition-colors"
+              className="text-white/30 hover:text-[#4A73D5] transition-colors"
               aria-label="Twitter"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -85,7 +87,7 @@ export function Footer() {
             </a>
             <a
               href="https://linkedin.com/company/coldrelay"
-              className="text-white/30 hover:text-white/60 transition-colors"
+              className="text-white/30 hover:text-[#4A73D5] transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
