@@ -41,7 +41,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-8 pb-16">
       <article className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         {/* Back link */}
         <Link

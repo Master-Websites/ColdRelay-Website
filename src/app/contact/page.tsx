@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-8 pb-16">
       <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#4A73D5]/8 rounded-full blur-3xl" />

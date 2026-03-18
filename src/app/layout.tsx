@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { AnnouncementBar } from "@/components/home/AnnouncementBar";
 import Script from "next/script";
 
 const inter = Inter({
@@ -82,6 +83,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="min-h-full flex flex-col bg-[#0a0a0a] text-[#f4f4f5]">
+        <AnnouncementBar />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

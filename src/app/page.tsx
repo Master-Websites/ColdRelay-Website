@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { AnnouncementBar } from "@/components/home/AnnouncementBar";
 import { HeroSection } from "@/components/home/HeroSection";
 import { LogoBar } from "@/components/home/LogoBar";
 import { GoogleOutlookPainSection } from "@/components/home/GoogleOutlookPainSection";
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <AnnouncementBar />
       <HeroSection />
       <LogoBar />
       <GoogleOutlookPainSection />

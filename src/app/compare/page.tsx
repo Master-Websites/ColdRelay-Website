@@ -22,7 +22,7 @@ export default function ComparePage() {
 
   return (
     <>
-      <section className="pt-32 sm:pt-40 pb-12 sm:pb-16">
+      <section className="pt-16 sm:pt-24 pb-12 sm:pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#4A73D5]/20 bg-[#4A73D5]/10 px-3 py-1 mb-6">
             <span className="text-xs font-medium tracking-wide uppercase text-[#6B8FE6]">Comparisons</span>

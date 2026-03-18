@@ -113,7 +113,7 @@ const additionalFeatures = [
 
 export default function FeaturesPage() {
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-8 pb-16">
       {/* Hero */}
       <section className="relative py-16 sm:py-24">
         <div className="absolute inset-0">

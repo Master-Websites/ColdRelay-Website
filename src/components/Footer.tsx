@@ -7,10 +7,15 @@ const footerLinks = {
     { href: "/pricing", label: "Pricing" },
     { href: "https://app.coldrelay.com/auth/register", label: "Get Started", external: true },
   ],
+  Resources: [
+    { href: "/blog", label: "Blog" },
+    { href: "/guides", label: "Guides" },
+    { href: "/compare", label: "Compare" },
+    { href: "/use-cases", label: "Use Cases" },
+    { href: "/resources", label: "Resources" },
+  ],
   Company: [
     { href: "/about", label: "About" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
   ],
   Legal: [
     { href: "/privacy", label: "Privacy Policy" },
@@ -25,7 +30,7 @@ export function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4A73D5]/30 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="inline-block">
@@ -72,9 +77,18 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/30">
-            © {new Date().getFullYear()} ColdRelay. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p className="text-xs text-white/30">
+              © {new Date().getFullYear()} ColdRelay. All rights reserved.
+            </p>
+            <span className="hidden sm:inline text-white/15">·</span>
+            <Link
+              href="/contact"
+              className="text-xs text-white/30 hover:text-[#6B8FE6] transition-colors"
+            >
+              Contact Us
+            </Link>
+          </div>
           <div className="flex items-center gap-4">
             <a
               href="https://twitter.com/coldrelay"

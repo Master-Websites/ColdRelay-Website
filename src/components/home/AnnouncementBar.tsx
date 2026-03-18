@@ -13,7 +13,7 @@ export function AnnouncementBar() {
       initial={{ y: -40, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative z-40 bg-[#111111] border-b border-white/[0.06] py-2.5 px-4 text-center text-sm mt-16"
+      className="relative z-50 bg-[#111111] border-b border-white/[0.06] py-2.5 px-4 text-center text-sm"
     >
       <div className="flex items-center justify-center gap-2 text-white/60">
         <span className="inline-flex items-center gap-1.5">

@@ -87,7 +87,7 @@ export default async function GuidePage({ params }: PageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Header */}
-      <section className="pt-32 sm:pt-40 pb-8 sm:pb-12">
+      <section className="pt-16 sm:pt-24 pb-8 sm:pb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/guides"

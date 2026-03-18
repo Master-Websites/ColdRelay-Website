@@ -6,7 +6,7 @@ import { ParticleField } from "@/components/animations/ParticleField";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-20">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden pt-4">
       <GradientMesh />
       <ParticleField />
 
