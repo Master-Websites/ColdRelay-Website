@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | ColdRelay",
   },
   description:
-    "Set up domains, mailboxes, DNS, and dedicated IPs for cold email at scale. 95% cheaper than Google Workspace. 95%+ deliverability guaranteed.",
+    "Set up domains, mailboxes, DNS, and dedicated IPs for cold email at scale. 95% cheaper than Google/Outlook. 99% inbox placement guaranteed.",
   metadataBase: new URL("https://coldrelay.com"),
   openGraph: {
     type: "website",
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     siteName: "ColdRelay",
     title: "ColdRelay — Cold Email Infrastructure That Actually Delivers",
     description:
-      "Set up domains, mailboxes, DNS, and dedicated IPs for cold email at scale. 95% cheaper than Google Workspace.",
+      "Set up domains, mailboxes, DNS, and dedicated IPs for cold email at scale. 95% cheaper than Google/Outlook.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "ColdRelay" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "ColdRelay — Cold Email Infrastructure That Actually Delivers",
     description:
-      "Cold email infrastructure at scale. 95% cheaper than Google Workspace.",
+      "Cold email infrastructure at scale. 95% cheaper than Google/Outlook.",
     images: ["/og-image.png"],
   },
   robots: {

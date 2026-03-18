@@ -5,11 +5,9 @@ import { ScrollReveal } from "@/components/animations/ScrollReveal";
 const tools = [
   "Instantly",
   "Smartlead",
-  "Apollo",
-  "Salesforge",
-  "Woodpecker",
-  "QuickMail",
   "Lemlist",
+  "EmailBison",
+  "Clay",
 ];
 
 export function LogoBar() {

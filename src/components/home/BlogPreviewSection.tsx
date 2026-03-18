@@ -13,10 +13,10 @@ const posts = [
   },
   {
     slug: "google-workspace-vs-cold-email",
-    title: "Why Google Workspace Is the Wrong Choice for Cold Email",
+    title: "Why Google/Outlook Is the Wrong Choice for Cold Email",
     date: "February 2025",
     excerpt:
-      "Google Workspace was built for business email. Here's why using it for cold outreach at scale is costing you thousands.",
+      "Google/Outlook was built for business email. Here's why using it for cold outreach at scale is costing you thousands.",
   },
   {
     slug: "domain-warmup-best-practices",

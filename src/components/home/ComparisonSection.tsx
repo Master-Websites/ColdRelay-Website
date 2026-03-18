@@ -58,7 +58,7 @@ export function ComparisonSection() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-              ColdRelay vs Google vs Microsoft
+              ColdRelay vs Google/Outlook
             </h2>
           </div>
         </ScrollReveal>
@@ -73,7 +73,7 @@ export function ComparisonSection() {
                     <span className="text-[#4A73D5] font-bold">ColdRelay</span>
                   </th>
                   <th className="p-4 sm:p-5 text-center border-l border-white/[0.06]">
-                    <span className="text-white/40 font-semibold">Google Workspace</span>
+                    <span className="text-white/40 font-semibold">Google/Outlook</span>
                   </th>
                   <th className="p-4 sm:p-5 text-center border-l border-white/[0.06]">
                     <span className="text-white/40 font-semibold">Microsoft 365</span>
@@ -109,8 +109,8 @@ export function ComparisonSection() {
 
         <ScrollReveal delay={0.25}>
           <p className="mt-8 text-center text-sm text-white/40 max-w-2xl mx-auto">
-            <strong className="text-white/60">Bottom line:</strong> Google and
-            Microsoft are email providers. ColdRelay is{" "}
+            <strong className="text-white/60">Bottom line:</strong> Google/Outlook
+            are email providers. ColdRelay is{" "}
             <span className="text-[#4A73D5] font-bold">cold email infrastructure</span>.
             Built from the ground up for one thing: getting your cold emails
             into the primary inbox at scale.

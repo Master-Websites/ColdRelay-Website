@@ -7,7 +7,7 @@ import { ScrollReveal } from "@/components/animations/ScrollReveal";
 const faqs = [
   {
     q: "How is $1/mailbox possible?",
-    a: "We built our own provisioning layer on Azure. No reselling. No middlemen. Our infrastructure handles 100-150 mailboxes per domain instead of 2. That efficiency is why our costs are 95% lower than Google — and we pass it to you.",
+    a: "We built our own provisioning layer on Azure. No reselling. No middlemen. Our infrastructure handles 100-150 mailboxes per domain instead of 2. That efficiency is why our costs are 95% lower than Google/Outlook — and we pass it to you.",
   },
   {
     q: "What does the 99% inbox placement guarantee mean?",
@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     q: "How many mailboxes can I put on one domain?",
-    a: "100-150 per domain. Compare that to Google Workspace where you get 2 mailboxes per domain. That's why you need 500 domains on Google but only 8 on ColdRelay for the same 1,000 mailboxes.",
+    a: "100-150 per domain. Compare that to Google/Outlook where you get 2 mailboxes per domain for cold email. That's why you need hundreds of domains on Google/Outlook but only 8 on ColdRelay for the same 1,000 mailboxes.",
   },
   {
     q: "What sending tools work with ColdRelay?",

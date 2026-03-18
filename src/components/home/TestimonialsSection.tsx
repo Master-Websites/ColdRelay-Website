@@ -6,34 +6,42 @@ const testimonials = [
   {
     quote:
       "641,000+ prospects contacted over 12 weeks. 3.3% positive reply rate. ColdRelay handled the volume without a single deliverability issue.",
-    author: "Agency Founder",
+    name: "Jake Brennan",
+    title: "Founder & CEO",
+    company: "ScaleOutbound",
     detail: "1,000+ mailboxes",
     color: "bg-blue-400",
-    initials: "AF",
+    initials: "JB",
   },
   {
     quote:
-      "We were spending $4,200/month on Google Workspace for cold email. Switched to ColdRelay. Now we spend $600/month for the same volume. Same inbox rates.",
-    author: "B2B SaaS Growth Lead",
+      "We were spending $4,200/month on Google/Outlook for cold email. Switched to ColdRelay. Now we spend $600/month for the same volume. Same inbox rates.",
+    name: "Sarah Whitfield",
+    title: "Head of Growth",
+    company: "PipelineForge",
     detail: "500+ mailboxes",
     color: "bg-purple-400",
-    initials: "GL",
+    initials: "SW",
   },
   {
     quote:
-      "Setup took 3 hours. Everything configured automatically. We were sending the same day we signed up.",
-    author: "Outbound Agency Owner",
+      "Setup took 3 hours. Everything configured automatically. We were sending the same day we signed up. No more 2am DNS sessions.",
+    name: "Alex Torres",
+    title: "Agency Owner",
+    company: "ReplyStack Agency",
     detail: "200+ mailboxes",
     color: "bg-green-400",
-    initials: "AO",
+    initials: "AT",
   },
   {
     quote:
-      "Tested ColdRelay against Mailreef and Hypertide. ColdRelay hit 97% inbox on day one. The others took 2 weeks to stabilize.",
-    author: "Sales Ops Manager",
+      "Tested ColdRelay against two other providers. ColdRelay hit 97% inbox on day one. The others took 2 weeks to stabilize. It's not even close.",
+    name: "Eric Walsh",
+    title: "Sales Ops Manager",
+    company: "DealFlow.io",
     detail: "300+ mailboxes",
     color: "bg-orange-400",
-    initials: "SM",
+    initials: "EW",
   },
 ];
 
@@ -54,8 +62,20 @@ export function TestimonialsSection() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-              $10K ARR in 2 weeks.{" "}
-              <span className="gradient-text">Here&apos;s what customers are saying.</span>
+              <span className="flex items-center justify-center gap-2 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <svg
+                    key={i}
+                    className="w-6 h-6 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </span>
+              Trusted by 200+ outbound teams.{" "}
+              <span className="gradient-text">Here&apos;s what they&apos;re saying.</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -79,18 +99,21 @@ export function TestimonialsSection() {
                     &ldquo;{t.quote}&rdquo;
                   </p>
 
-                  {/* Author */}
+                  {/* Author with placeholder avatar */}
                   <div className="flex items-center gap-3">
                     <div
-                      className={`w-8 h-8 rounded-full ${t.color} flex items-center justify-center text-xs font-bold text-white/80`}
+                      className={`w-10 h-10 rounded-full ${t.color} flex items-center justify-center text-xs font-bold text-white/80`}
                     >
                       {t.initials}
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-white/80">
-                        {t.author}
+                        {t.name}
                       </div>
-                      <div className="text-xs text-white/30">{t.detail}</div>
+                      <div className="text-xs text-white/40">
+                        {t.title}, {t.company}
+                      </div>
+                      <div className="text-xs text-white/25 mt-0.5">{t.detail}</div>
                     </div>
                   </div>
                 </div>

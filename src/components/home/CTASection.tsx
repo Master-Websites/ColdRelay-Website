@@ -37,9 +37,9 @@ export function CTASection() {
       <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            Stop paying $7/mailbox for
+            Stop paying Google/Outlook prices
             <br />
-            infrastructure that wasn&apos;t{" "}
+            for infrastructure that wasn&apos;t{" "}
             <span className="gradient-text">built for cold email.</span>
           </h2>
         </ScrollReveal>

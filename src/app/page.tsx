@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AnnouncementBar } from "@/components/home/AnnouncementBar";
 import { HeroSection } from "@/components/home/HeroSection";
 import { LogoBar } from "@/components/home/LogoBar";
-import { DomainMathSection } from "@/components/home/DomainMathSection";
+import { GoogleOutlookPainSection } from "@/components/home/GoogleOutlookPainSection";
 import { WhyNotGoogleSection } from "@/components/home/WhyNotGoogleSection";
 import { HowItWorksSection } from "@/components/home/HowItWorksSection";
 import { CalculatorSection } from "@/components/home/CalculatorSection";
@@ -16,7 +16,7 @@ import { BlogPreviewSection } from "@/components/home/BlogPreviewSection";
 export const metadata: Metadata = {
   title: "ColdRelay — Cold Email Infrastructure That Actually Delivers",
   description:
-    "Set up domains, mailboxes, DNS, and dedicated IPs for cold email at scale. 95% cheaper than Google Workspace. 99% inbox placement guaranteed.",
+    "Set up domains, mailboxes, DNS, and dedicated IPs for cold email at scale. 95% cheaper than Google/Outlook. 99% inbox placement guaranteed.",
   alternates: { canonical: "https://coldrelay.com" },
 };
 
@@ -26,7 +26,7 @@ export default function HomePage() {
       <AnnouncementBar />
       <HeroSection />
       <LogoBar />
-      <DomainMathSection />
+      <GoogleOutlookPainSection />
       <WhyNotGoogleSection />
       <HowItWorksSection />
       <CalculatorSection />

@@ -9,8 +9,8 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
       </svg>
     ),
-    title: "100-150 Mailboxes Per Domain",
-    desc: "Google gives you 2 mailboxes per domain. We give you 100-150. That's the difference between 500 domains and 8 domains for 1,000 mailboxes. Do the math.",
+    title: "150 Mailboxes From a Single Domain",
+    desc: "Google/Outlook gives you 2 mailboxes per domain. We give you 100-150. Fewer domains to manage. Less money on domain purchases. More time actually sending.",
   },
   {
     icon: (
@@ -18,8 +18,8 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
-    title: "Isolated Azure Tenants",
-    desc: "Every customer gets their own Azure tenant. Not a shared environment. Your sending reputation is yours. One bad sender somewhere else can never touch you.",
+    title: "Your Reputation Stays Yours",
+    desc: "Every customer gets their own isolated Azure tenant. Someone else's bad sending can never touch your deliverability. Your reputation is fully in your control.",
   },
   {
     icon: (
@@ -27,8 +27,8 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
       </svg>
     ),
-    title: "Dedicated IPs",
-    desc: "No shared IP pools. No random spammers dragging your deliverability down. Your IPs. Your reputation. Your control.",
+    title: "Dedicated IPs — No Shared Risk",
+    desc: "No shared IP pools where random spammers drag you down. Your IPs belong to you. Clean reputation from day one.",
   },
   {
     icon: (
@@ -37,8 +37,8 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    title: "Auto DNS Configuration",
-    desc: "SPF. DKIM. DMARC. Set up automatically when we provision your domains. No manual DNS records. No mistakes. No 'I forgot to add the DKIM record' moments.",
+    title: "Zero DNS Headaches",
+    desc: "SPF. DKIM. DMARC. All configured automatically when we provision your domains. No manual records. No mistakes. No more 2am DNS sessions.",
   },
   {
     icon: (
@@ -46,8 +46,8 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
       </svg>
     ),
-    title: "99% Inbox Placement Guarantee",
-    desc: "Follow our best practices inside the ColdRelay app. If you're not hitting 99% inbox within 14 days of warmup, we fix it free. If we can't fix it, full refund.",
+    title: "99% Inbox or Your Money Back",
+    desc: "Follow our best practices. If you're not hitting 99% inbox within 14 days, we fix it free. If we can't fix it, you get a full refund. That's how confident we are.",
   },
   {
     icon: (
@@ -55,8 +55,8 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
-    title: "2-4 Hour Deployment",
-    desc: "Signup to sending in under 4 hours. Fully automated provisioning. No waiting for 'the team to set up your account.' No onboarding calls required.",
+    title: "Sending in Hours, Not Weeks",
+    desc: "Signup to sending in under 4 hours. Fully automated provisioning. No waiting days for setup. No onboarding calls. Just infrastructure that works.",
   },
 ];
 
@@ -77,9 +77,9 @@ export function FeaturesSection() {
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-              Same emails. Fraction of the cost.
+              More emails. More replies.
               <br />
-              <span className="gradient-text">Better infrastructure.</span>
+              <span className="gradient-text">Fraction of the cost.</span>
             </h2>
           </div>
         </ScrollReveal>

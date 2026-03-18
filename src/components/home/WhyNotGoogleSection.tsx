@@ -10,7 +10,7 @@ const painPoints = [
       </svg>
     ),
     title: "2-5 mailboxes per domain — then you burn domains",
-    desc: "Google allows 2-5 mailboxes per domain. People start with 5, then domains get burned. Drop to 4, then 3, then 2. You're constantly buying new domains and starting over.",
+    desc: "Google/Outlook allows 2-5 mailboxes per domain for cold outreach. Start with 5, watch domains get burned. Drop to 4, then 3, then 2. You're constantly buying new domains and starting over.",
   },
   {
     icon: (
@@ -19,8 +19,8 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    title: "Manual DNS for EVERY domain — extreme headache at scale",
-    desc: "For every single domain, you manually set up DKIM, DMARC, and SPF records. At 500 domains, that's 1,500+ DNS records to configure and maintain. One typo kills deliverability.",
+    title: "Manual DNS for EVERY domain — a nightmare at scale",
+    desc: "Every single domain needs DKIM, DMARC, and SPF configured manually. At hundreds of domains, that's thousands of DNS records. One typo and your deliverability tanks.",
   },
   {
     icon: (
@@ -28,8 +28,8 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
       </svg>
     ),
-    title: "Phone verification / OTP limits creation",
-    desc: "Google requires phone verification for Workspace accounts. You can only verify so many before you're locked out. Scaling past a handful of accounts becomes impossible.",
+    title: "Phone verification blocks you from scaling",
+    desc: "Google/Outlook requires phone verification for Workspace accounts. You run out of numbers fast. Scaling past a handful of accounts becomes a full-time job nobody signed up for.",
   },
   {
     icon: (
@@ -37,8 +37,8 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
       </svg>
     ),
-    title: "Indian/edu resellers: cheap but dangerous",
-    desc: "Resellers sell at $2.50/mailbox but accounts get nuked randomly by Google. Indian IPs get blocked by US servers. You don't own the infrastructure, have no admin access, and zero control.",
+    title: "Third-party resellers: cheap but dangerous",
+    desc: "Resellers offer $2-3/mailbox, but accounts get nuked without warning. Shared IPs get flagged. You don't own the infrastructure, have no admin access, and zero control when things break.",
   },
   {
     icon: (
@@ -46,8 +46,8 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
       </svg>
     ),
-    title: "US resellers still face the same problems",
-    desc: "Even at $2.50-3/mailbox from US resellers, you still deal with domain burning, manual DNS, shared IPs, and zero isolation. Same infrastructure, same problems, different geography.",
+    title: "Even premium resellers can't fix the core problem",
+    desc: "Whether you pay $3 or $7 per mailbox, you're still dealing with burned domains, manual DNS, shared IPs, and zero isolation. Same infrastructure, same problems — just a different price tag.",
   },
   {
     icon: (
@@ -55,8 +55,8 @@ const painPoints = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
-    title: "ColdRelay: built different",
-    desc: "100-150 mailboxes per domain. Auto DNS configuration. No phone verification headaches. You own everything. Dedicated US IPs. Isolated Azure tenants. Scale without limits.",
+    title: "ColdRelay: infrastructure that works for you",
+    desc: "100-150 mailboxes per domain. Auto DNS. Auto warmup. No phone verification headaches. You own everything. Dedicated US IPs. Isolated Azure tenants. Scale without limits.",
     isHighlight: true,
   },
 ];
@@ -74,11 +74,11 @@ export function WhyNotGoogleSection() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
               </svg>
               <span className="text-sm text-white/60 font-medium">
-                Why not Google?
+                Why not Google/Outlook?
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-              Google Workspace was built for
+              Google/Outlook was built for
               <br />
               <span className="gradient-text">business email. Not cold email.</span>
             </h2>
