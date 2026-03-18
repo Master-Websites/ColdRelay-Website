@@ -1,19 +1,16 @@
 "use client";
 
-import { useRef, MouseEvent } from "react";
-import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
 
 const features = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
       </svg>
     ),
-    title: "Dedicated IPs",
-    description:
-      "Every customer gets their own dedicated IPs. No shared sending reputation — your deliverability is entirely in your hands.",
+    title: "100-150 Mailboxes Per Domain",
+    desc: "Google gives you 2 mailboxes per domain. We give you 100-150. That's the difference between 500 domains and 8 domains for 1,000 mailboxes. Do the math.",
   },
   {
     icon: (
@@ -22,8 +19,16 @@ const features = [
       </svg>
     ),
     title: "Isolated Azure Tenants",
-    description:
-      "Each customer gets a dedicated Azure tenant. Complete isolation means one bad actor can never affect your sending reputation.",
+    desc: "Every customer gets their own Azure tenant. Not a shared environment. Your sending reputation is yours. One bad sender somewhere else can never touch you.",
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z" />
+      </svg>
+    ),
+    title: "Dedicated IPs",
+    desc: "No shared IP pools. No random spammers dragging your deliverability down. Your IPs. Your reputation. Your control.",
   },
   {
     icon: (
@@ -32,29 +37,17 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    title: "Auto DNS Setup",
-    description:
-      "DKIM, SPF, DMARC — all configured automatically. No manual DNS records, no missed steps. Everything set up correctly from day one.",
+    title: "Auto DNS Configuration",
+    desc: "SPF. DKIM. DMARC. Set up automatically when we provision your domains. No manual DNS records. No mistakes. No 'I forgot to add the DKIM record' moments.",
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
       </svg>
     ),
-    title: "Deliverability Monitoring",
-    description:
-      "Daily placement testing and blocklist monitoring. Know exactly where your emails land — and fix issues before they become problems.",
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285zM12 15.75h.007v.008H12v-.008z" />
-      </svg>
-    ),
-    title: "Blocklist Protection",
-    description:
-      "Automated monitoring detects blocklist issues in real-time. We catch problems before they affect your campaigns.",
+    title: "99% Inbox Placement Guarantee",
+    desc: "Follow our best practices inside the ColdRelay app. If you're not hitting 99% inbox within 14 days of warmup, we fix it free. If we can't fix it, full refund.",
   },
   {
     icon: (
@@ -62,85 +55,58 @@ const features = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
-    title: "2-4 Hour Setup",
-    description:
-      "Fully automated from domain purchase to ready-to-send. No manual steps, no waiting days. Start sending in hours, not weeks.",
+    title: "2-4 Hour Deployment",
+    desc: "Signup to sending in under 4 hours. Fully automated provisioning. No waiting for 'the team to set up your account.' No onboarding calls required.",
   },
 ];
 
-function SpotlightCard({ children, className }: { children: React.ReactNode; className?: string }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  function handleMouseMove(e: MouseEvent<HTMLDivElement>) {
-    const card = cardRef.current;
-    if (!card) return;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.setProperty("--mouse-x", `${x}px`);
-    card.style.setProperty("--mouse-y", `${y}px`);
-  }
-
-  return (
-    <div
-      ref={cardRef}
-      onMouseMove={handleMouseMove}
-      className={`spotlight-card ${className}`}
-    >
-      {children}
-    </div>
-  );
-}
-
 export function FeaturesSection() {
   return (
-    <section className="relative py-24 sm:py-32">
-      {/* Background decorations */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 right-0 gradient-divider" />
-        <div className="absolute bottom-0 left-0 right-0 gradient-divider" />
-      </div>
+    <section className="relative py-24 bg-[#0a0a0a] overflow-hidden" id="features">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4A73D5]/20 to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#4A73D5]/20 bg-[#4A73D5]/5 px-4 py-1.5 mb-6 backdrop-blur-sm">
-              <span className="text-sm font-medium text-[#6B8FE6]">
-                Built for deliverability
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] mb-4">
+              <svg className="w-4 h-4 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+              </svg>
+              <span className="text-sm text-white/60 font-medium">
+                Built different
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
-              Infrastructure that{" "}
-              <span className="gradient-text">protects your reputation</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+              Same emails. Fraction of the cost.
+              <br />
+              <span className="gradient-text">Better infrastructure.</span>
             </h2>
-            <p className="mt-4 text-lg text-white/50">
-              Every component is designed with one goal: getting your cold emails into the primary inbox.
-            </p>
           </div>
         </ScrollReveal>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature, i) => (
-            <ScrollReveal key={i} delay={i * 0.1}>
-              <SpotlightCard className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 hover:bg-white/[0.04] hover:border-[#4A73D5]/20 transition-all duration-500 backdrop-blur-sm h-full">
+            <ScrollReveal key={i} delay={i * 0.08}>
+              <div
+                className="spotlight-card group rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.12] p-6 h-full transition-all duration-300 hover:-translate-y-1"
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  e.currentTarget.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
+                  e.currentTarget.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
+                }}
+              >
                 <div className="relative z-10">
-                  <motion.div
-                    whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                    className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#4A73D5]/10 text-[#6B8FE6] mb-4 border border-[#4A73D5]/10"
-                  >
+                  <div className="w-10 h-10 rounded-xl bg-[#4A73D5]/10 flex items-center justify-center text-[#6B8FE6] mb-4">
                     {feature.icon}
-                  </motion.div>
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-[#6B8FE6] transition-colors duration-300">
+                  </div>
+                  <h3 className="text-base font-bold text-white/90 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-white/50 leading-relaxed">
-                    {feature.description}
+                  <p className="text-sm text-white/45 leading-relaxed">
+                    {feature.desc}
                   </p>
                 </div>
-              </SpotlightCard>
+              </div>
             </ScrollReveal>
           ))}
         </div>

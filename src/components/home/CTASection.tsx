@@ -1,128 +1,108 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { motion } from "framer-motion";
+
+const trustItems = [
+  "No minimum order",
+  "99% inbox guarantee",
+  "Money-back promise",
+  "Cancel anytime",
+];
 
 export function CTASection() {
   return (
-    <section className="relative py-24 sm:py-32 overflow-hidden">
-      {/* Top divider */}
-      <div className="absolute top-0 left-0 right-0 gradient-divider" />
+    <section className="relative py-24 overflow-hidden" id="cta">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#4A73D5]/[0.08] via-[#0a0a0a] to-[#4A73D5]/[0.04]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4A73D5]/20 to-transparent" />
 
-      {/* Animated gradient background */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-[800px] h-[600px] rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(74, 115, 213, 0.12) 0%, rgba(74, 115, 213, 0.04) 40%, transparent 70%)",
-            transform: "translate(-50%, -50%)",
-          }}
-          animate={{
-            scale: [1, 1.15, 1],
-            opacity: [0.5, 0.8, 0.5],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
+      {/* Decorative orb */}
+      <motion.div
+        className="absolute w-[600px] h-[600px] rounded-full"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(74, 115, 213, 0.1) 0%, transparent 70%)",
+          top: "50%",
+          right: "-10%",
+          transform: "translateY(-50%)",
+        }}
+        animate={{
+          scale: [1, 1.1, 1],
+          opacity: [0.4, 0.6, 0.4],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
 
-      {/* Floating dots */}
-      {[
-        { top: "15%", left: "10%", size: 6, delay: 0 },
-        { top: "25%", right: "15%", size: 4, delay: 1 },
-        { bottom: "20%", left: "20%", size: 5, delay: 2 },
-        { bottom: "30%", right: "10%", size: 3, delay: 0.5 },
-        { top: "40%", left: "5%", size: 4, delay: 1.5 },
-        { top: "60%", right: "8%", size: 5, delay: 2.5 },
-      ].map((dot, i) => (
-        <motion.div
-          key={i}
-          className="absolute rounded-full bg-[#4A73D5]/20"
-          style={{
-            width: dot.size,
-            height: dot.size,
-            top: dot.top,
-            left: dot.left,
-            right: dot.right,
-            bottom: dot.bottom,
-          }}
-          animate={{
-            y: [0, -15, 0],
-            opacity: [0.3, 0.7, 0.3],
-          }}
-          transition={{
-            duration: 4,
-            delay: dot.delay,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
-
-      <ScrollReveal>
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
-            className="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Ready to scale your
+      <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+        <ScrollReveal>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
+            Stop paying $7/mailbox for
             <br />
-            <span className="gradient-text">cold email infrastructure?</span>
-          </motion.h2>
-          <motion.p
-            className="mt-6 text-lg text-white/50 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Join outbound teams sending millions of emails per month on infrastructure built for deliverability.
-            Set up in hours, not weeks.
-          </motion.p>
+            infrastructure that wasn&apos;t{" "}
+            <span className="gradient-text">built for cold email.</span>
+          </h2>
+        </ScrollReveal>
 
-          <motion.div
-            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+        <ScrollReveal delay={0.1}>
+          <p className="mt-6 text-lg text-white/50 max-w-2xl mx-auto">
+            Starting at $1/mailbox. As low as $0.55 at scale. 99% inbox
+            guaranteed. Setup in hours.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.2}>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://app.coldrelay.com/auth/register"
-              className="group relative inline-flex items-center gap-2 rounded-full bg-[#4A73D5] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#4A73D5]/25 hover:shadow-[#4A73D5]/40 transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
+              href="#calculator"
+              className="group relative inline-flex items-center gap-2 rounded-xl bg-[#4A73D5] px-8 py-4 text-base font-semibold text-white shadow-lg shadow-[#4A73D5]/25 hover:shadow-[#4A73D5]/40 hover:bg-[#5A83E5] transition-all duration-300 hover:-translate-y-[1px] overflow-hidden"
             >
-              <span className="relative z-10">Get Started — It&apos;s Free to Try</span>
-              <svg className="w-5 h-5 relative z-10 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              <span className="relative z-10">Calculate your savings</span>
+              <svg
+                className="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                />
               </svg>
               <div className="absolute inset-0 bg-gradient-to-r from-[#4A73D5] to-[#6B8FE6] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             </a>
             <a
-              href="/contact"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-8 py-3.5 text-base font-medium text-white/70 hover:text-white hover:bg-white/[0.06] hover:border-white/20 transition-all backdrop-blur-sm"
+              href="mailto:sales@coldrelay.com"
+              className="inline-flex items-center gap-2 rounded-xl bg-white/[0.04] border border-white/[0.08] px-8 py-4 text-base font-semibold text-white/60 hover:text-white hover:bg-white/[0.06] transition-all duration-300"
             >
-              Talk to Sales
+              Talk to sales
             </a>
-          </motion.div>
+          </div>
+        </ScrollReveal>
 
-          <motion.p
-            className="mt-6 text-sm text-white/30"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            No credit card required • 14-day deliverability guarantee • 24/7 support
-          </motion.p>
-        </div>
-      </ScrollReveal>
+        <ScrollReveal delay={0.3}>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            {trustItems.map((item, i) => (
+              <div key={i} className="flex items-center gap-1.5 text-sm text-white/30">
+                <svg
+                  className="w-4 h-4 text-[#4A73D5]/60"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                {item}
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
+      </div>
     </section>
   );
 }
