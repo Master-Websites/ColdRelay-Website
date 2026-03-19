@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ConditionalHeader } from "@/components/ConditionalHeader";
-import { Footer } from "@/components/Footer";
+import Footer from "@/components/v1/footer";
 import { AnnouncementBar } from "@/components/home/AnnouncementBar";
 import Script from "next/script";
 

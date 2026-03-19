@@ -5,19 +5,19 @@ import Spotlight from "./spotlight";
 
 const steps = [
   {
-    image: "/images/workflow-01.png",
+    image: "/images/card-setup.png",
     badge: "Set Up in Minutes",
     description:
       "Tell us your volume. We calculate mailboxes and domains. One click and your infrastructure is building. No manual DNS. No spreadsheets.",
   },
   {
-    image: "/images/workflow-02.png",
+    image: "/images/card-scale.png",
     badge: "Scale Without Limits",
     description:
       "Start with 50 mailboxes. Scale to 5,000+. Volume discounts kick in automatically. No new contracts. No waiting.",
   },
   {
-    image: "/images/workflow-03.png",
+    image: "/images/card-connect.png",
     badge: "Connect & Send",
     description:
       "Plug SMTP credentials into Instantly, Smartlead, or any tool. Your infrastructure is ready. Start sending from day one.",
