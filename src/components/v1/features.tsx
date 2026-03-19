@@ -102,7 +102,7 @@ export default function Features() {
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#e5e7eb,#7B9BE0,#f9fafb,#93AADF,#e5e7eb)] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Everything you need to scale outbound
             </h2>
-            <p className="text-lg text-[#7B9BE0]/65">
+            <p className="text-lg text-gray-300">
               Built specifically for cold email. Not repurposed from consumer tools.
             </p>
           </div>
@@ -114,7 +114,7 @@ export default function Features() {
                 <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
                   {feature.title}
                 </h3>
-                <p className="text-[#7B9BE0]/65">
+                <p className="text-gray-300">
                   {feature.description}
                 </p>
               </article>

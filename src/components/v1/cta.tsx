@@ -25,7 +25,7 @@ export default function Cta() {
               Stop paying $7/mailbox for infrastructure that wasn&apos;t built for cold email.
             </h2>
             <p
-              className="mb-8 text-lg text-[#7B9BE0]/65"
+              className="mb-8 text-lg text-gray-300"
               data-aos="fade-up"
               data-aos-delay={200}
             >

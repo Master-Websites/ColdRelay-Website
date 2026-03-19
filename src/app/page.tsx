@@ -40,7 +40,7 @@ export default function HomePage() {
                 <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#e5e7eb,#7B9BE0,#f9fafb,#93AADF,#e5e7eb)] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
                   Calculate Your Exact Cost
                 </h2>
-                <p className="text-lg text-[#7B9BE0]/65">
+                <p className="text-lg text-gray-300">
                   No hidden fees. Slide to see your price at any scale.
                 </p>
               </div>

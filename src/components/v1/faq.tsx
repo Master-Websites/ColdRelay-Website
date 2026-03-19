@@ -71,7 +71,7 @@ export default function FAQ() {
                 </button>
                 {open === i && (
                   <div className="relative z-10 px-6 pb-5">
-                    <p className="text-[#7B9BE0]/65">{faq.a}</p>
+                    <p className="text-gray-300">{faq.a}</p>
                   </div>
                 )}
               </div>

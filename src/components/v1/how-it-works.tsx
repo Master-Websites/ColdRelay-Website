@@ -41,7 +41,7 @@ export default function HowItWorks() {
             >
               Three steps. Four hours. Done.
             </h2>
-            <p className="text-lg text-[#7B9BE0]/65">
+            <p className="text-lg text-gray-300">
               Simple and fast. No onboarding calls, no manual configuration, no weeks of waiting. Just infrastructure that works.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function HowItWorks() {
                         </span>
                       </span>
                     </div>
-                    <p className="text-[#7B9BE0]/65">{step.description}</p>
+                    <p className="text-gray-300">{step.description}</p>
                   </div>
                 </div>
               </a>

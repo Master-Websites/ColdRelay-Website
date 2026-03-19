@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 
 const testimonials = [
   {
@@ -55,6 +55,23 @@ export default function Testimonials() {
     return () => clearInterval(timer);
   }, [next]);
 
+  // Touch/swipe support
+  const touchStartX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next();
+      else prev();
+    }
+    touchStartX.current = null;
+  };
+
   const t = testimonials[current];
 
   return (
@@ -65,18 +82,22 @@ export default function Testimonials() {
           <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#e5e7eb,#7B9BE0,#f9fafb,#93AADF,#e5e7eb)] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
             Real results from real teams
           </h2>
-          <p className="text-lg text-[#7B9BE0]/65">
+          <p className="text-lg text-gray-300">
             Outbound teams switch to ColdRelay and never look back.
           </p>
         </div>
 
         {/* Slider */}
-        <div className="relative flex items-center gap-4 md:gap-8">
+        <div
+          className="relative flex items-center gap-4 md:gap-8"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           {/* Prev button */}
           <button
             onClick={prev}
             aria-label="Previous testimonial"
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#374151] bg-[#111827] text-gray-400 transition-colors hover:border-[#4A73D5]/50 hover:text-white"
+            className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#374151] bg-[#111827] text-gray-400 transition-colors hover:border-[#4A73D5]/50 hover:text-white"
           >
             <svg
               width="20"
@@ -134,7 +155,7 @@ export default function Testimonials() {
           <button
             onClick={next}
             aria-label="Next testimonial"
-            className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#374151] bg-[#111827] text-gray-400 transition-colors hover:border-[#4A73D5]/50 hover:text-white"
+            className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#374151] bg-[#111827] text-gray-400 transition-colors hover:border-[#4A73D5]/50 hover:text-white"
           >
             <svg
               width="20"

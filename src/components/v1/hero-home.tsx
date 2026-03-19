@@ -21,12 +21,14 @@ function AnimatedVolume() {
   }, []);
 
   return (
-    <span
-      className={`inline-block text-[#4A73D5] transition-all duration-400 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
-      }`}
-    >
-      {volumes[index]}
+    <span className="inline-block min-w-[170px] text-center">
+      <span
+        className={`inline-block text-[#4A73D5] transition-all duration-400 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+        }`}
+      >
+        {volumes[index]}
+      </span>
     </span>
   );
 }
@@ -58,7 +60,7 @@ export default function HeroHome() {
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-xl text-[#7B9BE0]/65"
+                className="mb-8 text-xl text-gray-300"
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
