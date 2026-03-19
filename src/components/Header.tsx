@@ -12,6 +12,7 @@ const navLinks = [
 ];
 
 const resourceLinks = [
+  { href: "/tools", label: "Tools" },
   { href: "/blog", label: "Blog" },
   { href: "/guides", label: "Guides" },
   { href: "/compare", label: "Compare" },
