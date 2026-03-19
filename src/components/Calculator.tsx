@@ -197,8 +197,8 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
     stop4Value = 10000,
 
     // Theme
-    bg = "#0D0D0D",
-    leftPanel = "#121214",
+    bg = "#0a0a0a",
+    leftPanel = "#111827",
     border = "rgba(255,255,255,0.06)",
     text = "#F4F4F5",
     muted = "rgba(244,244,245,0.68)",
@@ -776,9 +776,9 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
 
   const ctaStyle: React.CSSProperties = {
     marginTop: SECTION_GAP,
-    background: `linear-gradient(90deg,${blue} 0%,${blue2} 100%)`,
+    background: `linear-gradient(180deg, #4A73D5 0%, #3A5DB5 100%)`,
     padding: "18px 16px",
-    borderRadius: 16,
+    borderRadius: 999,
     color: "#fff",
     fontWeight: 900,
     textAlign: "center",

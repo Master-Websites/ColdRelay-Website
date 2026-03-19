@@ -105,7 +105,7 @@ export default function Pricing() {
                   <div className="text-xs text-gray-400">Google/mo</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-nacelle font-semibold text-green-400">${savings}</div>
+                  <div className="text-2xl font-nacelle font-semibold text-[#7B9BE0]">${savings}</div>
                   <div className="text-xs text-gray-400">You save/mo</div>
                 </div>
               </div>

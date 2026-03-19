@@ -115,7 +115,7 @@ export function ContactForm() {
 
       <button
         type="submit"
-        className="w-full rounded-xl bg-[#4A73D5] hover:bg-[#5A83E5] px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#4A73D5]/20 hover:shadow-[#4A73D5]/30 hover:brightness-110 transition-all"
+        className="w-full rounded-full bg-gradient-to-b from-[#4A73D5] to-[#3A5DB5] hover:brightness-110 px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-[#4A73D5]/20 hover:shadow-[#4A73D5]/30 transition-all"
       >
         Send Message
       </button>

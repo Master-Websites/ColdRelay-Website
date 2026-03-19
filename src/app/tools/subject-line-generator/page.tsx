@@ -54,12 +54,12 @@ function generateSubjectLines(
     {
       text: `${p} for ${r} — ${g}`,
       style: "Direct",
-      styleColor: "text-green-400 bg-green-500/10 border-green-500/20",
+      styleColor: "text-[#7B9BE0] bg-[#4A73D5]/10 border-[#4A73D5]/20",
     },
     {
       text: `15 min to show how ${p} helps with ${g}`,
       style: "Direct",
-      styleColor: "text-green-400 bg-green-500/10 border-green-500/20",
+      styleColor: "text-[#7B9BE0] bg-[#4A73D5]/10 border-[#4A73D5]/20",
     },
     // Personalized style
     {

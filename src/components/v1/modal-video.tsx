@@ -88,7 +88,7 @@ export default function ModalVideo() {
                   </div>
                   <div className="rounded-lg bg-[#1e293b]/60 p-3">
                     <div className="h-2 w-12 rounded bg-[#4A73D5]/30 mb-2" />
-                    <div className="h-4 w-14 rounded bg-green-500/40" />
+                    <div className="h-4 w-14 rounded bg-[#7B9BE0]/40" />
                   </div>
                 </div>
                 <div className="space-y-2">

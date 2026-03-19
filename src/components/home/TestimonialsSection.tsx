@@ -30,7 +30,7 @@ const testimonials = [
     title: "Agency Owner",
     company: "ReplyStack Agency",
     detail: "200+ mailboxes",
-    color: "bg-green-400",
+    color: "bg-[#7B9BE0]",
     initials: "AT",
   },
   {
