@@ -172,7 +172,7 @@ export default function CruipHeader() {
             <li>
               <a
                 href="https://app.coldrelay.com/auth/login"
-                className="btn-sm relative bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] py-[5px] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%]"
+                className="rounded-full border border-[#374151] text-gray-300 px-4 py-2 text-sm font-medium hover:text-white hover:border-gray-500 transition-colors"
               >
                 Sign In
               </a>
@@ -180,7 +180,7 @@ export default function CruipHeader() {
             <li>
               <a
                 href="https://app.coldrelay.com/auth/register"
-                className="btn-sm bg-linear-to-t from-[#3A5DB5] to-[#4A73D5] bg-[length:100%_100%] bg-[bottom] py-[5px] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
+                className="rounded-full bg-[#4A73D5] text-white px-4 py-2 text-sm font-medium hover:bg-[#3A5DB5] transition-colors"
               >
                 Get Started
               </a>
