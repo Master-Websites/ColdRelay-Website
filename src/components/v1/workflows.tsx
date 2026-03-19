@@ -28,7 +28,7 @@ export default function Workflows() {
                 The Problem
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),#7B9BE0,var(--color-gray-50),#93AADF,var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#e5e7eb,#7B9BE0,#f9fafb,#93AADF,#e5e7eb)] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               You didn&apos;t sign up to be an IT admin.
             </h2>
             <p className="text-lg text-[#7B9BE0]/65">
@@ -39,7 +39,7 @@ export default function Workflows() {
           {/* Comparison */}
           <div className="grid gap-8 md:grid-cols-2" data-aos="fade-up">
             {/* Google/Outlook Pain */}
-            <div className="relative rounded-2xl bg-gray-900/50 p-6 md:p-8 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
+            <div className="relative rounded-2xl bg-gray-900/50 p-6 md:p-8 border border-[#374151]">
               <h3 className="mb-6 font-nacelle text-xl font-semibold text-gray-200">
                 <span className="text-red-400">Google / Outlook</span>
               </h3>
@@ -56,7 +56,7 @@ export default function Workflows() {
             </div>
 
             {/* ColdRelay Benefits */}
-            <div className="relative rounded-2xl bg-[#4A73D5]/5 p-6 md:p-8 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-[#4A73D5]/30 before:[mask-composite:exclude_!important]">
+            <div className="relative rounded-2xl bg-[#4A73D5]/5 p-6 md:p-8 border border-[#4A73D5]/30">
               <h3 className="mb-6 font-nacelle text-xl font-semibold text-gray-200">
                 <span className="text-[#4A73D5]">ColdRelay</span>
               </h3>

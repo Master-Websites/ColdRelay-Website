@@ -91,7 +91,7 @@ export default function Features() {
         />
       </div>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+        <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,rgba(148,163,184,0.25),transparent)1] md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-[#7B9BE0]/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-[#7B9BE0]/50">
@@ -99,7 +99,7 @@ export default function Features() {
                 Cold Email Infrastructure
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),#7B9BE0,var(--color-gray-50),#93AADF,var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#e5e7eb,#7B9BE0,#f9fafb,#93AADF,#e5e7eb)] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Everything you need to scale outbound
             </h2>
             <p className="text-lg text-[#7B9BE0]/65">

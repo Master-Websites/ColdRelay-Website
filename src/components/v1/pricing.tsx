@@ -27,7 +27,7 @@ export default function Pricing() {
   return (
     <section id="calculator" className="relative">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+        <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,rgba(148,163,184,0.25),transparent)1] md:py-20">
           {/* Section header */}
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-16">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-[#7B9BE0]/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-[#7B9BE0]/50">
@@ -35,7 +35,7 @@ export default function Pricing() {
                 Simple Pricing
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),#7B9BE0,var(--color-gray-50),#93AADF,var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,#e5e7eb,#7B9BE0,#f9fafb,#93AADF,#e5e7eb)] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Pay per mailbox. No surprises.
             </h2>
             <p className="text-lg text-[#7B9BE0]/65">
@@ -50,8 +50,8 @@ export default function Pricing() {
                 key={i}
                 className={`relative rounded-2xl p-6 text-center ${
                   tier.popular
-                    ? "bg-[#4A73D5]/10 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-[#4A73D5]/30"
-                    : "bg-gray-900/50 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]"
+                    ? "bg-[#4A73D5]/10 border border-[#4A73D5]/30"
+                    : "bg-gray-900/50 border border-[#374151]"
                 }`}
               >
                 {tier.popular && (
@@ -70,7 +70,7 @@ export default function Pricing() {
 
           {/* Calculator */}
           <div className="mx-auto max-w-xl" data-aos="fade-up">
-            <div className="relative rounded-2xl bg-gray-900/50 p-8 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
+            <div className="relative rounded-2xl bg-gray-900/50 p-8 border border-[#374151]">
               <h3 className="text-center font-nacelle text-lg font-semibold text-gray-200 mb-6">
                 Cost Calculator
               </h3>
