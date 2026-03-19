@@ -1,6 +1,7 @@
 "use client";
 
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 
 const mdxComponents = {
   table: (props: React.TableHTMLAttributes<HTMLTableElement>) => (
@@ -26,5 +27,5 @@ const mdxComponents = {
 };
 
 export function MDXContent({ content }: { content: string }) {
-  return <MDXRemote source={content} components={mdxComponents} />;
+  return <MDXRemote source={content} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />;
 }
