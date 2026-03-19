@@ -1,0 +1,52 @@
+{
+  "slug": "how-to-set-up-cold-email-infrastructure",
+  "title": "How to Set Up Cold Email Infrastructure — Complete Guide for 2026",
+  "description": "A step-by-step guide to setting up cold email infrastructure from scratch. Learn about domains, mailboxes, DNS authentication, IP reputation, warmup, and how to get sending-ready in hours instead of weeks.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "introduction": {
+      "title": "What Is Cold Email Infrastructure?",
+      "content": "Cold email infrastructure is the technical foundation that powers outbound email campaigns — the domains, mailboxes, IP addresses, DNS records, and email servers that determine whether your outreach reaches inboxes or spam folders. Unlike regular business email (where you send a few dozen messages a day to people who expect them), cold email infrastructure needs to handle volume, maintain sender reputation, survive spam filter scrutiny, and protect your primary business domain from reputational risk.\n\nMost businesses start cold outreach using their existing Google Workspace or Microsoft 365 accounts — and quickly learn why that's a mistake. Account suspensions, domain reputation damage, and deliverability issues force a migration to purpose-built infrastructure. This guide walks you through setting up cold email infrastructure the right way from the start."
+    },
+    "whyDedicated": {
+      "title": "Why You Need Dedicated Infrastructure (Not Your Business Email)",
+      "content": "The #1 mistake in cold email is using your primary business domain and email accounts. Here's why that fails:\n\n**Domain reputation contamination.** Your @company.com domain has a reputation score with every major email provider. Cold outreach — even well-crafted, targeted outreach — generates spam complaints, bounces, and unsubscribes that damage this score. Once damaged, every email from your domain suffers: marketing emails, client communication, support tickets, transactional messages.\n\n**Account suspension risk.** Google Workspace and Microsoft 365 prohibit bulk outbound in their Terms of Service. Both providers actively detect cold email patterns and suspend accounts — sometimes without warning and with no appeals process.\n\n**Volume limitations.** Business email accounts have daily sending limits (typically 500-2,000 messages) designed for regular communication, not outbound campaigns. Hitting these limits triggers throttling and flags.\n\n**No IP isolation.** On shared infrastructure (Google, Microsoft), your email deliverability is partially determined by other users' behavior. A bad actor on the same IP range can affect your inbox placement.\n\nDedicated cold email infrastructure solves all of these: separate domains protect your brand, purpose-built platforms allow cold outreach without suspension risk, dedicated IPs give you full control over your sender reputation, and proper provisioning handles volume requirements."
+    },
+    "components": {
+      "title": "The Components of Cold Email Infrastructure",
+      "content": "Setting up cold email infrastructure involves five core components:\n\n**1. Domains.** You need secondary domains — related to but separate from your primary business domain. These are used exclusively for cold outreach, protecting your main domain. Most setups use 1-5 domains depending on volume.\n\n**2. Mailboxes.** Each domain hosts multiple mailboxes (sending accounts). More mailboxes = more sending capacity, because each mailbox sends a limited number of emails per day (typically 3-5) to maintain natural sending patterns.\n\n**3. DNS Authentication.** SPF, DKIM, and DMARC records must be configured for every sending domain. These authentication protocols prove to receiving email servers that your emails are legitimately from your domain — not spoofed.\n\n**4. IP Addresses.** Your emails are sent from IP addresses that have their own reputation. Dedicated IPs give you sole control over your reputation. Shared IPs mean your reputation depends on other senders' behavior.\n\n**5. Email Platform.** The underlying email platform (Microsoft 365, Google Workspace, or custom SMTP) hosts your mailboxes and handles email delivery. Enterprise platforms like Microsoft 365 carry more inherent credibility than custom setups."
+    },
+    "diyVsManaged": {
+      "title": "DIY Setup vs. Managed Infrastructure Providers",
+      "content": "You have two paths to cold email infrastructure:\n\n**DIY Setup:**\n- Register domains manually ($10-15/year each)\n- Purchase Google Workspace or Microsoft 365 accounts ($6-7/user/month)\n- Configure SPF, DKIM, DMARC for each domain (30-60 minutes per domain)\n- Warm up mailboxes for 2-4 weeks before sending\n- Monitor deliverability and manage reputation ongoing\n- Total cost: $6-7/mailbox/month + hours of technical work\n- Risk: Account suspensions from ToS violations\n\n**Managed Infrastructure (ColdRelay):**\n- Order through self-service portal — specify domains and mailbox count\n- Auto DNS configures SPF, DKIM, DMARC automatically\n- Microsoft 365 mailboxes on dedicated Azure tenants with dedicated IPs\n- No warmup — send from day 1\n- Cost: $1/mailbox/month (as low as $0.55 at scale)\n- Zero suspension risk — built for cold email\n- Setup time: 2-4 hours\n\nFor most businesses, managed infrastructure saves enough time and reduces enough risk to pay for itself many times over. The cost difference alone is significant: 100 mailboxes costs $100/month on ColdRelay vs. $720/month on Google Workspace — and the Google setup carries suspension risk."
+    },
+    "stepByStep": {
+      "title": "Step-by-Step: Setting Up with ColdRelay",
+      "steps": [
+        { "title": "Step 1: Register Secondary Domains", "content": "Choose 1-3 domains related to your business. If your company is acmecorp.com, good secondary domains might be acmecorp.io, getacme.com, or acmecorpmail.com. Register through any domain registrar (Namecheap, Cloudflare, GoDaddy). Cost: $10-15/year per domain." },
+        { "title": "Step 2: Determine Mailbox Count", "content": "Calculate based on your outreach volume. Each mailbox should send 3-5 emails per day. If you want to reach 500 prospects/day, you need 100-170 mailboxes. ColdRelay supports 100-150 mailboxes per domain, so plan domains accordingly. Minimum order is 50 mailboxes." },
+        { "title": "Step 3: Order ColdRelay Infrastructure", "content": "Place your order through ColdRelay's self-service portal. Specify your domains, mailbox count, and naming conventions. Pricing: $1/mailbox (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+)." },
+        { "title": "Step 4: DNS Propagation (Automatic)", "content": "ColdRelay auto-configures SPF, DKIM, and DMARC for all your domains. You'll need to point your domain's nameservers or add DNS records as instructed. Propagation typically completes within the 2-4 hour provisioning window." },
+        { "title": "Step 5: Connect to Your Sending Platform", "content": "Import your ColdRelay mailboxes (SMTP/IMAP credentials) into your sequencing tool — Instantly, Smartlead, Lemlist, Apollo, or any platform that supports standard email protocols. Most support CSV import." },
+        { "title": "Step 6: Launch Campaigns", "content": "With ColdRelay's pre-optimized infrastructure, you can start sending immediately. No warmup period required. Begin with your best-performing sequences and scale volume as needed." }
+      ]
+    },
+    "bestPractices": {
+      "title": "Infrastructure Best Practices",
+      "content": "Even with managed infrastructure, following these best practices maximizes deliverability:\n\n**Keep sending volume per mailbox low.** 3-5 emails per day per mailbox mimics natural sending patterns. More mailboxes at low volume beats fewer mailboxes at high volume.\n\n**Use unique mailbox names.** john@domain.com, j.smith@domain.com, johnsmith@domain.com — vary naming conventions across mailboxes to appear more natural.\n\n**Separate domains by campaign type.** If you run both aggressive cold outreach and softer networking campaigns, use different domains for each. This isolates reputation by campaign type.\n\n**Monitor bounce rates.** High bounce rates (>5%) damage sender reputation fast. Verify email lists before sending. Use email verification tools to clean lists.\n\n**Maintain proper unsubscribe mechanisms.** CAN-SPAM and GDPR require easy opt-out options. Include unsubscribe links in your sequences.\n\n**Don't use spammy content.** Even perfect infrastructure can't save emails with spam trigger words, excessive links, or heavy HTML. Write emails that read like genuine one-to-one messages."
+    }
+  },
+  "faqs": [
+    { "question": "How much does cold email infrastructure cost?", "answer": "DIY setup on Google Workspace costs $6-7/mailbox/month plus hours of technical work. Managed infrastructure like ColdRelay costs $1/mailbox/month (as low as $0.55 at scale) with zero technical setup. For 100 mailboxes: $100/month on ColdRelay vs. $720/month on Google Workspace." },
+    { "question": "How long does it take to set up cold email infrastructure?", "answer": "DIY setup takes days to weeks (domain registration, DNS configuration, 2-4 week warmup). With ColdRelay, infrastructure is provisioned in 2-4 hours with no warmup required." },
+    { "question": "How many mailboxes do I need?", "answer": "Divide your target daily outreach volume by 3-5 (emails per mailbox per day). Want to send 500 emails/day? You need 100-170 mailboxes. ColdRelay's minimum order is 50 mailboxes." },
+    { "question": "Do I need technical skills to set up cold email infrastructure?", "answer": "With ColdRelay, no. Auto DNS configuration and self-service portal eliminate technical requirements. DIY setup requires knowledge of DNS, SPF, DKIM, DMARC, and email server management." },
+    { "question": "Can I use my existing Google Workspace for cold email?", "answer": "You can, but it violates Google's Terms of Service and risks account suspension. Purpose-built infrastructure like ColdRelay is the safer, more cost-effective approach." }
+  ],
+  "relatedPages": {
+    "guides": ["how-to-configure-spf-dkim-dmarc", "how-to-warm-up-email-domains", "how-to-set-up-email-domains-for-cold-outreach"],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-google-workspace", "coldrelay-vs-microsoft-365"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-startups", "cold-email-infrastructure-for-sales-teams"]
+  }
+}

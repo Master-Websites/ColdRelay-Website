@@ -1,0 +1,418 @@
+---
+title: "Cold Email Infrastructure Cost Breakdown: Google vs Microsoft vs Dedicated (2026)"
+description: "A complete cost analysis of cold email infrastructure at 100, 500, 1,000, and 5,000 mailboxes. Includes domain costs, setup time, warmup tools, and hidden costs most guides miss."
+date: "2026-03-19"
+author: "Mo Tahboub"
+tags: ["cold email infrastructure", "cost breakdown", "pricing", "Google Workspace", "Microsoft 365", "comparison"]
+slug: "cold-email-infrastructure-cost-breakdown"
+---
+
+# Cold Email Infrastructure Cost Breakdown: Google vs Microsoft vs Dedicated (2026)
+
+What does cold email infrastructure actually cost? Not the sticker price — the **real, all-in cost** including domains, warmup tools, verification, setup time, and all the expenses that don't show up on the pricing page.
+
+This guide breaks down every cost at 100, 500, 1,000, and 5,000 mailboxes across three infrastructure types: Google Workspace, Microsoft 365, and dedicated infrastructure (using [ColdRelay](/pricing) as the benchmark).
+
+No surprises. No hidden math. Just the real numbers.
+
+---
+
+## Cost Components Most People Forget
+
+Before we dive into the numbers, let's catalog every cost involved in running cold email infrastructure. Most comparisons only cover mailbox costs — here's what they miss:
+
+### 1. Mailbox Licensing
+The base cost per email account. This is what most people compare, but it's only 40-60% of the total.
+
+### 2. Domain Costs
+Every mailbox needs a domain. How many mailboxes you can run per domain varies dramatically by provider:
+- Google Workspace: **2 per domain**
+- Microsoft 365: **~5 per domain**
+- ColdRelay: **up to 150 per domain**
+
+Domain cost: ~$10-15/year each (we'll use $12/year average).
+
+### 3. Warmup Tools
+New mailboxes need warmup to build sending reputation. Some providers include warmup; others require third-party tools:
+- **Included:** ColdRelay, Instantly, Smartlead
+- **Not included:** Google Workspace, Microsoft 365
+- Third-party warmup cost: ~$3-5/mailbox/month (Warmbox, Lemwarm)
+
+### 4. Email Verification
+You need to verify every email address before sending. Bad lists destroy deliverability:
+- Cost: ~$0.003-0.005 per verification
+- At scale: 50,000 verifications/month = $150-250/month
+- This cost is the same regardless of infrastructure
+
+### 5. Sending Tool
+Your sending/sequencing tool (Instantly, Smartlead, Woodpecker, etc.) is a separate cost. Since this is the same regardless of infrastructure, we'll note it but exclude it from the comparison.
+
+### 6. DNS Management Time
+Every domain needs DNS records configured (SPF, DKIM, DMARC). This takes time:
+- Manual (Google/Microsoft): ~30-45 minutes per domain
+- Automated (ColdRelay): ~0 minutes
+
+We'll value setup time at $50/hour (cost of a technical ops person or your own time).
+
+### 7. Ongoing Management
+Domain renewals, mailbox monitoring, rotation of aged mailboxes, DNS updates, troubleshooting suspensions. This scales with domain count.
+
+### 8. Deliverability Monitoring
+Understanding where your emails land:
+- **Included:** ColdRelay
+- **Not included:** Google Workspace, Microsoft 365
+- Third-party tools (GlockApps, etc.): ~$90-200/month
+
+### 9. Blacklist Monitoring
+Checking if your IPs/domains are on blacklists:
+- **Included:** ColdRelay
+- **Not included:** Google/Microsoft
+- Third-party tools: ~$30-80/month
+
+---
+
+## Cost Breakdown at 100 Mailboxes
+
+**100 mailboxes = approximately 400 cold emails/day**
+
+### Google Workspace (100 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 100 × $7.20/mo | $720 |
+| Domains (50 needed) | 50 × $12/yr ÷ 12 | $50 |
+| Warmup tool | 100 × $3.50/mo | $350 |
+| DNS setup time (one-time, amortized over 12 months) | 50 domains × 0.75 hr × $50/hr ÷ 12 | $156 |
+| Deliverability monitoring | GlockApps or similar | $100 |
+| Blacklist monitoring | MXToolbox Pro or similar | $40 |
+| Ongoing management | ~5 hours/month × $50/hr | $250 |
+| **Monthly total** | | **$1,666** |
+| **Annual total** | | **$19,992** |
+| **Cost per mailbox per month** | | **$16.66** |
+
+### Microsoft 365 (100 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 100 × $6.00/mo | $600 |
+| Domains (20 needed) | 20 × $12/yr ÷ 12 | $20 |
+| Warmup tool | 100 × $3.50/mo | $350 |
+| DNS setup time (amortized) | 20 domains × 0.75 hr × $50/hr ÷ 12 | $63 |
+| Deliverability monitoring | | $100 |
+| Blacklist monitoring | | $40 |
+| Ongoing management | ~3 hours/month × $50/hr | $150 |
+| **Monthly total** | | **$1,323** |
+| **Annual total** | | **$15,876** |
+| **Cost per mailbox per month** | | **$13.23** |
+
+### ColdRelay Dedicated Infrastructure (100 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 100 × $2.00/mo | $200 |
+| Domains (1 needed) | 1 × $12/yr ÷ 12 | $1 |
+| Warmup tool | Included | $0 |
+| DNS setup time | Automated | $0 |
+| Deliverability monitoring | Included | $0 |
+| Blacklist monitoring | Included | $0 |
+| Ongoing management | ~0.5 hours/month × $50/hr | $25 |
+| **Monthly total** | | **$226** |
+| **Annual total** | | **$2,712** |
+| **Cost per mailbox per month** | | **$2.26** |
+
+### 100 Mailbox Summary
+
+| Provider | Monthly Cost | Annual Cost | Annual Savings vs Google |
+|---|---|---|---|
+| Google Workspace | $1,666 | $19,992 | — |
+| Microsoft 365 | $1,323 | $15,876 | $4,116 |
+| **ColdRelay** | **$226** | **$2,712** | **$17,280** |
+
+ColdRelay is **7.4x cheaper** than Google Workspace at 100 mailboxes.
+
+---
+
+## Cost Breakdown at 500 Mailboxes
+
+**500 mailboxes = approximately 2,000 cold emails/day**
+
+### Google Workspace (500 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 500 × $7.20/mo | $3,600 |
+| Domains (250 needed) | 250 × $12/yr ÷ 12 | $250 |
+| Warmup tool | 500 × $3.50/mo | $1,750 |
+| DNS setup time (amortized) | 250 × 0.75 hr × $50/hr ÷ 12 | $781 |
+| Deliverability monitoring | | $150 |
+| Blacklist monitoring | | $60 |
+| Ongoing management | ~20 hours/month × $50/hr | $1,000 |
+| **Monthly total** | | **$7,591** |
+| **Annual total** | | **$91,092** |
+| **Cost per mailbox per month** | | **$15.18** |
+
+### Microsoft 365 (500 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 500 × $6.00/mo | $3,000 |
+| Domains (100 needed) | 100 × $12/yr ÷ 12 | $100 |
+| Warmup tool | 500 × $3.50/mo | $1,750 |
+| DNS setup time (amortized) | 100 × 0.75 hr × $50/hr ÷ 12 | $313 |
+| Deliverability monitoring | | $150 |
+| Blacklist monitoring | | $60 |
+| Ongoing management | ~10 hours/month × $50/hr | $500 |
+| **Monthly total** | | **$5,873** |
+| **Annual total** | | **$70,476** |
+| **Cost per mailbox per month** | | **$11.75** |
+
+### ColdRelay Dedicated Infrastructure (500 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 500 × $1.80/mo | $900 |
+| Domains (4 needed) | 4 × $12/yr ÷ 12 | $4 |
+| Warmup tool | Included | $0 |
+| DNS setup time | Automated | $0 |
+| Deliverability monitoring | Included | $0 |
+| Blacklist monitoring | Included | $0 |
+| Ongoing management | ~1 hour/month × $50/hr | $50 |
+| **Monthly total** | | **$954** |
+| **Annual total** | | **$11,448** |
+| **Cost per mailbox per month** | | **$1.91** |
+
+### 500 Mailbox Summary
+
+| Provider | Monthly Cost | Annual Cost | Annual Savings vs Google |
+|---|---|---|---|
+| Google Workspace | $7,591 | $91,092 | — |
+| Microsoft 365 | $5,873 | $70,476 | $20,616 |
+| **ColdRelay** | **$954** | **$11,448** | **$79,644** |
+
+At 500 mailboxes, ColdRelay saves **$79,644/year** compared to Google Workspace. That's **8x cheaper**.
+
+---
+
+## Cost Breakdown at 1,000 Mailboxes
+
+**1,000 mailboxes = approximately 4,000 cold emails/day**
+
+### Google Workspace (1,000 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 1,000 × $7.20/mo | $7,200 |
+| Domains (500 needed) | 500 × $12/yr ÷ 12 | $500 |
+| Warmup tool | 1,000 × $3.00/mo (volume discount) | $3,000 |
+| DNS setup time (amortized) | 500 × 0.75 hr × $50/hr ÷ 12 | $1,563 |
+| Deliverability monitoring | | $200 |
+| Blacklist monitoring | | $80 |
+| Ongoing management | ~40 hours/month × $50/hr | $2,000 |
+| **Monthly total** | | **$14,543** |
+| **Annual total** | | **$174,516** |
+| **Cost per mailbox per month** | | **$14.54** |
+
+At this scale, you'd need a **dedicated ops person** just to manage Google Workspace domains and accounts.
+
+### Microsoft 365 (1,000 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 1,000 × $6.00/mo | $6,000 |
+| Domains (200 needed) | 200 × $12/yr ÷ 12 | $200 |
+| Warmup tool | 1,000 × $3.00/mo | $3,000 |
+| DNS setup time (amortized) | 200 × 0.75 hr × $50/hr ÷ 12 | $625 |
+| Deliverability monitoring | | $200 |
+| Blacklist monitoring | | $80 |
+| Ongoing management | ~20 hours/month × $50/hr | $1,000 |
+| **Monthly total** | | **$11,105** |
+| **Annual total** | | **$133,260** |
+| **Cost per mailbox per month** | | **$11.11** |
+
+### ColdRelay Dedicated Infrastructure (1,000 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 1,000 × $1.67/mo | $1,670 |
+| Domains (7 needed) | 7 × $12/yr ÷ 12 | $7 |
+| Warmup tool | Included | $0 |
+| DNS setup time | Automated | $0 |
+| Deliverability monitoring | Included | $0 |
+| Blacklist monitoring | Included | $0 |
+| Ongoing management | ~2 hours/month × $50/hr | $100 |
+| **Monthly total** | | **$1,777** |
+| **Annual total** | | **$21,324** |
+| **Cost per mailbox per month** | | **$1.78** |
+
+### 1,000 Mailbox Summary
+
+| Provider | Monthly Cost | Annual Cost | Annual Savings vs Google |
+|---|---|---|---|
+| Google Workspace | $14,543 | $174,516 | — |
+| Microsoft 365 | $11,105 | $133,260 | $41,256 |
+| **ColdRelay** | **$1,777** | **$21,324** | **$153,192** |
+
+At 1,000 mailboxes, ColdRelay saves **$153,192/year** vs Google Workspace. That's over **$12,700/month** back in your pocket.
+
+---
+
+## Cost Breakdown at 5,000 Mailboxes
+
+**5,000 mailboxes = approximately 20,000 cold emails/day**
+
+This is enterprise-scale outbound. At this volume, the infrastructure choice isn't just about cost — it's about whether it's even operationally feasible.
+
+### Google Workspace (5,000 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 5,000 × $7.20/mo | $36,000 |
+| Domains (2,500 needed) | 2,500 × $12/yr ÷ 12 | $2,500 |
+| Warmup tool | 5,000 × $2.50/mo (enterprise rate) | $12,500 |
+| DNS setup time (amortized) | 2,500 × 0.75 hr × $50/hr ÷ 12 | $7,813 |
+| Deliverability monitoring | Enterprise plan | $500 |
+| Blacklist monitoring | Enterprise plan | $200 |
+| Ongoing management | Full-time hire ($6,000/mo) | $6,000 |
+| **Monthly total** | | **$65,513** |
+| **Annual total** | | **$786,156** |
+
+**Reality check:** Managing 2,500 domains on Google Workspace is a nightmare. You'd need custom tooling just to handle domain purchases, DNS propagation, and account management. This isn't practical — it's a full-time engineering project.
+
+### Microsoft 365 (5,000 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 5,000 × $6.00/mo | $30,000 |
+| Domains (1,000 needed) | 1,000 × $12/yr ÷ 12 | $1,000 |
+| Warmup tool | 5,000 × $2.50/mo | $12,500 |
+| DNS setup time (amortized) | 1,000 × 0.75 hr × $50/hr ÷ 12 | $3,125 |
+| Deliverability monitoring | | $500 |
+| Blacklist monitoring | | $200 |
+| Ongoing management | Full-time hire | $6,000 |
+| **Monthly total** | | **$53,325** |
+| **Annual total** | | **$639,900** |
+
+### ColdRelay Dedicated Infrastructure (5,000 Mailboxes)
+
+| Cost Item | Calculation | Monthly Cost |
+|---|---|---|
+| Mailbox licensing | 5,000 × $1.67/mo | $8,350 |
+| Domains (34 needed) | 34 × $12/yr ÷ 12 | $34 |
+| Warmup tool | Included | $0 |
+| DNS setup time | Automated | $0 |
+| Deliverability monitoring | Included | $0 |
+| Blacklist monitoring | Included | $0 |
+| Ongoing management | ~5 hours/month × $50/hr | $250 |
+| **Monthly total** | | **$8,634** |
+| **Annual total** | | **$103,608** |
+
+### 5,000 Mailbox Summary
+
+| Provider | Monthly Cost | Annual Cost | Annual Savings vs Google |
+|---|---|---|---|
+| Google Workspace | $65,513 | $786,156 | — |
+| Microsoft 365 | $53,325 | $639,900 | $146,256 |
+| **ColdRelay** | **$8,634** | **$103,608** | **$682,548** |
+
+At 5,000 mailboxes, ColdRelay saves **$682,548/year** compared to Google Workspace. That's enough to fund an entire sales team.
+
+---
+
+## The Hidden Costs Nobody Talks About
+
+### Account Suspensions
+
+Google and Microsoft regularly suspend accounts used for cold email. Each suspension means:
+- **Lost sending capacity** while you set up replacements
+- **Wasted warmup time** (2-4 weeks per new mailbox)
+- **New domain purchases** if the domain is flagged
+- **Lost momentum** on active campaigns
+
+At 500 mailboxes on Google, expect **5-10% suspension rate per month**. That's 25-50 mailboxes needing replacement constantly. The recurring cost of suspension recovery:
+
+```
+50 mailboxes × ($12 domain + $7.20 setup + 3 weeks warmup lost productivity)
+= ~$2,000/month in suspension-related costs
+```
+
+With dedicated infrastructure designed for outbound, suspension rates drop to near zero.
+
+### Opportunity Cost
+
+Every hour spent managing infrastructure is an hour not spent on campaigns, targeting, or closing deals.
+
+At 500 mailboxes:
+- Google Workspace management: **~20 hours/month**
+- ColdRelay management: **~1 hour/month**
+
+That's **19 hours/month** of reclaimed productivity — nearly **half a work week** every month.
+
+### Domain Reputation Risk
+
+With Google Workspace, you're cycling through hundreds of domains. Each domain has a limited lifespan for cold email before reputation degrades. You're constantly:
+- Buying new domains
+- Aging them (ideally 2+ weeks before use)
+- Warming up mailboxes on new domains
+- Retiring burned domains
+
+This "domain treadmill" is an ongoing hidden cost that's hard to quantify but very real.
+
+With ColdRelay's 150-mailbox-per-domain ratio, your domains last much longer because the infrastructure isolation protects domain reputation.
+
+---
+
+## Total Cost Comparison (Annual)
+
+| Mailboxes | Google Workspace | Microsoft 365 | ColdRelay | Savings vs Google |
+|---|---|---|---|---|
+| 100 | $19,992 | $15,876 | **$2,712** | $17,280 (86%) |
+| 500 | $91,092 | $70,476 | **$11,448** | $79,644 (87%) |
+| 1,000 | $174,516 | $133,260 | **$21,324** | $153,192 (88%) |
+| 5,000 | $786,156 | $639,900 | **$103,608** | $682,548 (87%) |
+
+At every scale, ColdRelay is **85-88% cheaper** than Google Workspace when you account for all costs.
+
+---
+
+## When Cheap Infrastructure Costs You Money
+
+Choosing the lowest sticker price isn't always the cheapest option. Here's what happens when infrastructure cuts corners:
+
+### Scenario: Shared IP Deliverability Hit
+
+Your infrastructure has shared IPs. Another customer on your IP sends spam. Your deliverability drops from 85% to 50%.
+
+**Impact on a 500-mailbox operation sending 2,000 emails/day:**
+- Lost impressions: 700/day (2,000 × 0.35 deliverability loss)
+- Lost replies (at 5% reply rate): 35/day
+- Lost meetings (at 15% meeting rate): 5.25/day
+- Lost deals (at 10% close rate, $10K ACV): ~$5,250/day in pipeline
+
+**One week** of a shared IP deliverability issue costs more than a **full year** of ColdRelay's dedicated infrastructure.
+
+---
+
+## Calculate Your Specific Costs
+
+Every operation is different. Use the [ColdRelay infrastructure calculator](/tools) to get exact costs for your specific volume, including:
+
+- Mailboxes needed for your daily send volume
+- Domains required per provider
+- Monthly and annual cost comparison
+- Projected savings vs your current setup
+
+Or read our guide on [how many mailboxes you need](/blog/how-many-mailboxes-do-i-need-for-cold-email) to understand the formula behind the numbers.
+
+---
+
+## The Bottom Line
+
+Cold email infrastructure is the foundation of your outbound operation. The wrong choice doesn't just cost more money — it costs deals, time, and deliverability.
+
+At any scale above 50 mailboxes, dedicated infrastructure isn't just cheaper — it's **dramatically cheaper**. The combination of higher mailbox-per-domain ratios, included warmup, automated DNS, and dedicated IPs makes the math overwhelmingly clear.
+
+For the best combination of cost, deliverability, and operational simplicity, [check ColdRelay's pricing](/pricing) or [compare all providers](/blog/best-cold-email-infrastructure-providers-2026).
+
+---
+
+*See the difference for yourself. [Start with ColdRelay](https://app.coldrelay.com/auth/register) — fully set up in 2-4 hours, with dedicated IPs and 85%+ lower costs than Google Workspace.*
