@@ -1,4 +1,35 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import ModalVideo from "./modal-video";
+
+const volumes = ["10,000", "50,000", "100,000", "250,000", "500,000"];
+
+function AnimatedVolume() {
+  const [index, setIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % volumes.length);
+        setIsVisible(true);
+      }, 400);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <span
+      className={`inline-block text-[#4A73D5] transition-all duration-400 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"
+      }`}
+    >
+      {volumes[index]}
+    </span>
+  );
+}
 
 export default function HeroHome() {
   return (
@@ -23,7 +54,7 @@ export default function HeroHome() {
               data-aos="fade-up"
               data-aos-delay={100}
             >
-              What would 100,000 more cold emails do to your pipeline?
+              What would <AnimatedVolume /> more cold emails do to your pipeline?
             </h1>
             <div className="mx-auto max-w-3xl">
               <p

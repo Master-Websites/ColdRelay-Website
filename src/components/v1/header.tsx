@@ -93,9 +93,7 @@ export default function CruipHeader() {
               className="inline-flex shrink-0 items-center"
               aria-label="ColdRelay"
             >
-              <span className="font-nacelle text-xl text-white">
-                Cold<span className="font-semibold">Relay</span>
-              </span>
+              <img src="/coldrelay-logo-white.svg" alt="ColdRelay" className="h-8" />
             </Link>
           </div>
 
