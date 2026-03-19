@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-sending-ac",
+  "competitor": "Sending.ac",
+  "competitorUrl": "https://sending.ac",
+  "title": "ColdRelay vs Sending.ac — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and Sending.ac for Azure-based cold email infrastructure. See pricing, minimum orders, setup, isolation features, and scalability side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay provisions Microsoft 365 mailboxes on dedicated, isolated Azure tenants with dedicated IPs. Per-mailbox pricing: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+). Includes 100-150 mailboxes per domain, auto DNS, no warmup wait, 99% inbox guarantee, and 2-4 hour setup. Minimum order: 50 mailboxes.",
+      "competitor": "Sending.ac is an Azure-based cold email infrastructure provider offering advanced infrastructure at aggressive pricing. Current pricing is $0.40/mailbox (increasing to $0.44 in April 2026, with plans to reach $1.00+). Minimum order is 600 mailboxes (~1,200 outreach emails/day). Sending.ac emphasizes fully isolated infrastructure, replaceable mailboxes, and 1-click setup in 15 seconds. They offer both aggressive and conservative setup modes, with API auto-import to sending tools. Active customers are grandfathered at their signup price."
+    },
+    "featureComparison": [
+      { "feature": "Current Price per Mailbox", "coldrelay": "$1/mailbox (1-199), scaling to $0.55 at 5K+", "competitor": "$0.40/mailbox (increasing to $0.44, then $0.50, then $1.00+ planned)", "winner": "competitor" },
+      { "feature": "Long-term Pricing Stability", "coldrelay": "Stable published pricing — no announced increases", "competitor": "Active price increase roadmap: $0.40 → $0.44 → $0.50 → $1.00+ over coming months", "winner": "coldrelay" },
+      { "feature": "Minimum Order", "coldrelay": "50 mailboxes ($50/month) — accessible entry point", "competitor": "600 mailboxes ($240/month) — higher minimum commitment", "winner": "coldrelay" },
+      { "feature": "Infrastructure Isolation", "coldrelay": "Isolated Azure tenants with dedicated IPs", "competitor": "Fully isolated infrastructure per customer — replaceable mailboxes", "winner": "tie" },
+      { "feature": "DNS Configuration", "coldrelay": "Automated SPF, DKIM, DMARC", "competitor": "Automated DNS setup included", "winner": "tie" },
+      { "feature": "Setup Speed", "coldrelay": "2-4 hours for full deployment", "competitor": "1-click setup in 15 seconds (provisioning), created in hours", "winner": "tie" },
+      { "feature": "Setup Flexibility", "coldrelay": "Standard automated setup", "competitor": "Choice between aggressive and conservative setup modes with customization in 2 minutes", "winner": "competitor" },
+      { "feature": "API Integration", "coldrelay": "Compatible with Instantly, Smartlead, and other platforms", "competitor": "Auto-import via API to sending tools — connects API keys for automatic mailbox import", "winner": "competitor" },
+      { "feature": "Warmup", "coldrelay": "No warmup required — send from day 1", "competitor": "Infrastructure optimized for immediate use", "winner": "tie" },
+      { "feature": "Inbox Guarantee", "coldrelay": "99% inbox placement guarantee with money-back promise", "competitor": "No published inbox guarantee", "winner": "coldrelay" },
+      { "feature": "Grandfathering", "coldrelay": "Stable pricing — no grandfathering needed", "competitor": "Active customers grandfathered at their signup price as prices increase", "winner": "tie" },
+      { "feature": "Mailboxes per Domain", "coldrelay": "100-150 per domain", "competitor": "Configuration varies based on aggressive vs. conservative setup choice", "winner": "coldrelay" }
+    ],
+    "coldrelayWins": "ColdRelay's biggest advantages over Sending.ac are the low minimum order (50 vs. 600 mailboxes) and pricing stability. Sending.ac's $0.40/mailbox is the cheapest in the market right now, but they've publicly announced a roadmap to $1.00+ per mailbox — meaning the price gap will close or reverse. ColdRelay's 99% inbox guarantee with a money-back promise gives quantifiable deliverability assurance that Sending.ac doesn't offer. For teams starting small or testing the waters, ColdRelay's 50-mailbox minimum ($50/month) is far more accessible than Sending.ac's 600-mailbox minimum ($240/month). ColdRelay's pricing is also stable — you won't need to lock in early to avoid increases.",
+    "competitorWins": "Sending.ac's current $0.40/mailbox pricing is the most aggressive in the cold email infrastructure space — less than half of ColdRelay's base rate. For large-volume operations already committed to 600+ mailboxes, the savings are significant: 1,000 mailboxes on Sending.ac costs $400/month vs. $700 on ColdRelay. The grandfathering policy means early adopters lock in current pricing as rates increase. Sending.ac's setup flexibility (aggressive vs. conservative modes) and auto-API import to sending tools show thoughtful product design. They also survived a wave of Azure provider shutdowns, which suggests robust infrastructure.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if you want pricing stability, a low entry point, and the confidence of an inbox placement guarantee. ColdRelay is the better fit for teams starting with fewer than 600 mailboxes, operators who value predictable long-term costs, and anyone who wants a concrete deliverability guarantee backing their infrastructure.",
+    "whoShouldChooseCompetitor": "Choose Sending.ac if you're committed to 600+ mailboxes and want the lowest possible per-mailbox price right now. Lock in the current $0.40 rate before it increases. Sending.ac is ideal for large-scale operations that prioritize raw cost per mailbox and are comfortable with a higher minimum order and evolving pricing.",
+    "verdict": "Sending.ac currently offers the lowest per-mailbox pricing in the market, making it the cost leader for large-volume operations (600+ mailboxes). However, their publicly announced price increases will eventually bring pricing close to ColdRelay's. ColdRelay wins on accessibility (50 vs. 600 minimum), pricing stability, and its 99% inbox guarantee. If you need 600+ mailboxes today and want the cheapest rate, Sending.ac is hard to beat. If you want flexibility, guarantees, and long-term pricing certainty, ColdRelay is the safer bet."
+  },
+  "faqs": [
+    { "question": "Why is Sending.ac so cheap right now?", "answer": "Sending.ac has stated they're intentionally underpriced to build market share, with a published roadmap to increase prices from $0.40 to eventually $1.00+ per mailbox. Early customers are grandfathered at their signup price." },
+    { "question": "What's the minimum order for each platform?", "answer": "ColdRelay: 50 mailboxes ($50/month). Sending.ac: 600 mailboxes (~$240/month). ColdRelay has a much lower barrier to entry." },
+    { "question": "Will Sending.ac's pricing eventually match ColdRelay's?", "answer": "Based on their published roadmap ($0.40 → $0.44 → $0.50 → $1.00+), yes. Sending.ac plans to reach $1.00+ per mailbox, which is ColdRelay's current base rate. Existing Sending.ac customers keep their grandfathered rate." },
+    { "question": "Does Sending.ac offer an inbox placement guarantee?", "answer": "No. ColdRelay offers a 99% inbox placement guarantee with a money-back promise. Sending.ac doesn't publish a specific deliverability guarantee." },
+    { "question": "Both use Azure infrastructure — what's the actual difference?", "answer": "Both run on Azure/Microsoft 365, but ColdRelay emphasizes isolated tenants, dedicated IPs, and a deliverability guarantee. Sending.ac emphasizes fully isolated infrastructure with replaceable mailboxes and auto-API integration. The core technology is similar; the differences are in pricing, minimum orders, and guarantees." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-inframail", "coldrelay-vs-hypertide", "coldrelay-vs-maildoso"],
+    "useCases": ["cold-email-infrastructure-for-lead-gen-agencies", "cold-email-infrastructure-for-sales-teams"]
+  }
+}

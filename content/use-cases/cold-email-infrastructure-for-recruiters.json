@@ -1,0 +1,61 @@
+{
+  "slug": "cold-email-infrastructure-for-recruiters",
+  "industry": "Recruiters",
+  "title": "Cold Email Infrastructure for Recruiters — Fill Roles Faster with Reliable Outreach",
+  "description": "Learn how recruiters and staffing agencies use ColdRelay's dedicated cold email infrastructure to reach more candidates and hiring managers with better deliverability.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "painPoints": {
+      "title": "Why Recruiters Need Dedicated Cold Email Infrastructure",
+      "content": "Recruiting is a volume game with tight timelines. Roles need to be filled fast, and the best candidates are already employed — they're not checking job boards. Cold email is the primary outreach channel, but recruiters face infrastructure challenges:\n\n**Volume demands exceed Gmail/Outlook limits.** A single recruiter may need to reach 500-2,000 candidates per month. Multiply that across a team, and you're sending thousands of emails daily — far beyond what Google or Microsoft accounts are designed for.\n\n**Candidate experience matters.** If your outreach emails land in spam, candidates never see them. Worse, if your domain gets a bad reputation, even your follow-ups and interview scheduling emails suffer.\n\n**Multiple clients require isolation.** Staffing agencies work with many employers simultaneously. Mixing infrastructure across clients creates reputation risk — one bad campaign affects all your other clients.\n\n**LinkedIn alone isn't enough.** LinkedIn InMail response rates have declined as the platform becomes saturated. Email outreach consistently delivers higher response rates, but only when emails actually reach inboxes.\n\n**Speed is everything.** When a new req opens, recruiters need to start outreach immediately — not wait weeks for email warmup. The best candidates get scooped up within days."
+    },
+    "solution": {
+      "title": "How ColdRelay Solves Recruiter Infrastructure Challenges",
+      "content": "ColdRelay gives recruiters the email infrastructure to match their outreach velocity. At $1/mailbox, running 100-200 sending accounts is affordable enough to maintain healthy margins on placements. Dedicated IPs and isolated Azure tenants mean each client's outreach is completely separate — no cross-contamination. Auto DNS eliminates the technical setup that pulls recruiters away from actually recruiting. No warmup means you can start outreach the same day a new role opens. The 99% inbox guarantee ensures your messages reach candidates, not their spam folders."
+    },
+    "howItWorks": {
+      "title": "Setting Up ColdRelay for Recruiting Outreach",
+      "steps": [
+        { "title": "Plan Your Mailbox Strategy", "content": "Determine mailboxes per recruiter and per client. A typical setup uses 10-25 mailboxes per recruiter, with separate domains per client or practice area. ColdRelay's 100-150 mailboxes per domain means one domain per client usually suffices." },
+        { "title": "Order Infrastructure", "content": "Place your order through ColdRelay's self-service portal. Most recruiting teams start with 50-200 mailboxes. Specify domains that align with your recruiting brand." },
+        { "title": "Go Live in Hours", "content": "Infrastructure is provisioned in 2-4 hours with automated DNS. No warmup period — import mailboxes into your sequencing tool and start reaching candidates immediately." },
+        { "title": "Integrate with Your ATS", "content": "Connect ColdRelay mailboxes to your sequencing platform (Instantly, Smartlead, Gem, etc.) and sync with your ATS for candidate tracking." },
+        { "title": "Scale Per-Role or Per-Client", "content": "Add mailboxes as you take on new clients or high-volume roles. Volume pricing rewards growth: $0.85/mailbox at 200+ and $0.70 at 1,000+." }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits for Recruiters Using ColdRelay",
+      "items": [
+        { "title": "Reach More Candidates", "content": "With 100+ mailboxes each sending 3-5 emails/day, you can reach 300-500 new candidates daily without triggering spam filters. Dedicated IPs and proper DNS keep your messages in inboxes." },
+        { "title": "Client Campaign Isolation", "content": "Each client's recruiting campaigns run on separate infrastructure. A deliverability issue with one company's outreach never affects another — critical for staffing agencies managing multiple clients." },
+        { "title": "Start Outreach Day One", "content": "No warmup means you can launch candidate outreach the same day a role opens. In recruiting, speed-to-contact is the #1 predictor of placement success." },
+        { "title": "Affordable at Recruiting Scale", "content": "At $1/mailbox, running 200 mailboxes costs $170/month. A single placement fee covers months of infrastructure costs. The ROI is exceptional." },
+        { "title": "Professional Sender Reputation", "content": "Microsoft 365 mailboxes on dedicated Azure infrastructure carry professional credibility. Candidates see outreach from a legitimate email platform, not a suspicious unknown sender." }
+      ]
+    },
+    "metrics": {
+      "title": "Typical Recruiting Outreach Metrics with Dedicated Infrastructure",
+      "benchmarks": [
+        { "metric": "Candidate Reach per Day", "value": "300-500", "notes": "With 100+ mailboxes sending 3-5 emails each on dedicated infrastructure" },
+        { "metric": "Email Open Rate", "value": "45-65%", "notes": "Dedicated IPs and proper DNS typically deliver higher open rates vs. shared infrastructure" },
+        { "metric": "Reply Rate", "value": "8-15%", "notes": "Varies by role seniority and market — infrastructure ensures messages reach inboxes" },
+        { "metric": "Infrastructure Cost per Placement", "value": "$5-20", "notes": "At typical placement volumes, email infrastructure cost per hire is negligible" },
+        { "metric": "Time to First Outreach (New Role)", "value": "2-4 hours", "notes": "From infrastructure order to first candidate email — no warmup delay" },
+        { "metric": "Spam Folder Rate", "value": "<2%", "notes": "ColdRelay's 99% inbox guarantee ensures minimal spam folder placement" }
+      ]
+    }
+  },
+  "faqs": [
+    { "question": "How many mailboxes does a recruiting team need?", "answer": "It depends on team size and outreach volume. A solo recruiter typically needs 10-25 mailboxes. A staffing agency with 10 recruiters might need 100-250. ColdRelay's per-mailbox pricing means you only pay for what you use." },
+    { "question": "Can we separate infrastructure by client?", "answer": "Yes. ColdRelay provisions each order on isolated Azure tenants. You can order separate infrastructure for each client to ensure complete reputation isolation." },
+    { "question": "Will candidates see the email is from ColdRelay?", "answer": "No. Candidates see email from your recruiting domain and mailbox. ColdRelay provides the infrastructure behind the scenes — it's invisible to recipients." },
+    { "question": "Is cold email legal for recruiting?", "answer": "In most jurisdictions, cold email outreach for recruiting purposes is legal, especially for B2B outreach to professionals. ColdRelay provides infrastructure with proper authentication (SPF, DKIM, DMARC) which supports compliance with email regulations." },
+    { "question": "How does this compare to LinkedIn InMail?", "answer": "LinkedIn InMail has declining response rates and per-message costs ($1-3+/InMail). ColdRelay-powered email outreach costs fractions of a cent per email and typically delivers comparable or better response rates because emails land in inboxes candidates check daily." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-google-workspace", "coldrelay-vs-inframail"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-consultants"]
+  }
+}

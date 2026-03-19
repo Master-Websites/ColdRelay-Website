@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-inboxkit",
+  "competitor": "InboxKit",
+  "competitorUrl": "https://inboxkit.com",
+  "title": "ColdRelay vs InboxKit — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and InboxKit for cold email infrastructure. See pricing, mailbox providers, setup automation, and infrastructure quality side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay provides dedicated cold email infrastructure with Microsoft 365 mailboxes on isolated Azure tenants with dedicated IPs. Per-mailbox pricing: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+). Includes 100-150 mailboxes per domain, auto DNS, no warmup wait, 99% inbox guarantee, and 2-4 hour setup.",
+      "competitor": "InboxKit is a cold email infrastructure provider offering both Google Workspace and Microsoft 365 (Azure) mailboxes. They position themselves as the only official Google Cloud partner in the cold email space. Plans start at $31/month (Professional, 10 mailbox slots at $3.10/mailbox) with additional mailboxes at $3.10 each and Azure tenants at $30 each. InboxKit features include isolated admin panels per domain, built-in warmup ($3/mailbox/month add-on), InfraGuard domain protection, real-time monitoring, 15+ integrations, and full API access. Setup takes about 20 minutes."
+    },
+    "featureComparison": [
+      { "feature": "Price per Mailbox", "coldrelay": "$1/mailbox (1-199), scaling to $0.55 at 5K+", "competitor": "$3.10/mailbox — no volume discount published", "winner": "coldrelay" },
+      { "feature": "Mailbox Providers", "coldrelay": "Microsoft 365 (Azure) exclusively", "competitor": "Both Google Workspace and Microsoft 365 — official Google Cloud partner", "winner": "competitor" },
+      { "feature": "Infrastructure Isolation", "coldrelay": "Isolated Azure tenants with dedicated IPs per customer", "competitor": "Isolated admin panel per domain — cross-contamination protection", "winner": "tie" },
+      { "feature": "DNS Configuration", "coldrelay": "Fully automated SPF, DKIM, DMARC", "competitor": "Automated DNS configuration (DKIM, DMARC, SPF)", "winner": "tie" },
+      { "feature": "Warmup", "coldrelay": "No warmup required — included in infrastructure", "competitor": "Built-in warmup available as $3/mailbox/month add-on", "winner": "coldrelay" },
+      { "feature": "Domain Protection", "coldrelay": "Infrastructure isolation protects domain reputation", "competitor": "InfraGuard — always-on domain protection (first month free)", "winner": "competitor" },
+      { "feature": "Real-time Monitoring", "coldrelay": "Infrastructure monitoring through Azure", "competitor": "Real-time monitoring and alerts for mailbox health", "winner": "competitor" },
+      { "feature": "Setup Time", "coldrelay": "2-4 hours for complete deployment", "competitor": "20 minutes for basic setup — very fast provisioning", "winner": "competitor" },
+      { "feature": "API Access", "coldrelay": "Compatible with major sending platforms", "competitor": "Full API with webhooks on all plans", "winner": "tie" },
+      { "feature": "Inbox Guarantee", "coldrelay": "99% inbox placement guarantee with money-back promise", "competitor": "95% inbox delivery rate claimed", "winner": "coldrelay" },
+      { "feature": "Team Management", "coldrelay": "Standard account management", "competitor": "Unlimited team members and workspaces on all plans", "winner": "competitor" },
+      { "feature": "Cost at 100 Mailboxes", "coldrelay": "$100/month", "competitor": "$310/month (100 × $3.10)", "winner": "coldrelay" }
+    ],
+    "coldrelayWins": "ColdRelay's per-mailbox pricing is 3x cheaper than InboxKit at every volume tier. At 100 mailboxes, ColdRelay costs $100/month vs. InboxKit's $310 — a $210/month savings. At 500 mailboxes, it's $350 vs. $1,550. The savings compound further because ColdRelay's warmup is included (no warmup wait needed), while InboxKit charges $3/mailbox/month extra for warmup. Adding warmup to 100 InboxKit mailboxes increases the monthly cost to $610/month. ColdRelay's 99% inbox guarantee is higher than InboxKit's claimed 95% rate, and it's backed by a money-back promise.",
+    "competitorWins": "InboxKit's strongest advantage is being an official Google Cloud partner — giving access to Google Workspace mailboxes alongside Microsoft 365. Provider diversification (sending from both Google and Microsoft infrastructure) can improve deliverability for some campaigns. InboxKit's 20-minute setup is genuinely faster than ColdRelay's 2-4 hours. The InfraGuard domain protection and real-time monitoring features show a product-first approach to deliverability beyond just infrastructure. Unlimited team members and workspaces on all plans is great for agencies managing multiple clients. The full API with webhooks enables sophisticated automation workflows.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if per-mailbox cost is important and you're comfortable with Microsoft 365 exclusively. ColdRelay is the right choice for any operation where 3x pricing difference matters — which is most operations. At 200+ mailboxes, the savings compared to InboxKit are substantial enough to justify choosing ColdRelay even if you want some Google mailboxes from another provider.",
+    "whoShouldChooseCompetitor": "Choose InboxKit if Google Workspace mailboxes are a requirement and you need the official Google Cloud partnership backing. InboxKit is also appealing for teams that want faster setup, InfraGuard domain protection, and built-in monitoring dashboards — and are willing to pay a premium for those features.",
+    "verdict": "ColdRelay is significantly cheaper — 3x less per mailbox before accounting for InboxKit's paid warmup add-on. For most cold email operations, the cost difference makes ColdRelay the obvious infrastructure choice. InboxKit justifies its premium through Google Workspace access, faster setup, and monitoring tools, but you're paying 3x more per mailbox for those extras. If budget matters (and it always does at scale), ColdRelay wins decisively."
+  },
+  "faqs": [
+    { "question": "How much more expensive is InboxKit than ColdRelay?", "answer": "InboxKit costs $3.10/mailbox vs. ColdRelay's $1.00 (or less at volume). At 100 mailboxes, that's $310 vs. $100/month. Adding InboxKit's warmup ($3/mailbox) makes it $610 vs. $100 — over 6x more expensive." },
+    { "question": "Does ColdRelay offer Google Workspace mailboxes?", "answer": "No. ColdRelay exclusively provides Microsoft 365 on Azure. InboxKit is the better choice if you specifically need Google Workspace mailboxes." },
+    { "question": "Is InboxKit's faster setup worth the price premium?", "answer": "InboxKit sets up in 20 minutes vs. ColdRelay's 2-4 hours. That's a one-time difference — you save 2 hours once but pay 3x more every month forever. For most teams, ColdRelay's lower ongoing cost far outweighs the slightly longer initial setup." },
+    { "question": "What is InboxKit's InfraGuard?", "answer": "InfraGuard is InboxKit's always-on domain protection feature that monitors and protects domain health. ColdRelay achieves domain protection through infrastructure isolation (dedicated Azure tenants) rather than a named monitoring product." },
+    { "question": "Which has better deliverability?", "answer": "ColdRelay guarantees 99% inbox placement with a money-back promise. InboxKit claims a 95% inbox delivery rate. ColdRelay's guarantee is both higher and backed by a concrete commitment." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-maildoso", "coldrelay-vs-mailforge", "coldrelay-vs-inframail"],
+    "useCases": ["cold-email-infrastructure-for-saas", "cold-email-infrastructure-for-startups"]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-maildoso",
+  "competitor": "Maildoso",
+  "competitorUrl": "https://maildoso.ai",
+  "title": "ColdRelay vs Maildoso — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and Maildoso for cold email infrastructure. See pricing, infrastructure quality, setup automation, and deliverability features side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay provisions Microsoft 365 mailboxes on dedicated, isolated Azure tenants with dedicated IPs. Per-mailbox pricing: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+). Features include 100-150 mailboxes per domain, auto DNS, no warmup wait, 99% inbox guarantee, 2-4 hour setup, and a minimum of 50 mailboxes.",
+      "competitor": "Maildoso is a cold email infrastructure platform offering automated mailbox provisioning with both SMTP and Google Workspace options. Pricing is tiered: 32 mailboxes for $100/month (~$3.10/mailbox), 68 mailboxes for $166/month (~$2.40/mailbox), and 400 mailboxes for $733/month (~$1.80/mailbox). Billed quarterly. SMTP mailboxes from $1.90/mailbox and Google Workspace from $2.50/mailbox at 200+ volumes. Features include automated DNS setup, built-in warmup, auto-heal (replaces burned mailboxes), master inbox, domain audit, one-click integration with Instantly and Smartlead, and CAPTCHA domain protection."
+    },
+    "featureComparison": [
+      { "feature": "Price per Mailbox (Base)", "coldrelay": "$1/mailbox at 1-199 volume", "competitor": "$3.10/mailbox at 32 volume, $2.40 at 68, $1.80 at 400", "winner": "coldrelay" },
+      { "feature": "Price per Mailbox (Volume)", "coldrelay": "$0.55/mailbox at 5K+ volume", "competitor": "$1.90/mailbox (SMTP) or $2.50 (Google) at 200+ volume", "winner": "coldrelay" },
+      { "feature": "Billing Frequency", "coldrelay": "Monthly billing — no quarterly lock-in", "competitor": "Billed quarterly — 3-month commitment upfront", "winner": "coldrelay" },
+      { "feature": "Mailbox Provider Options", "coldrelay": "Microsoft 365 (Azure) exclusively", "competitor": "SMTP-based mailboxes and Google Workspace options", "winner": "competitor" },
+      { "feature": "Infrastructure Isolation", "coldrelay": "Isolated Azure tenants with dedicated IPs", "competitor": "Infrastructure approach not detailed — focus on mailbox management features", "winner": "coldrelay" },
+      { "feature": "DNS Configuration", "coldrelay": "Fully automated SPF, DKIM, DMARC", "competitor": "Automated DNS setup (DKIM, DMARC, SPF, MX)", "winner": "tie" },
+      { "feature": "Warmup", "coldrelay": "No warmup needed — send from day 1", "competitor": "Built-in warmup included (premium warmup add-on costs $160-$2,000/month extra)", "winner": "coldrelay" },
+      { "feature": "Auto-Heal", "coldrelay": "Not included — stable infrastructure designed to prevent issues", "competitor": "Auto-replaces burned or suspended mailboxes automatically", "winner": "competitor" },
+      { "feature": "Master Inbox", "coldrelay": "Not included — infrastructure only", "competitor": "Master inbox for managing replies across multiple accounts", "winner": "competitor" },
+      { "feature": "Inbox Guarantee", "coldrelay": "99% inbox placement guarantee with money-back promise", "competitor": "No specific inbox percentage guarantee published", "winner": "coldrelay" },
+      { "feature": "Domain Audit", "coldrelay": "DNS configured correctly from setup — ongoing audit not included", "competitor": "Domain audit feature included", "winner": "competitor" },
+      { "feature": "Cost at 200 Mailboxes", "coldrelay": "$170/month ($0.85/mailbox)", "competitor": "$380/month ($1.90/mailbox SMTP) — billed quarterly as $1,140", "winner": "coldrelay" }
+    ],
+    "coldrelayWins": "ColdRelay is substantially cheaper at every volume level. At 200 mailboxes: $170/month (ColdRelay) vs. $380/month (Maildoso SMTP) — less than half the cost. At 1,000 mailboxes: $700/month vs. $1,900/month. The pricing gap is significant and widens at scale. ColdRelay also bills monthly, while Maildoso requires quarterly payment — meaning you're committing 3x the upfront cost with Maildoso. ColdRelay's no-warmup approach eliminates the cost and complexity of warmup entirely (Maildoso's premium warmup add-on can cost up to $2,000/month). The dedicated, isolated Azure tenants provide clearer infrastructure quality than Maildoso details. The 99% inbox guarantee adds concrete deliverability assurance.",
+    "competitorWins": "Maildoso offers features that go beyond pure infrastructure. The auto-heal function automatically replaces burned mailboxes — valuable for operations where mailbox turnover is expected. The master inbox centralizes replies across all sending accounts, simplifying response management. Domain audit tools help maintain ongoing domain health. The ability to choose between SMTP and Google Workspace mailboxes provides provider flexibility. Maildoso's one-click Instantly/Smartlead integration is well-executed, and the CAPTCHA domain protection adds a security layer. Maildoso is a more feature-complete platform for managing the full mailbox lifecycle.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if cost per mailbox is a priority and you want reliable, isolated infrastructure with a deliverability guarantee. ColdRelay is ideal for operations that want clean, dedicated infrastructure without paying for management features they can handle themselves or through their sending platform. The monthly billing and volume pricing make it the cost-effective choice at any scale.",
+    "whoShouldChooseCompetitor": "Choose Maildoso if you want a more managed mailbox platform with features like auto-heal, master inbox, and domain audit — and you're willing to pay 2-3x more per mailbox for those conveniences. Maildoso works well for teams that expect mailbox turnover and want automated replacement, or those who need Google Workspace mailboxes alongside SMTP options.",
+    "verdict": "ColdRelay is 2-3x cheaper per mailbox than Maildoso at every volume level, with better infrastructure isolation and a concrete inbox guarantee. Maildoso offers more mailbox management features (auto-heal, master inbox, domain audit) that justify some premium for teams that value convenience. For cost-conscious operations that prioritize infrastructure quality over management features, ColdRelay is the clear winner."
+  },
+  "faqs": [
+    { "question": "How much cheaper is ColdRelay than Maildoso?", "answer": "At 200 mailboxes: ColdRelay is $170/month vs. Maildoso's $380/month (SMTP). At 1,000 mailboxes: $700/month vs. ~$1,900/month. ColdRelay consistently costs 45-55% less." },
+    { "question": "Does ColdRelay have auto-heal like Maildoso?", "answer": "No. ColdRelay focuses on preventing mailbox issues through dedicated infrastructure (isolated tenants, dedicated IPs). Maildoso's auto-heal automatically replaces burned mailboxes — a different approach to the same problem." },
+    { "question": "Does Maildoso require quarterly billing?", "answer": "Yes — Maildoso's standard plans are billed quarterly. ColdRelay bills monthly with no multi-month commitment required." },
+    { "question": "Which has better deliverability?", "answer": "ColdRelay offers a 99% inbox placement guarantee with a money-back promise and uses dedicated, isolated Azure tenants. Maildoso doesn't publish a specific deliverability guarantee. Some Maildoso users have reported SMTP deliverability issues." },
+    { "question": "Can Maildoso provide Google Workspace mailboxes?", "answer": "Yes — Maildoso offers Google Workspace accounts from $2.50/mailbox (at 200+ volume). ColdRelay only provides Microsoft 365 on Azure." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-mailforge", "coldrelay-vs-inframail", "coldrelay-vs-inboxkit"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-lead-gen-agencies"]
+  }
+}

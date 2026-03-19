@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-scaled-mail",
+  "competitor": "ScaledMail",
+  "competitorUrl": "https://scaledmail.com",
+  "title": "ColdRelay vs ScaledMail — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and ScaledMail for cold email infrastructure and outreach. See pricing, infrastructure approach, features, and deliverability side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay provides dedicated cold email infrastructure — Microsoft 365 mailboxes on isolated Azure tenants with dedicated IPs. Pricing is per-mailbox: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+). Features include 100-150 mailboxes per domain, automated DNS, no warmup wait, and a 99% inbox guarantee. Setup takes 2-4 hours with a minimum of 50 mailboxes.",
+      "competitor": "ScaledMail positions itself as both a cold email infrastructure and outreach automation platform. It combines mailbox provisioning with campaign management features. Plans are tiered by outreach volume: Solopreneur at $79/month (contact ~2,000 prospects/month), Business at $119/month (~10,000 prospects), and Enterprise at $249/month (~30,000 prospects). ScaledMail offers automated inbox creation, domain purchasing, CSV export of ready-to-use accounts, and claims 5x cheaper pricing with 50x faster setup compared to traditional methods."
+    },
+    "featureComparison": [
+      { "feature": "Pricing Model", "coldrelay": "Per-mailbox: $1-$0.55/mailbox/month — pay for exactly the infrastructure you need", "competitor": "Tiered plans: $79-$249/month based on outreach volume, not mailbox count", "winner": "tie" },
+      { "feature": "Infrastructure Isolation", "coldrelay": "Fully isolated Azure tenants with dedicated IPs — your reputation is yours alone", "competitor": "Infrastructure details less transparent — focus is on the outreach platform rather than infrastructure specifics", "winner": "coldrelay" },
+      { "feature": "Mailbox Provisioning", "coldrelay": "100-150 mailboxes per domain with automated setup", "competitor": "Create 50 to 1,000 mailboxes in 60 seconds with instant CSV export", "winner": "tie" },
+      { "feature": "DNS Configuration", "coldrelay": "Fully automated SPF, DKIM, DMARC", "competitor": "Automated DNS configuration included", "winner": "tie" },
+      { "feature": "Campaign Management", "coldrelay": "Infrastructure only — pairs with Instantly, Smartlead, etc. for campaign management", "competitor": "Built-in outreach platform with campaign management features", "winner": "competitor" },
+      { "feature": "Deliverability Guarantee", "coldrelay": "99% inbox placement guarantee with money-back promise", "competitor": "'Get more replies or you don't pay' guarantee", "winner": "tie" },
+      { "feature": "Setup Speed", "coldrelay": "2-4 hours for complete infrastructure deployment", "competitor": "Mailboxes created in 60 seconds (provisioning), but domain and DNS setup time varies", "winner": "tie" },
+      { "feature": "Warmup", "coldrelay": "No warmup required — send from day 1", "competitor": "Warmup approach not detailed — platform focuses on inbox creation speed", "winner": "coldrelay" },
+      { "feature": "Flexibility", "coldrelay": "Start with 50 mailboxes, scale to 5,000+ with volume pricing", "competitor": "Locked into plan tiers — need to upgrade plans as volume grows", "winner": "coldrelay" },
+      { "feature": "Domain Management", "coldrelay": "Bring your own domains or purchase through ColdRelay", "competitor": "Buy or add domains directly inside the platform", "winner": "tie" },
+      { "feature": "Free Trial", "coldrelay": "No free trial — but 99% guarantee provides risk coverage", "competitor": "7-day free trial on all plans", "winner": "competitor" },
+      { "feature": "All-in-One vs. Best-of-Breed", "coldrelay": "Best-of-breed infrastructure — pairs with your preferred sending platform", "competitor": "All-in-one platform combining infrastructure with outreach features", "winner": "tie" }
+    ],
+    "coldrelayWins": "ColdRelay's per-mailbox pricing gives you precise cost control — you pay for infrastructure, not outreach volume tiers. The dedicated, isolated Azure tenants with dedicated IPs provide a level of infrastructure transparency and quality that ScaledMail doesn't detail. ColdRelay's 99% inbox placement guarantee is specific and measurable, backed by a money-back promise. For teams that already use a sending platform (Instantly, Smartlead, etc.), ColdRelay's infrastructure-only approach means you're not paying for campaign features you won't use. At scale, ColdRelay's volume pricing ($0.55/mailbox at 5K+) can be significantly cheaper than ScaledMail's tier-based model.",
+    "competitorWins": "ScaledMail's biggest advantage is the all-in-one approach. If you want mailbox provisioning and campaign management in a single platform, ScaledMail removes the need to integrate separate tools. The 7-day free trial lets you test before committing — something ColdRelay doesn't offer. For solopreneurs and small teams just getting started with cold email, ScaledMail's $79/month plan includes everything you need to start reaching prospects. The instant 60-second mailbox creation is genuinely fast for small-batch operations.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if you want dedicated, isolated infrastructure with transparent per-mailbox pricing and you already have (or plan to use) a separate sending platform. ColdRelay is ideal for agencies and larger operations that need infrastructure they can trust at scale — with clear isolation guarantees and volume pricing that gets cheaper as you grow.",
+    "whoShouldChooseCompetitor": "Choose ScaledMail if you want an all-in-one platform that handles both infrastructure and campaign management. It's especially appealing for solopreneurs and small teams who prefer a single tool over integrating multiple services. The free trial makes it low-risk to evaluate.",
+    "verdict": "ColdRelay and ScaledMail take different approaches: ColdRelay is pure infrastructure with guaranteed isolation and per-mailbox pricing, while ScaledMail is an all-in-one platform bundling infrastructure with outreach tools. For serious cold email operations that need infrastructure transparency and scale, ColdRelay is the stronger choice. For individuals wanting a simple, all-in-one starting point, ScaledMail's bundled approach has appeal."
+  },
+  "faqs": [
+    { "question": "Is ScaledMail cheaper than ColdRelay?", "answer": "It depends on volume. ScaledMail's $79/month Solopreneur plan may include enough for small operations. But as you scale, ColdRelay's per-mailbox pricing ($0.70 at 1K+ mailboxes) gives more granular cost control and potentially lower costs at higher volumes." },
+    { "question": "Do I need a separate sending tool with ColdRelay?", "answer": "Yes. ColdRelay provides email infrastructure (mailboxes, domains, DNS). You'll pair it with a sending platform like Instantly or Smartlead for campaign management. ScaledMail bundles some outreach features into its plans." },
+    { "question": "Does ScaledMail offer dedicated IPs?", "answer": "ScaledMail doesn't prominently detail its infrastructure isolation approach. ColdRelay explicitly provides dedicated IPs and isolated Azure tenants for every deployment." },
+    { "question": "Can I try ColdRelay before buying?", "answer": "ColdRelay doesn't offer a free trial, but the 99% inbox placement guarantee with a money-back promise means you're protected if the infrastructure doesn't perform. ScaledMail offers a 7-day free trial." },
+    { "question": "Which is better for an agency managing multiple clients?", "answer": "ColdRelay's per-mailbox volume pricing and infrastructure isolation make it well-suited for agencies managing many clients. Each client can have isolated infrastructure. ScaledMail's plan-based pricing may require multiple subscriptions for separate client management." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-mailscale", "coldrelay-vs-inframail", "coldrelay-vs-maildoso"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-freelancers"]
+  }
+}

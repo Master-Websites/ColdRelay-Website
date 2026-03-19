@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-mailreef",
+  "competitor": "Mailreef",
+  "competitorUrl": "https://mailreef.com",
+  "title": "ColdRelay vs Mailreef — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and Mailreef for cold email infrastructure. See pricing, dedicated server approach, deliverability features, and scalability side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay provisions Microsoft 365 mailboxes on dedicated, isolated Azure tenants with dedicated IPs. Pricing is per-mailbox: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+). Each setup includes 100-150 mailboxes per domain, automated SPF/DKIM/DMARC, no warmup wait, and a 99% inbox placement guarantee. Minimum 50 mailboxes with 2-4 hour setup.",
+      "competitor": "Mailreef markets itself as the most stable and reliable cold email infrastructure, built by cold emailers for cold emailers. They provide dedicated mail servers with dedicated IPs, unlimited free inboxes, and BYO domain support. Their single plan — Agency Flex — costs $249/month per server plus $0.001/send. Mailreef emphasizes 99.9% uptime, zero blocked mailboxes, and claims 100M+ emails sent monthly across their platform. Features include 1-click domain purchases, 1-click mailbox creation, auto DNS, delivery consulting, and integration with Smartlead and Instantly."
+    },
+    "featureComparison": [
+      { "feature": "Pricing Model", "coldrelay": "Per-mailbox: $1-$0.55/mailbox/month — precise cost per inbox", "competitor": "$249/month per server + $0.001/send — flat server fee plus usage", "winner": "tie" },
+      { "feature": "Mailbox Capacity", "coldrelay": "100-150 mailboxes per domain, scale with additional domains", "competitor": "150+ mailboxes per server, unlimited free inboxes per server", "winner": "competitor" },
+      { "feature": "Dedicated Infrastructure", "coldrelay": "Isolated Azure tenants with dedicated IPs", "competitor": "Dedicated mail server with dedicated IP address — full server ownership", "winner": "tie" },
+      { "feature": "DNS Configuration", "coldrelay": "Fully automated SPF, DKIM, DMARC", "competitor": "Auto-create SPF, DKIM, DMARC with 1-click setup", "winner": "tie" },
+      { "feature": "Warmup", "coldrelay": "No warmup required — send from day 1 with pre-optimized infrastructure", "competitor": "Pre-warmed server, pre-warmed domains, and pre-warmed mailboxes", "winner": "tie" },
+      { "feature": "Per-Send Costs", "coldrelay": "No per-send charges — flat per-mailbox pricing covers everything", "competitor": "$0.001 per email sent — adds up at high volume (100K sends = $100 extra/month)", "winner": "coldrelay" },
+      { "feature": "Delivery Consulting", "coldrelay": "Technical infrastructure focus — deliverability through setup quality", "competitor": "Live delivery consulting included with real-time expert support", "winner": "competitor" },
+      { "feature": "Spammer Screening", "coldrelay": "Infrastructure quality maintained through best practices", "competitor": "Active screening for spammers — protects shared reputation", "winner": "competitor" },
+      { "feature": "Uptime", "coldrelay": "Dedicated Azure infrastructure with Microsoft's SLA backing", "competitor": "99.9% mail server uptime — zero blocked mailboxes claimed", "winner": "tie" },
+      { "feature": "Minimum Commitment", "coldrelay": "50 mailboxes minimum — as low as $50/month to start", "competitor": "$249/month minimum for one server — higher entry point", "winner": "coldrelay" },
+      { "feature": "Setup Time", "coldrelay": "2-4 hours", "competitor": "1-click domain and mailbox creation — rapid provisioning", "winner": "tie" },
+      { "feature": "Cost at 150 Mailboxes, 50K Sends/Month", "coldrelay": "$150/month (150 × $1, no send fees)", "competitor": "$299/month ($249 server + $50 send fees)", "winner": "coldrelay" }
+    ],
+    "coldrelayWins": "ColdRelay's per-mailbox pricing with no per-send fees makes costs completely predictable. At 150 mailboxes sending 50K emails/month, ColdRelay costs $150 vs. Mailreef's $299 — nearly half the price. The lower entry point ($50 for 50 mailboxes vs. $249/month minimum) makes ColdRelay accessible to teams that want to start small and scale. ColdRelay also avoids the variable cost uncertainty of per-send pricing — you know your exact monthly cost regardless of sending volume. The 99% inbox guarantee with a money-back promise provides concrete deliverability assurance.",
+    "competitorWins": "Mailreef's dedicated server approach gives you true server-level ownership — not just isolated tenants, but actual dedicated mail servers with your own IP. The live delivery consulting is a genuine differentiator: having real experts available to help optimize your sending is invaluable, especially when troubleshooting deliverability issues. Mailreef's spammer screening protects the ecosystem by actively filtering bad actors, which helps maintain IP reputation for legitimate users. The unlimited mailboxes per server model is attractive for teams that want to maximize density without per-inbox costs. Their 99.9% uptime claim and 100M+ monthly email volume suggest battle-tested infrastructure.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if you want predictable per-mailbox pricing without per-send surprises, a low minimum commitment, and the confidence of a 99% inbox guarantee. ColdRelay is ideal for teams scaling from small to large operations who want straightforward cost planning — especially high-volume senders who would rack up per-send fees on Mailreef.",
+    "whoShouldChooseCompetitor": "Choose Mailreef if you want a dedicated mail server with live delivery consulting and don't mind the $249/month minimum and per-send fees. Mailreef is well-suited for established agencies already sending at scale (100K+ emails/month) who value expert deliverability support and full server control. If you're sending over 250K emails/month on a single server, the unlimited mailbox model can be cost-effective.",
+    "verdict": "Both platforms deliver quality cold email infrastructure with dedicated IPs and automated DNS. ColdRelay wins on pricing transparency, lower entry barrier, and absence of per-send fees — making it the better choice for cost-conscious teams and those scaling up. Mailreef wins on the managed service side with live delivery consulting and a dedicated server model that appeals to high-volume operations willing to pay the premium."
+  },
+  "faqs": [
+    { "question": "How does Mailreef's pricing compare to ColdRelay at scale?", "answer": "At 150 mailboxes sending 50K emails/month: ColdRelay costs $150 vs. Mailreef's $299. At 300 mailboxes (2 servers on Mailreef) sending 200K/month: ColdRelay costs $255 ($0.85/mailbox) vs. Mailreef's $698 ($498 servers + $200 sends). ColdRelay is significantly cheaper at most volumes." },
+    { "question": "Does Mailreef charge per email sent?", "answer": "Yes. Mailreef charges $0.001 per email sent on top of the $249/month server fee. This means sending 100,000 emails costs an additional $100/month. ColdRelay has no per-send charges." },
+    { "question": "Which offers better deliverability support?", "answer": "Mailreef includes live delivery consulting with real experts. ColdRelay focuses on delivering high-quality infrastructure with its 99% inbox guarantee. If you want hands-on expert support, Mailreef has the edge. If you want guaranteed results, ColdRelay's inbox guarantee is more concrete." },
+    { "question": "Can I start with a small setup on Mailreef?", "answer": "Mailreef's minimum is $249/month for one server. ColdRelay lets you start with as few as 50 mailboxes ($50/month), making it much more accessible for smaller operations or testing." },
+    { "question": "Does Mailreef use Microsoft 365 like ColdRelay?", "answer": "Mailreef uses their own dedicated mail servers rather than Microsoft 365. ColdRelay uses Microsoft 365 on isolated Azure tenants. Both approaches have merits — Microsoft 365 benefits from Microsoft's reputation, while dedicated servers give full control." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-inframail", "coldrelay-vs-hypertide", "coldrelay-vs-sending-ac"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-lead-gen-agencies"]
+  }
+}

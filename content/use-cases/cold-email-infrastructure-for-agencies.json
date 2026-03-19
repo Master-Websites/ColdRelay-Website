@@ -1,0 +1,61 @@
+{
+  "slug": "cold-email-infrastructure-for-agencies",
+  "industry": "Agencies",
+  "title": "Cold Email Infrastructure for Agencies — Scale Outbound for Every Client",
+  "description": "Discover how agencies use ColdRelay's dedicated cold email infrastructure to run outbound campaigns across multiple clients with isolated domains, dedicated IPs, and volume pricing.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "painPoints": {
+      "title": "Why Agencies Struggle with Cold Email Infrastructure",
+      "content": "Agencies face a unique infrastructure challenge: every client needs their own sending infrastructure, but managing dozens of separate setups is a nightmare. The typical agency pain points include:\n\n**Client isolation is critical.** If one client's domain gets flagged, it can't contaminate another client's reputation. Shared infrastructure creates risk that agencies can't afford.\n\n**Scale economics don't work with retail pricing.** At $6-7/mailbox on Google Workspace or Microsoft 365 direct, managing 500-2,000 mailboxes across 10-20 clients gets prohibitively expensive. Infrastructure costs eat into margins that should be profit.\n\n**DNS configuration is a time sink.** Setting up SPF, DKIM, and DMARC for every new client domain is manual, error-prone, and takes hours. Multiply by 20 clients and you've burned a full work week just on DNS.\n\n**Warmup delays kill client timelines.** Clients expect results fast. Spending 2-4 weeks warming up new mailboxes before a single outreach email goes out creates frustration and delays revenue.\n\n**Account suspensions destroy client trust.** Using Google Workspace or Microsoft 365 for cold email risks account suspension. Explaining to a client that their entire email infrastructure got shut down overnight is a relationship-ending conversation."
+    },
+    "solution": {
+      "title": "How ColdRelay Solves Agency Infrastructure Challenges",
+      "content": "ColdRelay is built for the agency use case. Dedicated, isolated Azure tenants mean each client's infrastructure is completely separate — no cross-contamination risk. Volume pricing from $1/mailbox (dropping to $0.55 at 5K+) makes running 500-2,000 mailboxes across your client base economically viable. Auto DNS eliminates the hours of manual SPF/DKIM/DMARC configuration. No warmup required means your clients see results from week one, not week four. And because ColdRelay is purpose-built for cold email, there's zero suspension risk — unlike Google Workspace or Microsoft 365 where a ToS violation can wipe out a client's infrastructure overnight.\n\nFor agencies, ColdRelay transforms email infrastructure from an operational headache into a competitive advantage: faster setup, lower costs, better deliverability, and zero risk of account shutdowns."
+    },
+    "howItWorks": {
+      "title": "Setting Up ColdRelay for Your Agency",
+      "steps": [
+        { "title": "Plan Client Infrastructure", "content": "Determine the mailbox count per client based on their outreach volume. A typical client needs 50-200 mailboxes across 1-4 domains. ColdRelay's 100-150 mailboxes per domain means most clients need just 1-2 domains." },
+        { "title": "Order and Configure", "content": "Place your order through ColdRelay's self-service portal. Specify domains, mailbox counts, and configurations for each client. Auto DNS handles SPF, DKIM, and DMARC for every domain." },
+        { "title": "Receive Infrastructure", "content": "Within 2-4 hours, your client's dedicated Azure tenant is provisioned with dedicated IPs, configured mailboxes, and verified DNS. Each client's infrastructure is completely isolated." },
+        { "title": "Connect to Sending Platform", "content": "Import the provisioned mailboxes into your preferred sending platform — Instantly, Smartlead, or any other tool that supports SMTP/IMAP. Start campaigns immediately." },
+        { "title": "Scale with Volume Pricing", "content": "As you onboard more clients, your per-mailbox cost decreases. At 200+ total mailboxes you're at $0.85 each. At 1,000+ you're at $0.70. At 5,000+ you hit $0.55 — your margins improve as you grow." }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits for Agencies Using ColdRelay",
+      "items": [
+        { "title": "Client Isolation Guaranteed", "content": "Each client runs on their own isolated Azure tenant with dedicated IPs. A deliverability issue with one client never affects another. This is the #1 infrastructure requirement for agencies managing multiple brands." },
+        { "title": "Volume Economics", "content": "At $0.55/mailbox (5K+ tier), running 100 mailboxes per client across 50 clients costs $2,750/month. The same setup on Google Workspace would cost $35,000+/month. That margin difference is pure profit." },
+        { "title": "Same-Day Client Onboarding", "content": "New client signs on Monday? Their infrastructure is live by Monday afternoon. No 2-4 week warmup delays. Campaigns start immediately with ColdRelay's pre-optimized infrastructure." },
+        { "title": "Zero Suspension Risk", "content": "Purpose-built cold email infrastructure means no ToS violations, no surprise suspensions, no awkward calls to clients explaining why their email is down." },
+        { "title": "Simplified Operations", "content": "Auto DNS eliminates hours of manual configuration per client. Consistent infrastructure across all clients reduces troubleshooting complexity and training requirements." }
+      ]
+    },
+    "metrics": {
+      "title": "Typical Agency Metrics with Dedicated Infrastructure",
+      "benchmarks": [
+        { "metric": "Inbox Placement Rate", "value": "95-99%", "notes": "Dedicated IPs and isolated tenants deliver consistently high inbox rates — ColdRelay guarantees 99%" },
+        { "metric": "Client Onboarding Time", "value": "2-4 hours", "notes": "From order to sending-ready infrastructure, including DNS propagation" },
+        { "metric": "Infrastructure Cost per Client", "value": "$50-$150/month", "notes": "Typical client with 50-150 mailboxes at volume pricing tiers" },
+        { "metric": "DNS Configuration Time", "value": "0 minutes", "notes": "Fully automated SPF, DKIM, DMARC — no manual DNS work required" },
+        { "metric": "Account Suspension Rate", "value": "0%", "notes": "Purpose-built infrastructure eliminates suspension risk entirely" },
+        { "metric": "Monthly Savings vs. Google Workspace", "value": "80-92%", "notes": "At volume pricing, ColdRelay costs a fraction of Google Workspace per mailbox" }
+      ]
+    }
+  },
+  "faqs": [
+    { "question": "Can each client have their own isolated infrastructure?", "answer": "Yes. ColdRelay provisions each order on its own isolated Azure tenant with dedicated IPs. Client A's infrastructure is completely separate from Client B's — no shared resources, no reputation cross-contamination." },
+    { "question": "How does agency pricing work with ColdRelay?", "answer": "ColdRelay's volume pricing applies to your total mailbox count across all clients. As your agency grows, per-mailbox costs decrease: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+)." },
+    { "question": "What happens if a client churns?", "answer": "Shut down their mailboxes and stop paying for them. ColdRelay bills monthly with no long-term commitments — you're not locked into infrastructure for clients who leave." },
+    { "question": "Can I white-label ColdRelay for my clients?", "answer": "ColdRelay provides the infrastructure behind the scenes. Your clients see their own domains and mailboxes — ColdRelay isn't visible to them. You can position the infrastructure as part of your agency's service." },
+    { "question": "How many mailboxes should I set up per client?", "answer": "It depends on outreach volume. Most agencies start with 50-100 mailboxes per client (sending 2-5 emails/day per mailbox). High-volume clients may need 200-500 mailboxes. ColdRelay supports 100-150 mailboxes per domain." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-inframail", "coldrelay-vs-maildoso", "coldrelay-vs-google-workspace"],
+    "useCases": ["cold-email-infrastructure-for-lead-gen-agencies", "cold-email-infrastructure-for-marketing-agencies"]
+  }
+}

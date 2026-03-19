@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-superwave",
+  "competitor": "Superwave",
+  "competitorUrl": "https://superwave.ai",
+  "title": "ColdRelay vs Superwave — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and Superwave for cold email infrastructure. See pricing, setup, deliverability features, and infrastructure quality side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay is a cold email infrastructure provider delivering Microsoft 365 mailboxes on isolated Azure tenants with dedicated IPs. Pricing starts at $1/mailbox/month with volume discounts to $0.55 at scale. Features include 100-150 mailboxes per domain, auto DNS configuration (SPF, DKIM, DMARC), no warmup wait, and a 99% inbox placement guarantee. Minimum order is just 50 mailboxes with 2-4 hour setup.",
+      "competitor": "Superwave is a newer entrant in the cold email infrastructure space, focusing on providing managed email infrastructure for cold outreach. They offer automated mailbox provisioning with Microsoft 365 and Google Workspace options, DNS auto-configuration, and integration with popular cold email platforms. Superwave positions itself as a managed service with concierge setup support and deliverability consulting. Pricing details are typically provided through their sales team."
+    },
+    "featureComparison": [
+      { "feature": "Pricing Transparency", "coldrelay": "Fully transparent: $1/mailbox (1-199), $0.85 (200-999), $0.70 (1K-4999), $0.55 (5K+)", "competitor": "Custom pricing — requires contacting sales for quotes", "winner": "coldrelay" },
+      { "feature": "Infrastructure Isolation", "coldrelay": "Dedicated, isolated Azure tenants with dedicated IPs — guaranteed separation", "competitor": "Managed infrastructure with isolation features — specifics vary by plan", "winner": "coldrelay" },
+      { "feature": "DNS Configuration", "coldrelay": "Fully automated SPF, DKIM, DMARC for all domains", "competitor": "Automated DNS setup with concierge support available", "winner": "tie" },
+      { "feature": "Mailbox Providers", "coldrelay": "Microsoft 365 exclusively — deep expertise in Azure/Exchange", "competitor": "Both Microsoft 365 and Google Workspace options available", "winner": "competitor" },
+      { "feature": "Setup Time", "coldrelay": "2-4 hours with automated provisioning", "competitor": "Managed setup with concierge support — typically same-day", "winner": "tie" },
+      { "feature": "Warmup", "coldrelay": "No warmup required — send from day 1", "competitor": "Warmup support included with managed onboarding", "winner": "coldrelay" },
+      { "feature": "Inbox Guarantee", "coldrelay": "99% inbox placement guarantee with money-back promise", "competitor": "No published inbox guarantee", "winner": "coldrelay" },
+      { "feature": "Minimum Order", "coldrelay": "50 mailboxes — low barrier to entry", "competitor": "Varies — contact sales for minimum requirements", "winner": "coldrelay" },
+      { "feature": "Deliverability Consulting", "coldrelay": "Infrastructure focused — deliverability through technical setup", "competitor": "Hands-on deliverability consulting and managed service approach", "winner": "competitor" },
+      { "feature": "Self-Service", "coldrelay": "Fully self-service ordering and management", "competitor": "More concierge/managed approach — less self-service", "winner": "tie" },
+      { "feature": "Scalability", "coldrelay": "Clear volume pricing from 50 to 5,000+ mailboxes", "competitor": "Scalable with custom pricing at higher volumes", "winner": "coldrelay" },
+      { "feature": "Mailboxes per Domain", "coldrelay": "100-150 mailboxes per domain for maximum utilization", "competitor": "Domain density varies by configuration", "winner": "coldrelay" }
+    ],
+    "coldrelayWins": "ColdRelay's biggest advantages over Superwave are pricing transparency and self-service simplicity. You know exactly what you'll pay before you buy — $1/mailbox at the base tier, with clear volume discounts. There's no need to schedule a sales call to get a quote. The 99% inbox placement guarantee with a money-back promise gives you quantifiable confidence in the infrastructure. ColdRelay's dedicated Azure tenants with dedicated IPs provide clear, guaranteed isolation. The no-warmup approach means you can start campaigns immediately, and the 2-4 hour setup is predictable and fast.",
+    "competitorWins": "Superwave's managed service approach is genuinely valuable for teams that want hands-on support. The concierge setup, deliverability consulting, and white-glove onboarding mean you're getting expert guidance, not just infrastructure. If you're newer to cold email or want someone to optimize your sending strategy alongside your infrastructure, Superwave's approach has merit. The option to use Google Workspace mailboxes alongside Microsoft 365 also gives more flexibility for inbox provider diversification.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if you want transparent pricing, guaranteed infrastructure isolation, and the ability to get started immediately without a sales process. ColdRelay is ideal for experienced cold email operators who know what they need and want to move fast — self-service ordering, automated setup, and clear volume pricing.",
+    "whoShouldChooseCompetitor": "Choose Superwave if you value a managed, concierge-style service with hands-on deliverability consulting. If you're newer to cold email infrastructure or want dedicated account management to help optimize your setup, Superwave's white-glove approach may be worth the premium.",
+    "verdict": "ColdRelay and Superwave take different approaches to the same problem. ColdRelay is the self-service, transparent-pricing option with guaranteed isolation and inbox performance. Superwave is the managed-service option with human expertise built in. For experienced operators who want speed, transparency, and cost efficiency, ColdRelay is the better fit. For teams wanting guided setup and ongoing deliverability support, Superwave's approach has value — but you'll need to contact their sales team to find out the actual cost."
+  },
+  "faqs": [
+    { "question": "How does Superwave's pricing compare to ColdRelay?", "answer": "Superwave requires contacting sales for pricing, so direct comparison is difficult. ColdRelay's pricing is fully transparent: $1/mailbox (1-199), scaling down to $0.55 at 5,000+ mailboxes." },
+    { "question": "Does Superwave offer a money-back guarantee?", "answer": "Superwave doesn't publish a specific inbox placement guarantee. ColdRelay offers a 99% inbox guarantee with a money-back promise." },
+    { "question": "Can I get Google Workspace mailboxes from ColdRelay?", "answer": "No. ColdRelay exclusively offers Microsoft 365 on Azure. If you need Google Workspace mailboxes, Superwave or other multi-provider platforms would be a better fit." },
+    { "question": "Which is better for agencies scaling cold email?", "answer": "ColdRelay's transparent volume pricing ($0.70 at 1K-4,999 mailboxes, $0.55 at 5K+) makes cost planning straightforward for agencies. Superwave may offer competitive agency rates, but you'll need to negotiate through their sales team." },
+    { "question": "How quickly can I start sending with each platform?", "answer": "ColdRelay: 2-4 hours with no warmup required. Superwave: typically same-day with concierge setup, but warmup timelines may vary based on their recommended approach." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-hypertide", "coldrelay-vs-inframail", "coldrelay-vs-scaled-mail"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-saas"]
+  }
+}

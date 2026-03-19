@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-mailscale",
+  "competitor": "Mailscale",
+  "competitorUrl": "https://mailscale.ai",
+  "title": "ColdRelay vs Mailscale — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and Mailscale for cold email infrastructure. See pricing, infrastructure approach, deliverability guarantees, and feature differences side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay provides dedicated cold email infrastructure with Microsoft 365 mailboxes on isolated Azure tenants with dedicated IPs. Per-mailbox pricing: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+). Includes 100-150 mailboxes per domain, auto DNS, no warmup wait, 99% inbox guarantee, and 2-4 hour setup.",
+      "competitor": "Mailscale is a cold email infrastructure and inbox creation platform that positions itself as 5x cheaper and 50x faster than Google/Microsoft direct. Plans are volume-tiered: Solopreneur at $79/month (~2,000 prospects/month), Business at $119/month (~10,000 prospects), Enterprise at $249/month (~30,000 prospects), and an Unlimited Mailboxes plan for 100,000+ emails/month. Mailscale emphasizes creating 50-1,000 mailboxes in under 60 seconds with instant CSV export, automated DNS, and claims 3,000+ customers. They offer a 7-day free trial and a 'get more replies or don't pay' guarantee."
+    },
+    "featureComparison": [
+      { "feature": "Pricing Model", "coldrelay": "Per-mailbox: $1-$0.55 — pay per inbox, no tiers", "competitor": "Tiered by outreach volume: $79-$249/month plus unlimited plan for high volume", "winner": "tie" },
+      { "feature": "Infrastructure Isolation", "coldrelay": "Isolated Azure tenants with dedicated IPs — guaranteed per-customer separation", "competitor": "Infrastructure details less specific — focus on inbox creation speed rather than isolation", "winner": "coldrelay" },
+      { "feature": "Mailbox Creation Speed", "coldrelay": "Automated provisioning — infrastructure ready in 2-4 hours", "competitor": "50-1,000 mailboxes in under 60 seconds with instant CSV export", "winner": "competitor" },
+      { "feature": "DNS Configuration", "coldrelay": "Fully automated SPF, DKIM, DMARC", "competitor": "Automated DNS setup included", "winner": "tie" },
+      { "feature": "Warmup", "coldrelay": "No warmup required — send from day 1", "competitor": "Not detailed — platform focuses on mailbox provisioning speed", "winner": "coldrelay" },
+      { "feature": "Inbox Guarantee", "coldrelay": "99% inbox placement guarantee with money-back promise", "competitor": "Get more replies or don't pay guarantee — less specific metric", "winner": "coldrelay" },
+      { "feature": "Free Trial", "coldrelay": "No free trial — covered by money-back guarantee", "competitor": "7-day free trial on all plans", "winner": "competitor" },
+      { "feature": "Customer Base", "coldrelay": "Growing platform with dedicated infrastructure focus", "competitor": "3,000+ customers — established market presence", "winner": "competitor" },
+      { "feature": "Domain Management", "coldrelay": "BYO domains with automated DNS setup", "competitor": "Buy or add domains inside the platform", "winner": "tie" },
+      { "feature": "Sending Platform Integration", "coldrelay": "Works with Instantly, Smartlead, and other major platforms", "competitor": "One-click add to email sending tool with CSV export", "winner": "tie" },
+      { "feature": "Minimum Commitment", "coldrelay": "50 mailboxes ($50/month)", "competitor": "$79/month (Solopreneur plan)", "winner": "coldrelay" },
+      { "feature": "Scalability Pricing", "coldrelay": "Volume discounts: $0.70 at 1K+, $0.55 at 5K+ mailboxes", "competitor": "Fixed plan tiers — need to upgrade as you grow", "winner": "coldrelay" }
+    ],
+    "coldrelayWins": "ColdRelay's infrastructure isolation is a clear differentiator — dedicated Azure tenants with dedicated IPs give you control over your sending reputation in a way that platform-based solutions can't match. The 99% inbox placement guarantee is specific and measurable, vs. Mailscale's vaguer 'more replies or don't pay' promise. ColdRelay's per-mailbox volume pricing means your cost per inbox decreases as you scale, while Mailscale's fixed tiers can be constraining. The no-warmup approach saves time and eliminates a common failure point in cold email operations. For serious infrastructure where isolation and deliverability are non-negotiable, ColdRelay provides more confidence.",
+    "competitorWins": "Mailscale's 60-second mailbox creation with instant CSV export is impressively fast — ideal for teams that need to spin up and down infrastructure frequently. The 7-day free trial removes purchase friction entirely. With 3,000+ customers, Mailscale has significant market validation and likely a more mature platform from a UX standpoint. The tiered plans with fixed monthly costs make budgeting simple for smaller teams. Mailscale's focus on being an all-in-one solution (buy domains, create mailboxes, export to sending tool) reduces the number of tools in your stack.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if infrastructure quality, isolation, and deliverability guarantees are your priorities. ColdRelay is best for operations that treat email infrastructure as critical sending infrastructure — agencies managing client campaigns, sales teams with strict deliverability requirements, and large operations benefiting from volume pricing.",
+    "whoShouldChooseCompetitor": "Choose Mailscale if you want fast mailbox provisioning, a free trial to test before committing, and fixed monthly costs. Mailscale works well for solopreneurs and small teams that want a simple, all-in-one approach to cold email infrastructure without worrying about infrastructure-level details.",
+    "verdict": "ColdRelay and Mailscale serve different segments of the cold email market. ColdRelay is the infrastructure-focused choice with guaranteed isolation, dedicated IPs, and volume pricing — ideal for serious operations. Mailscale is the speed-focused, all-in-one platform with rapid provisioning and fixed pricing — ideal for smaller teams getting started. For operations where deliverability and infrastructure quality matter most, ColdRelay is the stronger choice."
+  },
+  "faqs": [
+    { "question": "Can I create mailboxes as fast on ColdRelay as on Mailscale?", "answer": "Mailscale creates mailboxes in 60 seconds with CSV export. ColdRelay's infrastructure setup takes 2-4 hours because it provisions dedicated Azure tenants and configures DNS. The extra time reflects a more thorough infrastructure setup process." },
+    { "question": "Does Mailscale offer dedicated IPs?", "answer": "Mailscale doesn't prominently highlight dedicated IP infrastructure. ColdRelay explicitly provides dedicated IPs with isolated Azure tenants for every deployment." },
+    { "question": "Which is cheaper at 500 mailboxes?", "answer": "ColdRelay at $350/month ($0.70/mailbox at 1K tier, or ~$425 at 200-999 tier). Mailscale's Enterprise plan at $249/month covers up to ~30,000 prospects but specific mailbox limits per plan aren't clearly documented. Direct comparison depends on Mailscale's actual mailbox allowances per tier." },
+    { "question": "Does Mailscale have a free trial?", "answer": "Yes — Mailscale offers a 7-day free trial on all plans. ColdRelay doesn't offer a free trial but provides a 99% inbox placement guarantee with a money-back promise." },
+    { "question": "Can I use ColdRelay with Mailscale?", "answer": "Not directly — both provide mailbox infrastructure. You'd choose one for infrastructure and pair it with a sending platform (Instantly, Smartlead, etc.). They serve the same role in the cold email stack." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-scaled-mail", "coldrelay-vs-inframail", "coldrelay-vs-mailforge"],
+    "useCases": ["cold-email-infrastructure-for-saas", "cold-email-infrastructure-for-sales-teams"]
+  }
+}

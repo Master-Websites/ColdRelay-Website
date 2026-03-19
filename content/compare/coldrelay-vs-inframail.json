@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-inframail",
+  "competitor": "InfraMail",
+  "competitorUrl": "https://inframail.io",
+  "title": "ColdRelay vs InfraMail — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and InfraMail for cold email infrastructure. See pricing models, infrastructure approach, deliverability, and scalability side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay provisions Microsoft 365 mailboxes on dedicated, isolated Azure tenants with dedicated IPs. Per-mailbox pricing: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+). Includes 100-150 mailboxes per domain, auto DNS, no warmup wait, 99% inbox guarantee, and 2-4 hour setup. Minimum: 50 mailboxes.",
+      "competitor": "InfraMail is a cold email infrastructure platform offering flat-fee pricing for unlimited inboxes. The Unlimited Plan costs $99/month and includes 80,000 cold emails/month, 1 dedicated US IP, 10 free domains, unlimited email inboxes, and automated DNS setup. The Agency Pack at $249/month offers 300,000 emails/month, 3 dedicated US IPs, and 20 free domains. InfraMail emphasizes automated setup and cost-effectiveness for high-volume operations. Additional domains cost approximately $5-16 each, and external warmup tools ($37-77/month) are recommended."
+    },
+    "featureComparison": [
+      { "feature": "Pricing Model", "coldrelay": "Per-mailbox: $1-$0.55/month — cost scales linearly with mailbox count", "competitor": "Flat-fee: $99/month (Unlimited) or $249/month (Agency) for unlimited inboxes", "winner": "tie" },
+      { "feature": "Cost at 50 Mailboxes", "coldrelay": "$50/month", "competitor": "$99/month (Unlimited plan minimum)", "winner": "coldrelay" },
+      { "feature": "Cost at 200 Mailboxes", "coldrelay": "$170/month ($0.85/mailbox)", "competitor": "$99/month (still on Unlimited plan)", "winner": "competitor" },
+      { "feature": "Cost at 500+ Mailboxes", "coldrelay": "$350/month ($0.70/mailbox)", "competitor": "$99-$249/month depending on send volume", "winner": "competitor" },
+      { "feature": "Dedicated IPs", "coldrelay": "Dedicated IPs with isolated Azure tenants per deployment", "competitor": "1 dedicated US IP (Unlimited) or 3 dedicated US IPs (Agency)", "winner": "coldrelay" },
+      { "feature": "Infrastructure Isolation", "coldrelay": "Fully isolated Azure tenants — complete separation per customer", "competitor": "Shared platform with dedicated IP allocation — less isolation detail", "winner": "coldrelay" },
+      { "feature": "DNS Configuration", "coldrelay": "Fully automated SPF, DKIM, DMARC", "competitor": "Automated DNS configuration included", "winner": "tie" },
+      { "feature": "Warmup", "coldrelay": "No warmup required — send from day 1", "competitor": "External warmup tools recommended ($37-77/month additional cost)", "winner": "coldrelay" },
+      { "feature": "Email Volume Cap", "coldrelay": "No monthly volume cap — scale based on mailbox count", "competitor": "80,000/month (Unlimited) or 300,000/month (Agency)", "winner": "coldrelay" },
+      { "feature": "Free Domains", "coldrelay": "BYO domains or purchase separately", "competitor": "10 free domains (Unlimited) or 20 free domains (Agency)", "winner": "competitor" },
+      { "feature": "Inbox Guarantee", "coldrelay": "99% inbox placement guarantee with money-back promise", "competitor": "No published inbox placement guarantee", "winner": "coldrelay" },
+      { "feature": "API Access", "coldrelay": "Compatible with major sending platforms", "competitor": "API access included on all plans", "winner": "tie" }
+    ],
+    "coldrelayWins": "ColdRelay's isolated Azure tenants with dedicated IPs provide superior infrastructure separation — your sending reputation is completely isolated from other customers. InfraMail's shared platform with allocated IPs doesn't offer the same level of isolation. ColdRelay requires no external warmup tools (saving $37-77/month that InfraMail users typically spend), and has no monthly email volume caps. The 99% inbox guarantee with a money-back promise gives concrete deliverability assurance. For smaller operations (under 100 mailboxes), ColdRelay is also cheaper: $50/month for 50 mailboxes vs. InfraMail's $99/month minimum.",
+    "competitorWins": "InfraMail's flat-fee model is extremely cost-effective at scale. For operations with 200+ mailboxes, InfraMail's $99/month for unlimited inboxes is dramatically cheaper than ColdRelay's per-mailbox pricing. The included free domains (10-20 depending on plan) save additional costs. At 500 mailboxes, InfraMail costs $99/month vs. ColdRelay's $350/month — a massive difference. The Agency Pack at $249/month with 300K emails and 3 IPs is hard to beat on pure cost for high-volume operations. InfraMail has also been in the market longer with a large content library and established reputation.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if infrastructure quality and isolation are your top priorities. ColdRelay is ideal for teams that need guaranteed tenant isolation, dedicated IPs they fully control, no warmup requirements, and a concrete inbox guarantee. It's also better for smaller operations (under ~100 mailboxes) where ColdRelay's per-mailbox pricing beats InfraMail's flat fee.",
+    "whoShouldChooseCompetitor": "Choose InfraMail if cost is your primary concern and you're running 200+ mailboxes. The unlimited inbox model at $99/month is unbeatable on price for high-volume operations. InfraMail is well-suited for agencies and teams that prioritize keeping infrastructure costs minimal and are comfortable managing their own warmup and deliverability optimization.",
+    "verdict": "This comparison comes down to infrastructure quality vs. raw cost. ColdRelay provides superior isolation, no warmup needs, and a deliverability guarantee — at a higher per-mailbox price. InfraMail offers unbeatable flat-fee pricing for unlimited mailboxes but with less infrastructure isolation detail and the need for external warmup tools. For operations prioritizing deliverability and isolation, ColdRelay wins. For operations prioritizing cost at scale, InfraMail is hard to beat."
+  },
+  "faqs": [
+    { "question": "Is InfraMail really unlimited?", "answer": "InfraMail offers unlimited mailbox creation, but email sending is capped at 80,000/month (Unlimited plan) or 300,000/month (Agency). ColdRelay has no monthly volume cap — your sending capacity scales with your mailbox count." },
+    { "question": "Do I need to buy warmup tools separately with InfraMail?", "answer": "Yes. InfraMail recommends external warmup tools which typically cost $37-77/month. ColdRelay's infrastructure requires no warmup — you can send from day 1." },
+    { "question": "Which is cheaper at 100 mailboxes?", "answer": "InfraMail at $99/month vs. ColdRelay at $100/month — nearly identical. But factor in InfraMail's recommended warmup tools ($37-77/month extra) and the real cost is $136-176/month for InfraMail." },
+    { "question": "Does InfraMail offer isolated infrastructure like ColdRelay?", "answer": "InfraMail provides dedicated IPs but doesn't emphasize per-customer tenant isolation the way ColdRelay does with its isolated Azure tenants. ColdRelay's approach provides stronger separation between customers." },
+    { "question": "Which has better deliverability?", "answer": "ColdRelay offers a 99% inbox placement guarantee backed by a money-back promise — putting their money where their mouth is. InfraMail doesn't publish a specific deliverability guarantee. Both platforms include automated DNS setup for SPF, DKIM, and DMARC." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-maildoso", "coldrelay-vs-mailforge", "coldrelay-vs-mailreef"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-lead-gen-agencies"]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "cold-email-infrastructure-for-saas",
+  "industry": "SaaS",
+  "title": "Cold Email Infrastructure for SaaS Companies — Drive Product Signups and Demos",
+  "description": "Learn how SaaS companies use ColdRelay's dedicated cold email infrastructure to scale outbound sales, book more demos, and drive product signups with reliable deliverability.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "painPoints": {
+      "title": "Why SaaS Companies Need Dedicated Cold Email Infrastructure",
+      "content": "SaaS companies rely on outbound email as a primary growth channel, but most struggle with the infrastructure side:\n\n**Your primary domain is sacred.** SaaS companies can't risk their main domain's reputation for cold outreach. If your @company.com domain gets flagged, it affects everything — product emails, onboarding sequences, support tickets, and investor communications.\n\n**Scaling past 10-20 mailboxes gets complicated.** Most SaaS teams start with a few Google Workspace accounts and hit a wall when they need to scale. Managing dozens of domains with manual DNS, separate billing, and warmup schedules consumes engineering time that should go toward product.\n\n**Engineering teams hate email ops.** Setting up SPF, DKIM, DMARC, managing DNS records, and troubleshooting deliverability is not what you hired developers to do. But someone has to do it, and it usually falls on the person with the most technical skills.\n\n**CAC pressure demands efficiency.** SaaS economics are unforgiving. If your outbound channel costs $20+/mailbox/month just for infrastructure (before sending tools), your customer acquisition cost suffers. Every dollar wasted on infrastructure is a dollar that could go toward product development.\n\n**Growth teams need speed.** When the VP of Sales says 'we need to double outbound capacity,' the answer needs to be hours, not weeks. Warmup periods and manual setup create bottlenecks at exactly the moments when speed matters most."
+    },
+    "solution": {
+      "title": "How ColdRelay Solves SaaS Outbound Infrastructure",
+      "content": "ColdRelay lets SaaS companies run outbound at scale without touching their primary domain or consuming engineering resources. Dedicated Azure tenants with separate IPs mean your cold outreach never risks your product domain's reputation. At $1/mailbox (dropping to $0.55 at scale), infrastructure costs stay low enough to maintain healthy CAC metrics. Auto DNS setup means zero engineering time on SPF/DKIM/DMARC — it's configured in the 2-4 hour provisioning window. No warmup means when your growth team needs to scale, they can double capacity by afternoon. The 99% inbox guarantee means your outbound investment actually reaches inboxes, not spam folders."
+    },
+    "howItWorks": {
+      "title": "Getting Started with ColdRelay for SaaS Outbound",
+      "steps": [
+        { "title": "Choose Your Outbound Domains", "content": "Select secondary domains that are related to but separate from your primary SaaS domain. ColdRelay supports 100-150 mailboxes per domain, so 1-3 domains cover most SaaS outbound needs." },
+        { "title": "Order Through Self-Service Portal", "content": "Specify your domains and mailbox count. Most SaaS companies start with 50-200 mailboxes. ColdRelay provisions everything on isolated Azure tenants with dedicated IPs." },
+        { "title": "Infrastructure Ready in Hours", "content": "Within 2-4 hours, your mailboxes are live with fully configured DNS (SPF, DKIM, DMARC). No warmup period — start importing into your sending platform immediately." },
+        { "title": "Connect to Your Sales Tech Stack", "content": "Import mailboxes into your sequencing tool (Instantly, Smartlead, Apollo, Outreach, etc.). Most platforms support CSV import or SMTP/IMAP connection." },
+        { "title": "Scale as You Grow", "content": "As outbound becomes a larger revenue driver, add more mailboxes. Volume pricing kicks in automatically — 200+ mailboxes at $0.85, 1,000+ at $0.70, 5,000+ at $0.55." }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits for SaaS Companies Using ColdRelay",
+      "items": [
+        { "title": "Protect Your Product Domain", "content": "Outbound runs on completely isolated infrastructure. Your @company.com domain — used for product emails, onboarding, and support — is never at risk from cold outreach activity." },
+        { "title": "Zero Engineering Time", "content": "Automated DNS configuration and managed infrastructure mean your engineers never touch email ops. No SPF records, no DKIM keys, no DMARC policies — ColdRelay handles it all." },
+        { "title": "Keep CAC Under Control", "content": "At $1/mailbox (or less at scale), email infrastructure costs stay minimal. Compare to $6-7/mailbox on Google Workspace or the engineering hours of DIY infrastructure." },
+        { "title": "Scale On Demand", "content": "Need to double outbound capacity for a product launch or funding round? New infrastructure is live in 2-4 hours with no warmup delay. Growth teams can move at the speed of the business." },
+        { "title": "Reliable Deliverability", "content": "The 99% inbox guarantee means your carefully crafted outbound sequences actually reach prospects. Dedicated IPs and isolated tenants prevent deliverability issues from shared infrastructure." }
+      ]
+    },
+    "metrics": {
+      "title": "Typical SaaS Outbound Metrics with Dedicated Infrastructure",
+      "benchmarks": [
+        { "metric": "Inbox Placement Rate", "value": "95-99%", "notes": "Dedicated infrastructure consistently outperforms shared Google/Microsoft setups" },
+        { "metric": "Infrastructure Cost per Demo", "value": "$2-8", "notes": "At $1/mailbox and typical SaaS reply-to-demo rates, infrastructure cost per demo is minimal" },
+        { "metric": "Time from Decision to First Campaign", "value": "4-6 hours", "notes": "2-4 hours for infrastructure + 1-2 hours for campaign setup in sending platform" },
+        { "metric": "Engineering Hours Saved per Month", "value": "10-20 hours", "notes": "Compared to managing DIY email infrastructure across multiple domains" },
+        { "metric": "Infrastructure Cost at 200 Mailboxes", "value": "$170/month", "notes": "At $0.85/mailbox (200-999 tier) — vs. $1,400+/month on Google Workspace" },
+        { "metric": "Domain Reputation Risk", "value": "Zero", "notes": "Complete isolation between outbound infrastructure and primary SaaS domain" }
+      ]
+    }
+  },
+  "faqs": [
+    { "question": "Will cold outreach affect our SaaS product email deliverability?", "answer": "Not with ColdRelay. Your outbound runs on completely separate infrastructure — different domains, different IPs, different Azure tenants. Your product emails (onboarding, notifications, support) are unaffected." },
+    { "question": "How many mailboxes does a typical SaaS company need?", "answer": "It depends on your outbound volume. Early-stage SaaS: 50-100 mailboxes. Growth-stage: 200-500. Enterprise with multiple SDRs: 500-2,000. ColdRelay's 100-150 mailboxes per domain means you need 1-15 domains for most setups." },
+    { "question": "Can we connect ColdRelay to our existing sales tools?", "answer": "Yes. ColdRelay mailboxes work with any sending platform that supports SMTP/IMAP — Instantly, Smartlead, Apollo, Outreach, Salesloft, HubSpot, and more." },
+    { "question": "Do we need technical staff to manage ColdRelay?", "answer": "No. ColdRelay's self-service portal and automated DNS configuration mean no technical skills are needed. SDR managers or RevOps teams can handle setup and management." },
+    { "question": "What about GDPR and compliance?", "answer": "ColdRelay provides email infrastructure. Compliance with GDPR, CAN-SPAM, and other regulations is your responsibility at the campaign level. ColdRelay's infrastructure supports proper authentication (SPF, DKIM, DMARC) which is a compliance best practice." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-google-workspace", "coldrelay-vs-microsoft-365", "coldrelay-vs-inframail"],
+    "useCases": ["cold-email-infrastructure-for-startups", "cold-email-infrastructure-for-sales-teams"]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "coldrelay-vs-mailforge",
+  "competitor": "Mailforge",
+  "competitorUrl": "https://mailforge.ai",
+  "title": "ColdRelay vs Mailforge — Cold Email Infrastructure Comparison",
+  "description": "Comparing ColdRelay and Mailforge for cold email infrastructure. See pricing, infrastructure isolation, mailbox quality, and scalability side-by-side.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "overview": {
+      "coldrelay": "ColdRelay provisions Microsoft 365 mailboxes on dedicated, isolated Azure tenants with dedicated IPs. Per-mailbox pricing: $1 (1-199), $0.85 (200-999), $0.70 (1K-4,999), $0.55 (5K+). Includes 100-150 mailboxes per domain, auto DNS, no warmup wait, 99% inbox guarantee, 2-4 hour setup, and a minimum of 50 mailboxes.",
+      "competitor": "Mailforge is a cold email infrastructure platform offering automated mailbox and domain provisioning. Mailbox slot pricing starts at approximately $3/mailbox/month, with volume discounts down to $1.67-$1.75/mailbox. A minimum of 10 mailbox slots is required. Mailforge also offers campaign plans: Free (500 contacts), Pro ($48/month, 1K contacts/5K emails), and Growth ($96/month, 10K contacts/50K emails). The platform emphasizes automated setup, shared IP infrastructure, and universal SMTP integration. Domains purchased through Mailforge cost $9-14/year."
+    },
+    "featureComparison": [
+      { "feature": "Price per Mailbox (Base)", "coldrelay": "$1/mailbox (1-199 volume)", "competitor": "~$3/mailbox starting price", "winner": "coldrelay" },
+      { "feature": "Price per Mailbox (Volume)", "coldrelay": "$0.55/mailbox at 5K+", "competitor": "$1.67-$1.75/mailbox at bulk volume", "winner": "coldrelay" },
+      { "feature": "Infrastructure Type", "coldrelay": "Dedicated IPs on isolated Azure tenants — per-customer isolation", "competitor": "Shared IP infrastructure — purpose-built for cold email but shared across users", "winner": "coldrelay" },
+      { "feature": "Mailbox Technology", "coldrelay": "Microsoft 365 (Exchange/Azure) — recognized and trusted by receiving servers", "competitor": "Custom SMTP infrastructure — purpose-built, but may receive different treatment from receiving servers", "winner": "coldrelay" },
+      { "feature": "DNS Configuration", "coldrelay": "Fully automated SPF, DKIM, DMARC", "competitor": "Automated DNS configuration (DKIM, DMARC, SPF) included", "winner": "tie" },
+      { "feature": "Campaign Features", "coldrelay": "Infrastructure only — pairs with sending platforms", "competitor": "Built-in campaign management with contact and email volume limits", "winner": "competitor" },
+      { "feature": "Minimum Order", "coldrelay": "50 mailboxes ($50/month)", "competitor": "10 mailbox slots (~$30/month)", "winner": "competitor" },
+      { "feature": "Free Plan", "coldrelay": "No free plan", "competitor": "Free plan with 500 contacts", "winner": "competitor" },
+      { "feature": "Warmup", "coldrelay": "No warmup required — send from day 1", "competitor": "Warmup approach not detailed — infrastructure focus", "winner": "coldrelay" },
+      { "feature": "Inbox Guarantee", "coldrelay": "99% inbox placement guarantee with money-back promise", "competitor": "No published inbox guarantee", "winner": "coldrelay" },
+      { "feature": "Annual Discount", "coldrelay": "Volume-based discounts only", "competitor": "Annual billing gives ~17% discount (2 months free)", "winner": "competitor" },
+      { "feature": "Slot Flexibility", "coldrelay": "Active mailboxes — pay for what you use", "competitor": "Slot-based — pay for slots whether or not all have active mailboxes, but can delete/recreate within slots", "winner": "coldrelay" }
+    ],
+    "coldrelayWins": "ColdRelay's dedicated IP and isolated tenant infrastructure is a fundamental quality advantage over Mailforge's shared IP model. When you share IPs with other cold email senders, your deliverability is affected by their sending practices — one bad actor can damage your reputation. ColdRelay's isolated tenants eliminate this risk entirely. Pricing is also significantly better: $1/mailbox on ColdRelay vs. ~$3 on Mailforge at base volume. At scale, ColdRelay's $0.55 beats Mailforge's $1.67-$1.75. The 99% inbox guarantee with money-back promise provides concrete assurance that Mailforge doesn't match. Microsoft 365 mailboxes also carry inherent reputation advantages over custom SMTP infrastructure.",
+    "competitorWins": "Mailforge offers a lower entry point with 10 mailbox slots minimum (~$30/month) and a free plan with 500 contacts — making it accessible for very early-stage operations. The built-in campaign management features (contact management, email scheduling) mean you can run campaigns without a separate sending tool. Annual billing discounts of ~17% help reduce long-term costs. The slot-based model lets you delete and recreate mailboxes without additional cost, which is useful for operations that frequently rotate infrastructure. Mailforge is a more self-contained solution for smaller operations.",
+    "whoShouldChooseColdRelay": "Choose ColdRelay if infrastructure quality, deliverability, and IP isolation are priorities. ColdRelay is the better choice for any operation where shared IPs are a concern — which is most serious cold email operations. The per-mailbox pricing advantage and inbox guarantee make ColdRelay the stronger value at every volume tier above 50 mailboxes.",
+    "whoShouldChooseCompetitor": "Choose Mailforge if you're testing cold email at very small scale (under 50 mailboxes) and want campaign management built into the platform. The free plan and low minimum make Mailforge a good starting point for experimentation. If you frequently rotate mailboxes and value the slot-based model, Mailforge's approach can be convenient.",
+    "verdict": "ColdRelay delivers superior infrastructure at a lower price point. Dedicated IPs and isolated tenants are a clear quality advantage over Mailforge's shared IP model — especially at scale where shared infrastructure risks multiply. ColdRelay is cheaper at every volume level and offers a concrete inbox guarantee. Mailforge has a lower entry barrier and built-in campaign features, making it suitable for early-stage testing, but operations serious about deliverability will outgrow shared infrastructure quickly."
+  },
+  "faqs": [
+    { "question": "Why does infrastructure isolation matter?", "answer": "Shared IPs mean your sending reputation is affected by all other senders on the same IP. If someone else sends spam, your deliverability suffers. ColdRelay's dedicated IPs on isolated tenants mean your reputation is entirely your own. Mailforge uses shared IP infrastructure." },
+    { "question": "Is Mailforge's free plan useful?", "answer": "For testing: yes. Mailforge's free plan with 500 contacts lets you experiment with cold email infrastructure at no cost. For actual campaigns, the limitations make it impractical — and ColdRelay's infrastructure quality at $1/mailbox is the better investment." },
+    { "question": "How does Microsoft 365 compare to Mailforge's SMTP infrastructure?", "answer": "Microsoft 365 mailboxes benefit from Microsoft's trusted sender reputation. Custom SMTP infrastructure (like Mailforge's) can work well but may receive different treatment from receiving servers that prioritize known email platforms." },
+    { "question": "Which scales better?", "answer": "ColdRelay. Volume pricing drops to $0.55/mailbox at 5K+ with guaranteed isolation maintained at every level. Mailforge's shared infrastructure means scalability comes with proportionally more shared IP risk." },
+    { "question": "Can I use both for different campaigns?", "answer": "Some operations use different infrastructure providers for different campaign types. You could use ColdRelay for your primary high-value campaigns (where deliverability matters most) and Mailforge for testing or lower-stakes outreach." }
+  ],
+  "relatedPages": {
+    "guides": [],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-maildoso", "coldrelay-vs-inframail", "coldrelay-vs-mailscale"],
+    "useCases": ["cold-email-infrastructure-for-startups", "cold-email-infrastructure-for-freelancers"]
+  }
+}
