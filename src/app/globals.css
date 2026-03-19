@@ -10,6 +10,27 @@
   --color-primary-light: #6B8FE6;
   --color-primary-dark: #3558B0;
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-nacelle: var(--font-nacelle-local), sans-serif;
+
+  /* v1 theme: text sizes */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5384;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5715;
+  --text-base: 0.9375rem;
+  --text-base--line-height: 1.5333;
+  --text-base--letter-spacing: -0.0125em;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
+  --text-lg--letter-spacing: -0.0125em;
+
+  --animate-gradient: gradient 6s linear infinite;
+
+  @keyframes gradient {
+    to {
+      background-position: 200% center;
+    }
+  }
 }
 
 html {
@@ -283,4 +304,95 @@ body {
 .prose th {
   background: rgba(255, 255, 255, 0.04);
   font-weight: 600;
+}
+
+/* ===== V1 (Cruip) BUTTON UTILITIES ===== */
+
+.btn,
+.btn-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: 9999px; /* pill / rounded-full */
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.btn {
+  padding: 11px 16px;
+}
+
+.btn-sm {
+  padding: 7px 12px;
+}
+
+/* ===== NACELLE FONT FACE ===== */
+
+@font-face {
+  font-family: "Nacelle";
+  src: url("/fonts/nacelle-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nacelle";
+  src: url("/fonts/nacelle-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nacelle";
+  src: url("/fonts/nacelle-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nacelle";
+  src: url("/fonts/nacelle-semibolditalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+.font-nacelle {
+  font-family: "Nacelle", sans-serif;
+}
+
+/* ===== CUSTOM AOS ANIMATIONS ===== */
+
+@media screen {
+  html:not(.no-js) body [data-aos="fade-up"] {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  html:not(.no-js) body [data-aos="fade-down"] {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  html:not(.no-js) body [data-aos="fade-right"] {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  html:not(.no-js) body [data-aos="fade-left"] {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+/* ===== GLOBAL PILL BUTTONS ===== */
+/* Make ALL buttons rounded-full (pill style) */
+button,
+[role="button"],
+a.btn,
+a.btn-sm,
+input[type="submit"],
+input[type="button"] {
+  border-radius: 9999px;
 }

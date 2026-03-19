@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
-import { HeroSection } from "@/components/home/HeroSection";
-import { LogoBar } from "@/components/home/LogoBar";
-import { GoogleOutlookPainSection } from "@/components/home/GoogleOutlookPainSection";
-import { WhyNotGoogleSection } from "@/components/home/WhyNotGoogleSection";
-import { HowItWorksSection } from "@/components/home/HowItWorksSection";
-import { CalculatorSection } from "@/components/home/CalculatorSection";
-import { FeaturesSection } from "@/components/home/FeaturesSection";
-import { ComparisonSection } from "@/components/home/ComparisonSection";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { FAQSection } from "@/components/home/FAQSection";
-import { CTASection } from "@/components/home/CTASection";
-import { BlogPreviewSection } from "@/components/home/BlogPreviewSection";
+import AOSInit from "@/components/v1/aos-init";
+import PageIllustration from "@/components/v1/page-illustration";
+import Hero from "@/components/v1/hero-home";
+import Features from "@/components/v1/features";
+import Workflows from "@/components/v1/workflows";
+import Pricing from "@/components/v1/pricing";
+import Testimonials from "@/components/v1/testimonials";
+import FAQ from "@/components/v1/faq";
+import Cta from "@/components/v1/cta";
 
 export const metadata: Metadata = {
   title: "ColdRelay — Cold Email Infrastructure That Actually Delivers",
@@ -22,18 +19,17 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <LogoBar />
-      <GoogleOutlookPainSection />
-      <WhyNotGoogleSection />
-      <HowItWorksSection />
-      <CalculatorSection />
-      <FeaturesSection />
-      <ComparisonSection />
-      <TestimonialsSection />
-      <FAQSection />
-      <CTASection />
-      <BlogPreviewSection />
+      <AOSInit />
+      <div className="relative flex grow flex-col">
+        <PageIllustration />
+        <Hero />
+        <Features />
+        <Workflows />
+        <Pricing />
+        <Testimonials />
+        <FAQ />
+        <Cta />
+      </div>
     </>
   );
 }
