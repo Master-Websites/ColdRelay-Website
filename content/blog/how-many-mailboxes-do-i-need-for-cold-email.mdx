@@ -1,0 +1,281 @@
+---
+title: "How Many Mailboxes Do You Need for Cold Email? (Calculator + Formula)"
+description: "The exact formula to calculate how many mailboxes and domains you need for cold email. Includes a cost calculator for every scale, from 100 to 10,000 emails per day."
+date: "2026-03-19"
+author: "Mo Tahboub"
+tags: ["cold email", "mailboxes", "calculator", "infrastructure", "scaling"]
+slug: "how-many-mailboxes-do-i-need-for-cold-email"
+---
+
+# How Many Mailboxes Do You Need for Cold Email? (Calculator + Formula)
+
+One of the most common questions in cold email is: **"How many mailboxes do I actually need?"**
+
+The answer depends on your daily sending volume, and there's a simple formula that works every time. This guide gives you the formula, the math at every scale, and a breakdown of what it'll cost across different infrastructure providers.
+
+---
+
+## The Formula
+
+Here's the core formula for calculating cold email mailboxes:
+
+### Step 1: Mailboxes Needed
+
+```
+Emails per day ÷ 4 = Mailboxes needed
+```
+
+**Why divide by 4?** Each mailbox should send a maximum of **20-30 cold emails per day** for optimal deliverability. But you also need headroom for warmup emails (10-20/day) and natural variation. Dividing by 4 gives you a conservative, deliverability-safe number that accounts for:
+
+- 20-25 cold emails per mailbox per day
+- 15-20 warmup emails per mailbox per day
+- Buffer for sending pattern variation
+- Room for follow-up sequences
+
+**Example:** If you want to send 400 cold emails per day:
+```
+400 ÷ 4 = 100 mailboxes
+```
+
+### Step 2: Domains Needed
+
+The number of domains depends on your infrastructure provider:
+
+**Google Workspace (2 mailboxes per domain):**
+```
+Mailboxes ÷ 2 = Domains needed
+```
+
+**Microsoft 365 (5 mailboxes per domain):**
+```
+Mailboxes ÷ 5 = Domains needed
+```
+
+**ColdRelay / Dedicated Infrastructure (up to 150 mailboxes per domain):**
+```
+Mailboxes ÷ 150 = Domains needed (minimum 1)
+```
+
+**Example at 100 mailboxes:**
+- Google Workspace: 100 ÷ 2 = **50 domains**
+- Microsoft 365: 100 ÷ 5 = **20 domains**
+- ColdRelay: 100 ÷ 150 = **1 domain**
+
+The difference is massive. At 100 mailboxes, Google requires **50x more domains** than ColdRelay. That's not just a cost difference — it's an operational nightmare.
+
+---
+
+## Quick Reference Table
+
+Here's the complete calculation at common sending volumes:
+
+| Emails/Day | Mailboxes Needed | Domains (Google) | Domains (Microsoft) | Domains (ColdRelay) |
+|---|---|---|---|---|
+| 50 | 13 | 7 | 3 | 1 |
+| 100 | 25 | 13 | 5 | 1 |
+| 200 | 50 | 25 | 10 | 1 |
+| 500 | 125 | 63 | 25 | 1 |
+| 1,000 | 250 | 125 | 50 | 2 |
+| 2,000 | 500 | 250 | 100 | 4 |
+| 5,000 | 1,250 | 625 | 250 | 9 |
+| 10,000 | 2,500 | 1,250 | 500 | 17 |
+
+**Want exact numbers for your volume?** Use the [ColdRelay infrastructure calculator](/tools) — plug in your daily volume and get mailboxes, domains, and costs instantly.
+
+---
+
+## Cost at Every Scale
+
+The number of mailboxes is only half the equation. Here's what it actually costs:
+
+### 50 Emails/Day (13 Mailboxes)
+
+| Provider | Mailbox Cost | Domain Cost | Warmup Cost | **Total/Month** |
+|---|---|---|---|---|
+| Google Workspace | $94/mo | $7/mo | $30/mo | **$131/mo** |
+| Microsoft 365 | $78/mo | $3/mo | $30/mo | **$111/mo** |
+| ColdRelay | $35/mo | $1/mo | Included | **$36/mo** |
+
+### 200 Emails/Day (50 Mailboxes)
+
+| Provider | Mailbox Cost | Domain Cost | Warmup Cost | **Total/Month** |
+|---|---|---|---|---|
+| Google Workspace | $360/mo | $25/mo | $75/mo | **$460/mo** |
+| Microsoft 365 | $300/mo | $10/mo | $75/mo | **$385/mo** |
+| ColdRelay | $100/mo | $1/mo | Included | **$101/mo** |
+
+### 500 Emails/Day (125 Mailboxes)
+
+| Provider | Mailbox Cost | Domain Cost | Warmup Cost | **Total/Month** |
+|---|---|---|---|---|
+| Google Workspace | $900/mo | $63/mo | $150/mo | **$1,113/mo** |
+| Microsoft 365 | $750/mo | $25/mo | $150/mo | **$925/mo** |
+| ColdRelay | $225/mo | $1/mo | Included | **$226/mo** |
+
+### 1,000 Emails/Day (250 Mailboxes)
+
+| Provider | Mailbox Cost | Domain Cost | Warmup Cost | **Total/Month** |
+|---|---|---|---|---|
+| Google Workspace | $1,800/mo | $125/mo | $250/mo | **$2,175/mo** |
+| Microsoft 365 | $1,500/mo | $50/mo | $250/mo | **$1,800/mo** |
+| ColdRelay | $425/mo | $2/mo | Included | **$427/mo** |
+
+### 5,000 Emails/Day (1,250 Mailboxes)
+
+| Provider | Mailbox Cost | Domain Cost | Warmup Cost | **Total/Month** |
+|---|---|---|---|---|
+| Google Workspace | $9,000/mo | $625/mo | $500/mo | **$10,125/mo** |
+| Microsoft 365 | $7,500/mo | $250/mo | $500/mo | **$8,250/mo** |
+| ColdRelay | $2,088/mo | $9/mo | Included | **$2,097/mo** |
+
+At 5,000 emails/day, ColdRelay saves **$8,028/month** vs Google Workspace — that's **$96,336/year**.
+
+For the full breakdown including hidden costs, read our [Cold Email Infrastructure Cost Breakdown](/blog/cold-email-infrastructure-cost-breakdown).
+
+---
+
+## Why the "Divide by 4" Rule Matters
+
+Some guides tell you to send 50 emails per mailbox per day. That's a recipe for spam folders and account suspensions. Here's why conservative limits matter:
+
+### The Math Behind Safe Sending
+
+A healthy mailbox daily activity looks like this:
+
+| Activity | Emails/Day |
+|---|---|
+| Cold outbound emails | 20-25 |
+| Warmup sends | 15-20 |
+| Warmup replies received | 10-15 |
+| Natural replies from prospects | 1-3 |
+| **Total activity** | **46-63** |
+
+Email providers look at **total activity**, not just outbound sends. If you're sending 50 cold emails plus 20 warmup emails, that's 70+ outbound messages per day from one mailbox — well above what looks natural.
+
+**The divide-by-4 rule** keeps your cold sends at ~25/day per mailbox, leaving room for warmup and engagement that builds reputation.
+
+### What Happens When You Send Too Many
+
+- **Day 1-3:** Everything seems fine. Emails get delivered.
+- **Day 4-7:** Open rates start dropping. Some emails hit spam.
+- **Week 2:** Deliverability drops to 40-60%. Reply rates tank.
+- **Week 3:** Account warnings or suspensions. Domain reputation damaged.
+- **Month 2:** Domain is burned. You need new domains and mailboxes.
+
+Starting over costs more than doing it right. Always err on the side of fewer emails per mailbox.
+
+---
+
+## Scaling Strategy: How to Grow Your Mailbox Count
+
+### Phase 1: Launch (Week 1-4)
+- Start with your calculated mailbox count
+- Send only warmup emails for weeks 1-2
+- Begin cold sends at 25% volume in week 3
+- Reach full volume by week 4
+
+### Phase 2: Validate (Month 2)
+- Monitor deliverability daily
+- Track reply rates and bounce rates
+- Identify underperforming mailboxes
+- Replace any mailboxes with poor reputation
+
+### Phase 3: Scale (Month 3+)
+- Add mailboxes in batches (25-50 at a time)
+- Each new batch needs its own warmup cycle
+- Don't increase total volume by more than 30% per week
+- Monitor deliverability after each scale-up
+
+### Phase 4: Optimize (Ongoing)
+- Rotate in new mailboxes as older ones age
+- A/B test different domains and sending patterns
+- Maintain warmup on all active mailboxes
+- Retire mailboxes showing declining performance
+
+---
+
+## Common Mistakes in Mailbox Planning
+
+### Mistake 1: Not Accounting for Follow-ups
+
+Your follow-up sequences count toward daily volume. If your sequence is 4 emails and you're sending to new prospects daily, your actual daily volume per prospect list is:
+
+```
+New contacts/day × average sequence length = true daily sends needed
+```
+
+Example: 100 new contacts/day with a 4-email sequence means you eventually need capacity for 400 emails/day as sequences overlap.
+
+**Fix:** Calculate based on your peak daily send volume, including all active sequences.
+
+### Mistake 2: Forgetting About Seasonality
+
+Most B2B outbound has peaks (January, September) and valleys (December, August). Size your infrastructure for your average, and have a plan to temporarily scale up during peaks.
+
+### Mistake 3: Not Having Backup Mailboxes
+
+Mailboxes can and do get suspended, blacklisted, or develop poor reputation. Plan for **10-15% overhead** above your calculated need.
+
+```
+Required mailboxes × 1.15 = Total mailboxes to provision
+```
+
+### Mistake 4: Mixing Use Cases on One Mailbox
+
+Don't use the same mailbox for cold outbound, customer support, and newsletters. Each use case should have dedicated mailboxes.
+
+### Mistake 5: Scaling Before Validating
+
+Don't go from 10 mailboxes to 500 overnight. Prove your campaigns work at small scale first, then scale infrastructure to match.
+
+---
+
+## Agency & Multi-Client Considerations
+
+If you run an outbound agency or manage cold email for multiple clients:
+
+### Separate Infrastructure Per Client
+Each client should have their own domains and mailboxes. Never share infrastructure across clients — one client's bad practices shouldn't affect another's deliverability.
+
+### Client Mailbox Planning
+Help each client calculate their needs independently:
+1. Define their daily sending goal
+2. Apply the divide-by-4 formula
+3. Calculate domains based on infrastructure type
+4. Add 15% overhead buffer
+5. Plan their scaling phases
+
+### Why Agencies Love ColdRelay
+With [ColdRelay's](/pricing) 150 mailboxes per domain ratio, agencies can manage client infrastructure with minimal domain overhead. Instead of juggling hundreds of domains across clients, each client might need just 1-3 domains regardless of mailbox count.
+
+---
+
+## Calculate Your Exact Needs
+
+Don't want to do the math manually? Use the [ColdRelay infrastructure calculator](/tools) to instantly calculate:
+
+- **Exact mailboxes needed** for your daily volume
+- **Domains required** across different providers
+- **Monthly and annual costs** compared side-by-side
+- **Savings** vs Google Workspace and Microsoft
+
+Just plug in your target emails per day and the calculator does the rest.
+
+---
+
+## Summary: The Quick Formula
+
+For any cold email operation, here's the formula:
+
+1. **Emails per day ÷ 4 = Mailboxes needed**
+2. **Mailboxes × 1.15 = Mailboxes to provision** (with buffer)
+3. **Mailboxes ÷ domains-per-provider = Domains needed**
+   - Google: ÷ 2
+   - Microsoft: ÷ 5
+   - ColdRelay: ÷ 150
+
+Then [choose your infrastructure provider](/blog/best-cold-email-infrastructure-providers-2026) based on cost, deliverability, and scale requirements.
+
+---
+
+*Need help figuring out your infrastructure? [Try the ColdRelay calculator](/tools) for instant mailbox and cost calculations, or [get started with ColdRelay](https://app.coldrelay.com/auth/register) to set up in 2-4 hours.*

@@ -13,6 +13,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog",
     "/tools",
     "/tools/email-deliverability-test",
+    "/tools/spf-generator",
+    "/tools/dkim-generator",
+    "/tools/dmarc-generator",
     "/privacy",
     "/terms",
   ].map((route) => ({

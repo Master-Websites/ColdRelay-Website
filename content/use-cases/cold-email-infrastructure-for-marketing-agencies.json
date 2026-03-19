@@ -1,0 +1,61 @@
+{
+  "slug": "cold-email-infrastructure-for-marketing-agencies",
+  "industry": "Marketing Agencies",
+  "title": "Cold Email Infrastructure for Marketing Agencies — Prospect Clients and Deliver Outbound for Them",
+  "description": "Learn how digital marketing agencies, SEO agencies, and growth agencies use ColdRelay's dedicated cold email infrastructure both for their own client acquisition and as a white-label outbound service for their clients.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "painPoints": {
+      "title": "Why Marketing Agencies Need Dedicated Cold Email Infrastructure",
+      "content": "Marketing agencies face a dual infrastructure challenge: they need cold email to win their own clients AND many offer outbound email as a service to their clients. This creates compounding complexity:\n\n**You need pipeline for yourself AND your clients.** Marketing agencies are businesses that need their own client pipeline while simultaneously managing outbound infrastructure for the clients they serve. That's two separate infrastructure needs with different requirements.\n\n**Client deliverability failures reflect on your agency.** When a client's outreach lands in spam, they blame the agency — not the infrastructure. Your reputation as a marketing expert is on the line every time you send on a client's behalf.\n\n**Managing infrastructure for 10-20 clients is operational chaos.** Each client needs separate domains, DNS configuration, mailbox management, and deliverability monitoring. Without streamlined infrastructure, email ops becomes a full-time job that eats into creative and strategic work.\n\n**Clients demand results from day one.** When a new client signs a $3,000-10,000/month retainer, they expect action immediately. Spending the first month warming up email infrastructure while burning retainer budget creates tension and churn risk.\n\n**Shared infrastructure creates liability.** If you run multiple clients on shared email infrastructure, one aggressive sender can tank everyone's deliverability. Client A's spam complaints can destroy Client B's inbox placement.\n\n**Pricing pressure requires cost efficiency.** Marketing agency margins are tight. Infrastructure costs of $6-7/mailbox on Google Workspace eat into the profitability of outbound services, especially for clients requiring 100+ mailboxes."
+    },
+    "solution": {
+      "title": "How ColdRelay Solves Marketing Agency Infrastructure Challenges",
+      "content": "ColdRelay is the infrastructure backbone that marketing agencies need for both their own prospecting and client service delivery. Isolated Azure tenants with dedicated IPs per client eliminate cross-contamination risk — Client A's aggressive campaign never affects Client B. Volume pricing from $1/mailbox (dropping to $0.55 at 5,000+) makes outbound services profitable at any retainer level. Auto DNS removes the technical burden of configuring SPF, DKIM, and DMARC for every new client domain. No warmup means new clients see campaign activity from their first week, not their first month. The 99% inbox guarantee gives agencies a deliverability SLA to stand behind. For agencies, ColdRelay transforms email infrastructure from an operational liability into a profit center."
+    },
+    "howItWorks": {
+      "title": "Setting Up ColdRelay for Your Marketing Agency",
+      "steps": [
+        { "title": "Separate Agency and Client Infrastructure", "content": "Order your agency's own outbound infrastructure on dedicated domains. Then provision separate infrastructure for each client. ColdRelay's isolated Azure tenants ensure complete separation." },
+        { "title": "Standardize Client Onboarding", "content": "Create a repeatable process: collect client domains, determine mailbox counts, and place orders through ColdRelay's portal. Most clients need 50-150 mailboxes across 1-2 domains." },
+        { "title": "Deploy Client Infrastructure in Hours", "content": "Each client's infrastructure is provisioned in 2-4 hours with auto DNS. No warmup means you can show campaign activity in the client's first week — setting the right expectations and building trust." },
+        { "title": "Connect to Your Tech Stack", "content": "Import mailboxes into your preferred sending platforms (Instantly, Smartlead, etc.). Integrate with client CRMs for lead handoff and reporting." },
+        { "title": "Grow Your Infrastructure Portfolio", "content": "As you onboard more clients, total mailbox count increases and per-mailbox cost decreases. At 1,000+ mailboxes across all clients, you're at $0.70/mailbox — your infrastructure becomes increasingly profitable." }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits for Marketing Agencies Using ColdRelay",
+      "items": [
+        { "title": "Complete Client Isolation", "content": "Every client runs on their own isolated Azure tenant with dedicated IPs. No cross-contamination risk. This is the foundation of reliable multi-client outbound services." },
+        { "title": "Profitable Outbound Services", "content": "At $0.55-1.00/mailbox, your cost to provision 100 mailboxes for a client is $55-100/month. If your outbound service retainer is $2,000-5,000/month, infrastructure is just 2-5% of revenue. The rest is margin." },
+        { "title": "Instant Client Activation", "content": "New client signed? Infrastructure is live in 2-4 hours. First campaigns launch the same week. No warmup delays mean faster time-to-results and better client retention." },
+        { "title": "Deliverability You Can Stand Behind", "content": "ColdRelay's 99% inbox guarantee gives you a deliverability promise to make to clients. When clients ask 'will my emails reach inboxes?' you have a backed answer." },
+        { "title": "Agency-Grade Economics", "content": "Volume pricing across your entire client portfolio means infrastructure gets cheaper as you grow. At 5,000+ total mailboxes ($0.55/each), you're running enterprise-scale outbound at the lowest cost in the market." }
+      ]
+    },
+    "metrics": {
+      "title": "Typical Marketing Agency Metrics with ColdRelay",
+      "benchmarks": [
+        { "metric": "Client Onboarding Time (Infrastructure)", "value": "2-4 hours", "notes": "From client order to sending-ready infrastructure" },
+        { "metric": "Infrastructure Cost per Client", "value": "$50-150/month", "notes": "Typical client with 50-150 mailboxes at volume pricing" },
+        { "metric": "Infrastructure as % of Retainer", "value": "2-5%", "notes": "At $2,000-5,000/month retainers — minimal impact on margins" },
+        { "metric": "Cross-Client Contamination Risk", "value": "0%", "notes": "Isolated Azure tenants and dedicated IPs per client" },
+        { "metric": "DNS Configuration Time per Client", "value": "0 minutes", "notes": "Fully automated SPF, DKIM, DMARC for every domain" },
+        { "metric": "Inbox Placement Rate", "value": "95-99%", "notes": "Backed by ColdRelay's 99% inbox guarantee" }
+      ]
+    }
+  },
+  "faqs": [
+    { "question": "Can I white-label ColdRelay for my agency clients?", "answer": "ColdRelay provides infrastructure behind the scenes. Clients see their own domains and mailboxes — ColdRelay isn't visible to them. You can position the infrastructure as part of your agency's outbound service." },
+    { "question": "How does pricing work across multiple clients?", "answer": "ColdRelay's volume pricing applies to your total mailbox count across all clients. More clients = more mailboxes = lower per-mailbox cost. At 5,000+ total mailboxes you're at $0.55 each." },
+    { "question": "What if a client wants to take their infrastructure when they leave?", "answer": "Infrastructure is tied to the domains and mailboxes you provision. If a client leaves, you can shut down their mailboxes. If they want to continue independently, they can order their own ColdRelay infrastructure." },
+    { "question": "How do I handle clients with different sending volumes?", "answer": "Order mailbox counts based on each client's needs. A low-volume client might need 50 mailboxes; a high-volume client might need 300+. Each client's infrastructure is isolated regardless of volume." },
+    { "question": "Can I use ColdRelay for my own agency's prospecting too?", "answer": "Yes. Most agencies order their own infrastructure separately from client infrastructure. Your agency's outreach runs on your domains; client outreach runs on theirs." }
+  ],
+  "relatedPages": {
+    "guides": ["how-to-set-up-cold-email-infrastructure", "how-to-scale-cold-email-sending"],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-google-workspace", "coldrelay-vs-inframail", "coldrelay-vs-maildoso"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-lead-gen-agencies"]
+  }
+}

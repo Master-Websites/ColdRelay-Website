@@ -1,0 +1,61 @@
+{
+  "slug": "cold-email-infrastructure-for-sales-teams",
+  "industry": "Sales Teams",
+  "title": "Cold Email Infrastructure for Sales Teams — Scale Outbound Without the Technical Overhead",
+  "description": "Learn how B2B sales teams use ColdRelay's dedicated cold email infrastructure to increase meeting volume, protect company domains, and let SDRs focus on selling instead of managing email ops.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "painPoints": {
+      "title": "Why Sales Teams Need Dedicated Cold Email Infrastructure",
+      "content": "B2B sales teams know that outbound email is the most scalable prospecting channel. But as teams grow from 2-3 SDRs to 10-20+, the infrastructure challenges compound:\n\n**Company domain risk is a leadership issue.** When the VP of Sales asks IT to set up 200 mailboxes for cold outreach on the company domain, IT says no — and rightfully so. One deliverability incident affects the entire company's email: marketing, support, executive communication, everything.\n\n**SDR time on email ops is selling time lost.** Every hour an SDR spends troubleshooting deliverability, managing warmup, or rotating mailboxes is an hour they're not booking meetings. At SDR costs of $50,000-80,000/year, infrastructure friction is expensive.\n\n**Scaling SDRs requires scaling infrastructure.** Hiring 5 new SDRs means provisioning 50-125 new mailboxes (10-25 per SDR), configuring domains, setting up DNS, and managing warmup — a process that takes weeks if done manually.\n\n**Inconsistent infrastructure creates inconsistent results.** Some SDRs have well-configured mailboxes with great deliverability. Others have poorly configured accounts that land in spam. Without standardized infrastructure, pipeline metrics are unreliable.\n\n**RevOps is drowning in email operations.** Revenue Operations teams should be optimizing sales processes and building dashboards, not managing DNS records and mailbox rotations. Email infrastructure consumes RevOps bandwidth that should go toward revenue.\n\n**Budget scrutiny is increasing.** CFOs are looking at every line item. Paying $7.20/mailbox on Google Workspace for 500 sending accounts ($3,600/month) when cheaper alternatives exist raises questions during budget reviews."
+    },
+    "solution": {
+      "title": "How ColdRelay Solves Sales Team Infrastructure Challenges",
+      "content": "ColdRelay provides sales teams with standardized, scalable email infrastructure that eliminates operational overhead. Every SDR gets the same quality infrastructure — dedicated IPs, isolated Azure tenants, and auto-configured DNS — so deliverability is consistent across the team. At $1/mailbox/month (dropping to $0.55 at 5,000+), running 500 mailboxes across a 20-SDR team costs $350-500/month instead of $3,600. No warmup means new SDR hires start prospecting on their first day, not their fourth week. The 99% inbox guarantee gives sales leadership a deliverability metric they can count on. And because ColdRelay handles all infrastructure, RevOps and SDRs focus on what they do best: closing pipeline."
+    },
+    "howItWorks": {
+      "title": "Deploying ColdRelay for Your Sales Team",
+      "steps": [
+        { "title": "Plan Mailbox Allocation", "content": "Determine mailboxes per SDR based on target outreach volume. Most teams allocate 10-25 mailboxes per SDR (sending 3-5 emails each per day). A 10-SDR team needs 100-250 mailboxes across 2-3 domains." },
+        { "title": "Order at Team Scale", "content": "Place a single order for your entire team through ColdRelay's self-service portal. Volume pricing kicks in immediately — 200+ mailboxes at $0.85, 1,000+ at $0.70." },
+        { "title": "Infrastructure Live in Hours", "content": "ColdRelay provisions all mailboxes on dedicated Azure tenants with auto DNS in 2-4 hours. Entire team is ready to send the same day." },
+        { "title": "Assign to Your Sending Platform", "content": "Distribute mailboxes to SDRs within your sequencing tool (Instantly, Smartlead, Outreach, Apollo, etc.). Each SDR gets their allocation with standardized deliverability." },
+        { "title": "Onboard New SDRs Instantly", "content": "When you hire new SDRs, add mailboxes to your existing infrastructure. New reps start prospecting on day one — no warmup wait, no configuration delay." }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits for Sales Teams Using ColdRelay",
+      "items": [
+        { "title": "Protect the Company Domain", "content": "All cold outreach runs on dedicated infrastructure completely separate from corporate email. Marketing, support, executive, and client communications are never at risk from outbound activity." },
+        { "title": "Standardized SDR Infrastructure", "content": "Every SDR gets the same quality infrastructure — dedicated IPs, proper authentication, isolated tenants. No more performance variations from inconsistent mailbox quality." },
+        { "title": "New SDR = Same-Day Sending", "content": "New hire starts Monday? Their mailboxes are provisioned and ready Monday morning. No warmup period means new reps generate pipeline from their first week." },
+        { "title": "RevOps Freed from Email Ops", "content": "ColdRelay handles DNS, authentication, deliverability, and infrastructure management. RevOps focuses on process optimization, reporting, and revenue — not SPF records." },
+        { "title": "Budget-Friendly at Scale", "content": "500 mailboxes at ColdRelay costs $350/month (at $0.70/mailbox for 1,000+ tier including team buffer). The same on Google Workspace: $3,600/month. Annual savings: $39,000." }
+      ]
+    },
+    "metrics": {
+      "title": "Typical Sales Team Metrics with ColdRelay Infrastructure",
+      "benchmarks": [
+        { "metric": "Meetings Booked per SDR per Month", "value": "15-30", "notes": "With standardized infrastructure ensuring consistent deliverability" },
+        { "metric": "Infrastructure Cost per SDR", "value": "$10-25/month", "notes": "At 10-25 mailboxes per SDR at volume pricing tiers" },
+        { "metric": "New SDR Ramp Time (Infrastructure)", "value": "0 days", "notes": "No warmup — new SDRs send from day one" },
+        { "metric": "Cost per Meeting (Infrastructure Only)", "value": "$0.50-2.00", "notes": "Infrastructure cost per booked meeting at team scale" },
+        { "metric": "Annual Savings vs. Google Workspace (500 mailboxes)", "value": "$39,000+", "notes": "ColdRelay at $0.70 vs. Google at $7.20 per mailbox, annualized" },
+        { "metric": "RevOps Hours Saved per Month", "value": "20-40 hours", "notes": "Eliminated DNS management, warmup monitoring, and mailbox troubleshooting" }
+      ]
+    }
+  },
+  "faqs": [
+    { "question": "How many mailboxes does each SDR need?", "answer": "Most teams allocate 10-25 mailboxes per SDR. At 3-5 emails per mailbox per day, that's 30-125 emails per SDR per day. Start with 15 per SDR and adjust based on your target volume." },
+    { "question": "Can we use ColdRelay with Outreach, Apollo, or Salesloft?", "answer": "Yes. ColdRelay mailboxes support SMTP/IMAP and work with any sending platform that supports standard email protocols — Outreach, Apollo, Salesloft, Instantly, Smartlead, and more." },
+    { "question": "Who manages the ColdRelay infrastructure?", "answer": "Typically RevOps or SDR management. ColdRelay's self-service portal and auto DNS mean no technical skills are needed. Ordering and assigning mailboxes takes minutes, not hours." },
+    { "question": "What happens when an SDR leaves?", "answer": "Reassign their mailboxes to a new rep or shut them down. ColdRelay's monthly billing means you only pay for active mailboxes. No penalties for scaling down." },
+    { "question": "Can different SDRs have different domains?", "answer": "Yes. You can organize mailboxes by SDR, territory, ICP, or product line — each on separate domains for reputation isolation. ColdRelay's pricing is per-mailbox regardless of domain distribution." }
+  ],
+  "relatedPages": {
+    "guides": ["how-to-set-up-cold-email-infrastructure", "how-to-scale-cold-email-sending"],
+    "resources": [],
+    "comparisons": ["coldrelay-vs-google-workspace", "coldrelay-vs-microsoft-365", "coldrelay-vs-inframail"],
+    "useCases": ["cold-email-infrastructure-for-agencies", "cold-email-infrastructure-for-startups"]
+  }
+}

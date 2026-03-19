@@ -4,14 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Free Cold Email Tools — Deliverability Tests, DNS Checks & More",
   description:
-    "Free tools for cold email professionals. Test email deliverability, check SPF/DKIM/DMARC, validate DNS records, and optimize your outbound infrastructure.",
+    "Free tools for cold email professionals. Test email deliverability, generate SPF, DKIM, and DMARC records, validate DNS, and optimize your outbound infrastructure.",
   alternates: { canonical: "https://coldrelay.com/tools" },
   openGraph: {
     type: "website",
     url: "https://coldrelay.com/tools",
     title: "Free Cold Email Tools | ColdRelay",
     description:
-      "Free tools for cold email professionals. Test deliverability, check DNS records, and optimize your infrastructure.",
+      "Free tools for cold email professionals. Test deliverability, generate DNS records, and optimize your infrastructure.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "ColdRelay Tools" }],
   },
 };
@@ -25,7 +25,30 @@ const tools = [
     icon: "📧",
     badge: "Popular",
   },
-  // Future tools will be added here
+  {
+    slug: "dmarc-generator",
+    title: "DMARC Record Generator",
+    description:
+      "Generate a complete DMARC TXT record. Choose your policy, set up reporting, and configure advanced options like subdomain policy and alignment.",
+    icon: "🛡️",
+    badge: "New",
+  },
+  {
+    slug: "spf-generator",
+    title: "SPF Record Generator",
+    description:
+      "Create a valid SPF TXT record for your domain. Select your email providers, add IP addresses, and get the correct record to authorize your senders.",
+    icon: "✅",
+    badge: "New",
+  },
+  {
+    slug: "dkim-generator",
+    title: "DKIM Record Generator",
+    description:
+      "Generate a DKIM TXT record for email authentication. Select your provider, enter your selector, and get the DNS record format for your public key.",
+    icon: "🔑",
+    badge: "New",
+  },
 ];
 
 export default function ToolsPage() {
