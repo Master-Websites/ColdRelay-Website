@@ -1,6 +1,21 @@
 export default function HowItWorks() {
   return (
     <section className="relative">
+      {/* CSS keyframe animations for the cards */}
+      <style>{`
+        @keyframes hw-pulse {
+          0%, 100% { opacity: 0.8; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.03); }
+        }
+        @keyframes hw-spin-slow {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes hw-float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-8px); }
+        }
+      `}</style>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-20 md:py-28">
           {/* Section header */}
@@ -25,19 +40,20 @@ export default function HowItWorks() {
               className="group relative rounded-2xl border border-[#374151] bg-[#111827] p-8 transition-all duration-300 hover:border-[#4A73D5]/50 hover:scale-[1.02] hover:shadow-lg hover:shadow-[#4A73D5]/5"
               data-aos="fade-up"
             >
-              {/* Illustration with blue glow */}
-              <div className="relative mb-8 flex h-48 items-center justify-center">
+              {/* Illustration with blue glow — pulse animation */}
+              <div className="relative mb-8 flex h-56 items-center justify-center">
                 {/* Blue glow behind SVG */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-32 w-32 rounded-full bg-[#4A73D5]/10 blur-2xl" />
+                  <div className="h-40 w-40 rounded-full bg-[#4A73D5]/10 blur-2xl" />
                 </div>
                 <svg
-                  width="140"
-                  height="140"
+                  width="200"
+                  height="200"
                   viewBox="0 0 120 120"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="relative opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ animation: "hw-pulse 3s ease-in-out infinite" }}
                 >
                   {/* Stacked config panels */}
                   <rect x="20" y="25" width="80" height="30" rx="6" fill="#1E293B" stroke="#374151" strokeWidth="1.5" />
@@ -72,15 +88,15 @@ export default function HowItWorks() {
               data-aos="fade-up"
               data-aos-delay={100}
             >
-              {/* Illustration with blue glow */}
-              <div className="relative mb-8 flex h-48 items-center justify-center">
+              {/* Illustration with blue glow — slow rotation on dial */}
+              <div className="relative mb-8 flex h-56 items-center justify-center">
                 {/* Blue glow behind SVG */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-32 w-32 rounded-full bg-[#4A73D5]/10 blur-2xl" />
+                  <div className="h-40 w-40 rounded-full bg-[#4A73D5]/10 blur-2xl" />
                 </div>
                 <svg
-                  width="140"
-                  height="140"
+                  width="200"
+                  height="200"
                   viewBox="0 0 120 120"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -89,22 +105,24 @@ export default function HowItWorks() {
                   {/* Circular dial with numbers */}
                   <circle cx="60" cy="60" r="40" stroke="#374151" strokeWidth="1.5" fill="#1E293B" />
                   <circle cx="60" cy="60" r="32" stroke="#374151" strokeWidth="0.75" fill="none" />
-                  {/* Scale marks */}
-                  {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle) => {
-                    const rad = (angle * Math.PI) / 180;
-                    const x1 = 60 + 36 * Math.cos(rad);
-                    const y1 = 60 + 36 * Math.sin(rad);
-                    const x2 = 60 + 40 * Math.cos(rad);
-                    const y2 = 60 + 40 * Math.sin(rad);
-                    return (
-                      <line key={angle} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#4A73D5" strokeWidth="1.5" opacity="0.4" />
-                    );
-                  })}
+                  {/* Scale marks — rotating slowly */}
+                  <g style={{ animation: "hw-spin-slow 20s linear infinite", transformOrigin: "60px 60px" }}>
+                    {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((angle) => {
+                      const rad = (angle * Math.PI) / 180;
+                      const x1 = 60 + 36 * Math.cos(rad);
+                      const y1 = 60 + 36 * Math.sin(rad);
+                      const x2 = 60 + 40 * Math.cos(rad);
+                      const y2 = 60 + 40 * Math.sin(rad);
+                      return (
+                        <line key={angle} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#4A73D5" strokeWidth="1.5" opacity="0.4" />
+                      );
+                    })}
+                    {/* Indicator arc */}
+                    <path d="M 26.1 80.5 A 40 40 0 1 1 93.9 80.5" stroke="#4A73D5" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.6" />
+                  </g>
                   {/* Center number */}
                   <text x="60" y="56" textAnchor="middle" fill="#4A73D5" fontSize="20" fontWeight="600" fontFamily="sans-serif">5K+</text>
                   <text x="60" y="72" textAnchor="middle" fill="#6B7280" fontSize="9" fontFamily="sans-serif">MAILBOXES</text>
-                  {/* Indicator arc */}
-                  <path d="M 26.1 80.5 A 40 40 0 1 1 93.9 80.5" stroke="#4A73D5" strokeWidth="3" fill="none" strokeLinecap="round" opacity="0.6" />
                 </svg>
               </div>
 
@@ -127,19 +145,20 @@ export default function HowItWorks() {
               data-aos="fade-up"
               data-aos-delay={200}
             >
-              {/* Illustration with blue glow */}
-              <div className="relative mb-8 flex h-48 items-center justify-center">
+              {/* Illustration with blue glow — float animation */}
+              <div className="relative mb-8 flex h-56 items-center justify-center">
                 {/* Blue glow behind SVG */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="h-32 w-32 rounded-full bg-[#4A73D5]/10 blur-2xl" />
+                  <div className="h-40 w-40 rounded-full bg-[#4A73D5]/10 blur-2xl" />
                 </div>
                 <svg
-                  width="140"
-                  height="140"
+                  width="200"
+                  height="200"
                   viewBox="0 0 120 120"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   className="relative opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{ animation: "hw-float 3s ease-in-out infinite" }}
                 >
                   {/* Connection/integration icon */}
                   {/* Left node */}

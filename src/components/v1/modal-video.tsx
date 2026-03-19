@@ -52,7 +52,7 @@ export default function ModalVideo() {
           data-aos="fade-up"
           data-aos-delay={200}
         >
-          <figure className="relative w-full aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] border border-[#374151]">
+          <figure className="relative w-full aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-[#0a0a0a] via-[#111827] to-[#0a0a0a] border border-[#374151]">
             {/* Gradient overlay pattern */}
             <div className="absolute inset-0 bg-gradient-to-br from-[#4A73D5]/5 via-transparent to-[#4A73D5]/10" />
             {/* Grid pattern for visual interest */}
@@ -64,6 +64,46 @@ export default function ModalVideo() {
                 backgroundSize: "40px 40px",
               }}
             />
+            {/* Subtle blue glow in the center */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="h-64 w-64 rounded-full bg-[#4A73D5]/15 blur-3xl" />
+            </div>
+            {/* Dashboard mockup visual */}
+            <div className="absolute inset-0 flex items-center justify-center p-8 opacity-40 group-hover:opacity-60 transition-opacity duration-500">
+              <div className="w-full max-w-2xl rounded-xl border border-[#374151]/50 bg-[#0f172a]/80 p-4 shadow-2xl">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-2.5 w-2.5 rounded-full bg-red-500/60" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/60" />
+                  <div className="h-2.5 w-2.5 rounded-full bg-green-500/60" />
+                  <div className="ml-4 h-3 w-48 rounded bg-[#374151]/40" />
+                </div>
+                <div className="grid grid-cols-3 gap-3 mb-3">
+                  <div className="rounded-lg bg-[#1e293b]/60 p-3">
+                    <div className="h-2 w-12 rounded bg-[#4A73D5]/30 mb-2" />
+                    <div className="h-4 w-16 rounded bg-[#4A73D5]/50" />
+                  </div>
+                  <div className="rounded-lg bg-[#1e293b]/60 p-3">
+                    <div className="h-2 w-12 rounded bg-[#4A73D5]/30 mb-2" />
+                    <div className="h-4 w-20 rounded bg-[#4A73D5]/40" />
+                  </div>
+                  <div className="rounded-lg bg-[#1e293b]/60 p-3">
+                    <div className="h-2 w-12 rounded bg-[#4A73D5]/30 mb-2" />
+                    <div className="h-4 w-14 rounded bg-green-500/40" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex gap-2">
+                    <div className="h-3 w-full rounded bg-[#374151]/30" />
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="h-3 w-3/4 rounded bg-[#374151]/25" />
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="h-3 w-5/6 rounded bg-[#374151]/20" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </figure>
           {/* Play icon */}
           <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-gray-950 before:duration-300 group-hover:before:scale-110">
@@ -117,7 +157,7 @@ export default function ModalVideo() {
           <div className="mx-auto flex h-full max-w-6xl items-center">
             <DialogPanel
               transition
-              className="aspect-video max-h-full w-full overflow-hidden rounded-2xl bg-black shadow-2xl duration-300 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
+              className="aspect-video w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-2xl duration-300 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
             >
               <iframe
                 className="h-full w-full"
