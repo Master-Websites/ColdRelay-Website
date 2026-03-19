@@ -4,14 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Free Cold Email Tools — Calculators, DNS Checks, Generators & More",
   description:
-    "11 free tools for cold email professionals. Mailbox calculator, ROI calculator, blacklist checker, MX lookup, SPF/DKIM/DMARC generators, deliverability test, spintax, templates, and more.",
+    "16 free tools for cold email professionals. Mailbox calculator, ROI calculator, blacklist checker, MX lookup, SPF/DKIM/DMARC generators, deliverability test, warmup scheduler, signature generator, domain reputation checker, email sequence builder, CAN-SPAM checker, and more.",
   alternates: { canonical: "https://coldrelay.com/tools" },
   openGraph: {
     type: "website",
     url: "https://coldrelay.com/tools",
     title: "Free Cold Email Tools | ColdRelay",
     description:
-      "11 free tools for cold email professionals. Calculators, DNS checks, generators, and deliverability tools — no signup required.",
+      "16 free tools for cold email professionals. Calculators, DNS checks, generators, and deliverability tools — no signup required.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "ColdRelay Tools" }],
   },
 };
@@ -23,7 +23,7 @@ const tools = [
     description:
       "Calculate how many mailboxes and domains you need for your cold email volume. Compare ColdRelay pricing vs Google Workspace and Microsoft 365.",
     icon: "🔢",
-    badge: "New",
+    badge: null,
     category: "Calculators",
   },
   {
@@ -32,6 +32,15 @@ const tools = [
     description:
       "Estimate your cold email return on investment. Input volume, reply rate, meeting rate, close rate, and deal value to see projected revenue.",
     icon: "💰",
+    badge: null,
+    category: "Calculators",
+  },
+  {
+    slug: "warmup-schedule-generator",
+    title: "Warmup Schedule Generator",
+    description:
+      "Generate a 30-day warmup calendar for your mailboxes. See the day-by-day volume ramp and warmup vs cold email split.",
+    icon: "🔥",
     badge: "New",
     category: "Calculators",
   },
@@ -41,6 +50,15 @@ const tools = [
     description:
       "Check if your domain or IP is listed on major email blocklists (DNSBLs). Instant results across 12+ blacklists used by Gmail, Outlook, and Yahoo.",
     icon: "🛡️",
+    badge: null,
+    category: "Deliverability",
+  },
+  {
+    slug: "domain-reputation-checker",
+    title: "Domain Reputation Checker",
+    description:
+      "Check your domain's email authentication records — SPF, DKIM, DMARC, MX, A, and BIMI — and get a reputation score from 0 to 100.",
+    icon: "⭐",
     badge: "New",
     category: "Deliverability",
   },
@@ -50,7 +68,7 @@ const tools = [
     description:
       "Look up MX records for any domain. See mail server priorities, detect the email provider, and verify email routing configuration.",
     icon: "🔍",
-    badge: "New",
+    badge: null,
     category: "DNS Tools",
   },
   {
@@ -60,7 +78,7 @@ const tools = [
       "Check your SPF, DKIM, DMARC, and MX records. Get a deliverability score out of 100 with actionable recommendations.",
     icon: "📧",
     badge: "Popular",
-    category: "Deliverability",
+    category: "DNS Tools",
   },
   {
     slug: "spf-generator",
@@ -99,6 +117,15 @@ const tools = [
     category: "Content",
   },
   {
+    slug: "email-sequence-builder",
+    title: "Email Sequence Builder",
+    description:
+      "Generate a complete cold email sequence — initial email plus follow-ups with optimal timing. Customized for your product, audience, and tone.",
+    icon: "📋",
+    badge: "New",
+    category: "Content",
+  },
+  {
     slug: "subject-line-generator",
     title: "Subject Line Generator",
     description:
@@ -116,9 +143,27 @@ const tools = [
     badge: null,
     category: "Content",
   },
+  {
+    slug: "email-signature-generator",
+    title: "Email Signature Generator",
+    description:
+      "Create a clean, professional HTML email signature. Multiple styles — minimal, professional, bold — with live preview and one-click copy.",
+    icon: "✍️",
+    badge: "New",
+    category: "Content",
+  },
+  {
+    slug: "can-spam-checker",
+    title: "CAN-SPAM Compliance Checker",
+    description:
+      "Check if your cold emails comply with the CAN-SPAM Act. Interactive checklist with scoring, compliance status, and requirement explanations.",
+    icon: "⚖️",
+    badge: "New",
+    category: "Compliance",
+  },
 ];
 
-const categories = ["Calculators", "Deliverability", "DNS Tools", "Content"];
+const categories = ["Calculators", "Deliverability", "DNS Tools", "Content", "Compliance"];
 
 export default function ToolsPage() {
   return (
