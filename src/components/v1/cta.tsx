@@ -38,7 +38,7 @@ export default function Cta() {
                   href="https://app.coldrelay.com/auth/register"
                 >
                   <span className="relative inline-flex items-center">
-                    Start for $50/month
+                    Start for $1/mailbox
                     <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                       -&gt;
                     </span>
