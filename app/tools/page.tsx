@@ -4,14 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Free Cold Email Tools — Calculators, DNS Checks, Generators & More",
   description:
-    "16 free tools for cold email professionals. Mailbox calculator, ROI calculator, blacklist checker, MX lookup, SPF/DKIM/DMARC generators, deliverability test, warmup scheduler, signature generator, domain reputation checker, email sequence builder, CAN-SPAM checker, and more.",
+    "20 free tools for cold email professionals. Mailbox calculator, ROI calculator, blacklist checker, MX lookup, SPF/DKIM/DMARC generators, deliverability test, warmup scheduler, signature generator, domain reputation checker, email sequence builder, CAN-SPAM checker, header analyzer, domain age checker, inbox placement tester, A/B test planner, and more.",
   alternates: { canonical: "https://coldrelay.com/tools" },
   openGraph: {
     type: "website",
     url: "https://coldrelay.com/tools",
     title: "Free Cold Email Tools | ColdRelay",
     description:
-      "16 free tools for cold email professionals. Calculators, DNS checks, generators, and deliverability tools — no signup required.",
+      "20 free tools for cold email professionals. Calculators, DNS checks, generators, and deliverability tools — no signup required.",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "ColdRelay Tools" }],
   },
 };
@@ -41,6 +41,15 @@ const tools = [
     description:
       "Generate a 30-day warmup calendar for your mailboxes. See the day-by-day volume ramp and warmup vs cold email split.",
     icon: "🔥",
+    badge: null,
+    category: "Calculators",
+  },
+  {
+    slug: "ab-test-planner",
+    title: "Cold Email A/B Test Planner",
+    description:
+      "Plan statistically valid A/B tests for cold email. Calculate sample sizes, significance thresholds, and timelines for subject lines, opening lines, CTAs, and send times.",
+    icon: "🧪",
     badge: "New",
     category: "Calculators",
   },
@@ -59,6 +68,33 @@ const tools = [
     description:
       "Check your domain's email authentication records — SPF, DKIM, DMARC, MX, A, and BIMI — and get a reputation score from 0 to 100.",
     icon: "⭐",
+    badge: null,
+    category: "Deliverability",
+  },
+  {
+    slug: "inbox-placement-tester",
+    title: "Inbox Placement Tester",
+    description:
+      "Estimate your inbox placement rate based on an 8-point deliverability checklist. Score your cold email setup and get actionable recommendations.",
+    icon: "📬",
+    badge: "New",
+    category: "Deliverability",
+  },
+  {
+    slug: "email-header-analyzer",
+    title: "Email Header Analyzer",
+    description:
+      "Paste raw email headers to inspect SPF, DKIM, and DMARC authentication results, trace the routing path, and extract key fields.",
+    icon: "🔬",
+    badge: "New",
+    category: "Deliverability",
+  },
+  {
+    slug: "domain-age-checker",
+    title: "Domain Age Checker",
+    description:
+      "Check when a domain was registered and whether it's old enough for cold email. Shows registration date, registrar, nameservers, and readiness assessment.",
+    icon: "📅",
     badge: "New",
     category: "Deliverability",
   },
@@ -122,7 +158,7 @@ const tools = [
     description:
       "Generate a complete cold email sequence — initial email plus follow-ups with optimal timing. Customized for your product, audience, and tone.",
     icon: "📋",
-    badge: "New",
+    badge: null,
     category: "Content",
   },
   {
@@ -149,7 +185,7 @@ const tools = [
     description:
       "Create a clean, professional HTML email signature. Multiple styles — minimal, professional, bold — with live preview and one-click copy.",
     icon: "✍️",
-    badge: "New",
+    badge: null,
     category: "Content",
   },
   {
@@ -158,7 +194,7 @@ const tools = [
     description:
       "Check if your cold emails comply with the CAN-SPAM Act. Interactive checklist with scoring, compliance status, and requirement explanations.",
     icon: "⚖️",
-    badge: "New",
+    badge: null,
     category: "Compliance",
   },
 ];
