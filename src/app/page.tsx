@@ -4,6 +4,7 @@ import PageIllustration from "@/components/v1/page-illustration";
 import Hero from "@/components/v1/hero-home";
 import Features from "@/components/v1/features";
 import Workflows from "@/components/v1/workflows";
+import HowItWorks from "@/components/v1/how-it-works";
 import Pricing from "@/components/v1/pricing";
 import Testimonials from "@/components/v1/testimonials";
 import FAQ from "@/components/v1/faq";
@@ -25,6 +26,7 @@ export default function HomePage() {
         <Hero />
         <Features />
         <Workflows />
+        <HowItWorks />
         <Pricing />
         <Testimonials />
         <FAQ />

@@ -76,6 +76,24 @@ export default function HeroHome() {
               </div>
               <p className="text-sm text-gray-400">Trusted by 200+ outbound teams</p>
             </div>
+
+            {/* Video Section */}
+            <div className="mx-auto max-w-3xl mt-12" data-aos="fade-up" data-aos-delay={900}>
+              <div className="relative aspect-video rounded-2xl border border-[#374151] bg-[#111827] overflow-hidden">
+                {/* Wistia embed placeholder - Mo will add video ID later */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-20 h-20 rounded-full bg-[#4A73D5]/20 flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-[#4A73D5]/30 transition-colors">
+                      <svg className="w-8 h-8 text-[#4A73D5] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p className="text-sm text-gray-400">See ColdRelay in Action</p>
+                  </div>
+                </div>
+                {/* When ready, replace with: <script src="https://fast.wistia.com/embed/medias/VIDEO_ID.jsonp" async></script> */}
+              </div>
+            </div>
           </div>
         </div>
       </div>
