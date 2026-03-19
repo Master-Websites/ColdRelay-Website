@@ -2,15 +2,14 @@ import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
 import { LogoBar } from "@/components/home/LogoBar";
 import { GoogleOutlookPainSection } from "@/components/home/GoogleOutlookPainSection";
-import { WhyNotGoogleSection } from "@/components/home/WhyNotGoogleSection";
 import { HowItWorksSection } from "@/components/home/HowItWorksSection";
 import { CalculatorSection } from "@/components/home/CalculatorSection";
 import { FeaturesSection } from "@/components/home/FeaturesSection";
+import { StatsSection } from "@/components/home/StatsSection";
 import { ComparisonSection } from "@/components/home/ComparisonSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FAQSection } from "@/components/home/FAQSection";
 import { CTASection } from "@/components/home/CTASection";
-import { BlogPreviewSection } from "@/components/home/BlogPreviewSection";
 
 export const metadata: Metadata = {
   title: "ColdRelay — Cold Email Infrastructure That Actually Delivers",
@@ -25,15 +24,14 @@ export default function HomePage() {
       <HeroSection />
       <LogoBar />
       <GoogleOutlookPainSection />
-      <WhyNotGoogleSection />
       <HowItWorksSection />
       <CalculatorSection />
       <FeaturesSection />
+      <StatsSection />
       <ComparisonSection />
       <TestimonialsSection />
       <FAQSection />
       <CTASection />
-      <BlogPreviewSection />
     </>
   );
 }
