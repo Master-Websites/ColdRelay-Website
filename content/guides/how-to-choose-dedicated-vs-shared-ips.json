@@ -1,0 +1,82 @@
+{
+  "slug": "how-to-choose-dedicated-vs-shared-ips",
+  "title": "How to Choose Between Dedicated and Shared IPs for Cold Email",
+  "description": "Understand the critical difference between dedicated and shared IP addresses for cold email infrastructure. Learn how IP reputation works, when you need dedicated IPs, and why shared IPs are risky for outbound campaigns.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "intro": {
+      "title": "Why IP Addresses Matter for Cold Email",
+      "content": "Every email you send comes from an IP address. Email providers (Gmail, Outlook, Yahoo) maintain reputation scores for every IP address that sends email \u2014 and this reputation directly determines whether your messages reach the inbox or the spam folder.\n\nThink of it like a credit score for sending. A high-reputation IP means your emails are trusted. A low-reputation IP means your emails are filtered, throttled, or blocked. And just like credit scores, IP reputation can be damaged by the behavior of others if you share the same IP address.\n\nFor cold email, the choice between dedicated and shared IPs is one of the most impactful infrastructure decisions you'll make. It affects deliverability, scalability, troubleshooting ability, and long-term infrastructure reliability."
+    },
+    "steps": [
+      {
+        "title": "Shared IPs: How They Work and Why They're Risky",
+        "content": "Shared IP addresses are used by multiple senders simultaneously. When you use Google Workspace, standard Microsoft 365, or many email service providers, your emails are sent from IP addresses shared with thousands of other users.\n\n**How shared IPs work:**\n- Multiple email accounts send through the same IP address\n- The IP's reputation is the aggregate of all senders' behavior\n- Email providers see one IP sending millions of emails from many different domains\n- Your individual sending behavior is just one factor in the IP's overall reputation\n\n**Advantages of shared IPs:**\n- No individual warmup needed (the IP already has sending history)\n- Lower cost (infrastructure costs are distributed across users)\n- Good senders benefit from other good senders on the same IP\n- Suitable for low-volume, non-cold email sending\n\n**Risks of shared IPs for cold email:**\n\n**Reputation contamination.** If another sender on your shared IP sends spam, gets high complaints, or hits spam traps, the entire IP's reputation suffers \u2014 including your emails. You can do everything right and still land in spam because of someone else's behavior.\n\n**No control over recovery.** When a shared IP's reputation drops, you can't fix it yourself. You're dependent on the email provider to address the bad actors. This can take days or weeks.\n\n**Unpredictable deliverability.** Shared IP reputation fluctuates based on aggregate behavior. Your inbox placement rate may vary day to day based on what other senders are doing \u2014 even when your own sending practices are consistent.\n\n**Blacklist vulnerability.** If a shared IP gets blacklisted (Spamhaus, Barracuda, etc.), every sender on that IP is affected. Delisting requires the IP owner to act \u2014 you have no direct control."
+      },
+      {
+        "title": "Dedicated IPs: Full Control Over Your Reputation",
+        "content": "A dedicated IP address is assigned exclusively to you (or your organization). Only your emails are sent from that IP. Your reputation is determined entirely by your own sending behavior.\n\n**How dedicated IPs work:**\n- Your emails are the only traffic on the IP address\n- IP reputation is 100% determined by your sending practices\n- Email providers evaluate your IP independently from all other senders\n- You have direct control over improving or maintaining reputation\n\n**Advantages of dedicated IPs:**\n\n**Complete reputation isolation.** No other sender can damage your IP's reputation. If you maintain good list hygiene, low complaints, and proper authentication, your reputation stays clean.\n\n**Predictable deliverability.** Your inbox placement rate is determined by your own behavior, not random fluctuations from shared infrastructure. This makes deliverability metrics reliable and actionable.\n\n**Blacklist control.** If your IP gets listed (rare with good practices), you can identify the cause and request delisting directly. No dependency on a shared infrastructure provider to act.\n\n**Scalability.** Dedicated IPs handle increasing volume gracefully because the reputation is already established under your control. Scaling on shared IPs introduces more reputation variance.\n\n**Transparency.** You can use tools like Google Postmaster Tools and Microsoft SNDS to monitor your exact IP reputation. With shared IPs, these tools show aggregate data that's less actionable."
+      },
+      {
+        "title": "When to Choose Dedicated vs. Shared IPs",
+        "content": "**Choose shared IPs when:**\n- You're sending low-volume business email (not cold outreach)\n- Email is not a critical business channel\n- You're on a platform like Gmail for personal use\n- You send fewer than 50 emails per day total\n\n**Choose dedicated IPs when:**\n- You're running cold email campaigns of any volume\n- Email deliverability directly impacts revenue\n- You manage multiple clients (agency/lead gen)\n- You need predictable, controllable inbox placement\n- You send more than 100 emails per day\n- Your business depends on outbound email as a growth channel\n\n**The clear recommendation for cold email:** Always use dedicated IPs. The risk of shared IP contamination is too high when your business depends on email reaching inboxes. The cost difference between shared and dedicated IPs is negligible compared to the revenue impact of poor deliverability."
+      },
+      {
+        "title": "How ColdRelay Implements Dedicated IPs",
+        "content": "ColdRelay provides dedicated IPs as a standard feature, not an expensive add-on:\n\n**Isolated Azure tenants.** Each customer (or client, for agencies) gets their own Azure tenant. This provides isolation at the infrastructure level, not just the IP level. Your entire email environment is separate.\n\n**Dedicated IP per tenant.** Each isolated tenant has dedicated IP addresses. Your sending reputation is entirely your own \u2014 no shared infrastructure, no contamination risk.\n\n**Pre-established IP reputation.** ColdRelay's dedicated IPs have established sending history, which is why no warmup is required. You're not starting from a blank IP \u2014 you inherit infrastructure with positive reputation signals.\n\n**Multi-client isolation for agencies.** Agencies and lead gen companies can provision separate tenants per client. Client A's IPs are completely separate from Client B's. This level of isolation is typically only available in enterprise email infrastructure.\n\n**Included in per-mailbox pricing.** Dedicated IPs on ColdRelay cost $1/mailbox (as low as $0.55 at scale). Compare to other providers where dedicated IPs are add-on fees of $20-100+/month per IP. ColdRelay's pricing includes everything."
+      }
+    ],
+    "mistakes": {
+      "title": "Common Mistakes to Avoid",
+      "items": [
+        "Using shared IPs for cold email and wondering why deliverability is inconsistent",
+        "Assuming dedicated IPs require no management \u2014 you still need to maintain sending reputation",
+        "Mixing transactional email and cold outreach on the same IP, contaminating both reputation streams",
+        "Sending wildly inconsistent daily volumes from dedicated IPs, confusing reputation algorithms",
+        "Not monitoring IP reputation through Google Postmaster Tools and Microsoft SNDS"
+      ]
+    },
+    "summary": {
+      "title": "Managing IP Reputation Over Time",
+      "content": "Having dedicated IPs is the foundation \u2014 maintaining their reputation is an ongoing practice:\n\n**Monitor IP reputation regularly.**\n- Google Postmaster Tools: shows your IP reputation as Gmail sees it (High, Medium, Low, Bad)\n- Microsoft SNDS: shows complaint data and filter results for your IPs\n- MXToolbox: checks your IPs against 100+ blacklists\n\n**Respond to reputation changes immediately.** If your IP reputation drops from High to Medium on Google Postmaster, investigate immediately. Don't wait for it to drop further. Common causes: increased complaints, spam trap hits, or bounce rate spikes.\n\n**Maintain consistent sending volume.** Dedicated IPs build reputation based on consistent patterns. Avoid dramatic volume swings (sending 5,000 emails one day, 50 the next). Consistent daily volume maintains stable reputation.\n\n**Use IP rotation wisely.** At higher volumes, rotating across multiple dedicated IPs distributes load and prevents any single IP from being overtaxed. ColdRelay's infrastructure handles IP management as part of the service.\n\n**Separate transactional and cold email IPs.** Never mix transactional email (order confirmations, password resets) with cold outreach on the same IP. Different email types have different engagement patterns and should be isolated."
+    }
+  },
+  "faqs": [
+    {
+      "question": "Do I get dedicated IPs with ColdRelay?",
+      "answer": "Yes. ColdRelay provides dedicated IPs on isolated Azure tenants as a standard feature. Every customer gets their own dedicated IP infrastructure \u2014 it's included in the per-mailbox price."
+    },
+    {
+      "question": "Can someone else's behavior affect my ColdRelay IP?",
+      "answer": "No. ColdRelay's isolated Azure tenants ensure your IP is exclusively yours. No other customer's sending behavior affects your IP reputation."
+    },
+    {
+      "question": "How many dedicated IPs do I need?",
+      "answer": "ColdRelay handles IP allocation as part of infrastructure provisioning. The number of IPs scales with your mailbox count and sending volume. You don't need to manage IP allocation manually."
+    },
+    {
+      "question": "Is a dedicated IP enough for good deliverability?",
+      "answer": "Dedicated IPs are essential but not sufficient. You also need proper authentication (SPF, DKIM, DMARC), good list hygiene, appropriate sending volume, and quality content. ColdRelay handles the infrastructure side; you handle the campaign side."
+    },
+    {
+      "question": "What happens to my IP reputation if I pause sending?",
+      "answer": "IP reputation gradually decays during long periods of inactivity (weeks to months). Short pauses (days) have minimal impact. ColdRelay's infrastructure maintains baseline IP health even during low-activity periods."
+    }
+  ],
+  "relatedPages": {
+    "guides": [
+      "how-to-set-up-cold-email-infrastructure",
+      "how-to-avoid-email-blacklists",
+      "how-to-monitor-email-deliverability"
+    ],
+    "resources": [],
+    "comparisons": [
+      "coldrelay-vs-google-workspace",
+      "coldrelay-vs-inframail"
+    ],
+    "useCases": [
+      "cold-email-infrastructure-for-agencies",
+      "cold-email-infrastructure-for-lead-gen-agencies"
+    ]
+  }
+}

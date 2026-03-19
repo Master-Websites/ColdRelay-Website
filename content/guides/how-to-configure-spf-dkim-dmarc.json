@@ -1,0 +1,79 @@
+{
+  "slug": "how-to-configure-spf-dkim-dmarc",
+  "title": "How to Configure SPF, DKIM, and DMARC for Cold Email \u2014 Complete Technical Guide",
+  "description": "A comprehensive guide to configuring SPF, DKIM, and DMARC email authentication protocols for cold email infrastructure. Learn what each protocol does, how to set them up, and why they're essential for inbox deliverability.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "intro": {
+      "title": "Why Email Authentication Matters for Cold Email",
+      "content": "Email authentication is the technical foundation of deliverability. SPF, DKIM, and DMARC are three protocols that prove to receiving email servers (Gmail, Outlook, Yahoo, etc.) that your emails are legitimately from your domain and haven't been tampered with in transit. Without proper authentication, your cold emails are virtually guaranteed to land in spam \u2014 regardless of how good your content is.\n\nThink of it like this: SPF says 'these servers are allowed to send email for my domain.' DKIM says 'this email hasn't been modified since it left my server.' DMARC says 'if an email fails SPF or DKIM checks, here's what to do with it.' Together, they form a trust chain that email providers use to decide whether your message reaches the inbox or the spam folder.\n\nFor cold email specifically, authentication isn't optional \u2014 it's the baseline requirement. Email providers are increasingly aggressive about filtering unauthenticated email, and in 2024 Google and Yahoo implemented requirements that make SPF, DKIM, and DMARC mandatory for bulk senders."
+    },
+    "steps": [
+      {
+        "title": "SPF (Sender Policy Framework) \u2014 Who Can Send for Your Domain",
+        "content": "SPF is a DNS record that lists which IP addresses and servers are authorized to send email on behalf of your domain. When a receiving server gets an email from your domain, it checks the SPF record to verify that the sending server is authorized.\n\n**How SPF works:**\n1. You publish a TXT record in your domain's DNS\n2. The record specifies which IP addresses/servers can send email for your domain\n3. Receiving servers look up this record when they get email from your domain\n4. If the sending server matches the SPF record, the check passes\n5. If it doesn't match, the email may be flagged or rejected\n\n**Example SPF record for Microsoft 365:**\n`v=spf1 include:spf.protection.outlook.com -all`\n\nThis record says: 'Only Microsoft 365 servers (spf.protection.outlook.com) are authorized to send email for this domain. Reject everything else (-all).'\n\n**SPF pitfalls:**\n- **Too many DNS lookups.** SPF has a 10 DNS lookup limit. Each 'include' directive counts as a lookup. Complex setups with multiple sending services can exceed this limit, causing SPF to fail.\n- **Forgetting the -all directive.** Using `~all` (softfail) instead of `-all` (hardfail) is weaker. For cold email, use `-all` to explicitly reject unauthorized senders.\n- **Not updating after changing providers.** If you migrate between email platforms, update SPF to reflect the new sending servers."
+      },
+      {
+        "title": "DKIM (DomainKeys Identified Mail) \u2014 Email Integrity Verification",
+        "content": "DKIM adds a cryptographic signature to every email you send. The receiving server uses this signature to verify that the email content hasn't been modified in transit and that it genuinely originated from your domain.\n\n**How DKIM works:**\n1. Your email server generates a public/private key pair\n2. The private key is used to sign outgoing emails (creating a hash of the email content)\n3. The public key is published as a DNS record on your domain\n4. Receiving servers use the public key to verify the signature\n5. If the signature matches, the email is verified as authentic and unmodified\n\n**Example DKIM DNS record:**\nA CNAME or TXT record at `selector._domainkey.yourdomain.com` pointing to or containing the public key.\n\n**Why DKIM matters for cold email:**\n- It proves your email hasn't been tampered with by intermediaries\n- Email providers give DKIM-signed emails a significant deliverability boost\n- Without DKIM, DMARC alignment fails (more on this below)\n- Many corporate email filters flag unsigned emails as suspicious\n\n**DKIM configuration notes:**\n- Key length should be at least 1024 bits (2048 recommended)\n- Each sending service may require its own DKIM selector\n- DKIM keys should be rotated periodically (annually is common)"
+      },
+      {
+        "title": "DMARC (Domain-based Message Authentication, Reporting, and Conformance)",
+        "content": "DMARC builds on SPF and DKIM by adding a policy layer that tells receiving servers what to do when emails fail authentication checks. It also provides reporting so you can monitor authentication results.\n\n**How DMARC works:**\n1. You publish a DMARC policy as a TXT record at `_dmarc.yourdomain.com`\n2. When an email arrives, the receiving server checks SPF and DKIM\n3. DMARC requires 'alignment' \u2014 the domain in SPF/DKIM must match the From address domain\n4. If alignment fails, the DMARC policy determines the action: none (monitor), quarantine (spam folder), or reject\n5. Receiving servers send aggregate reports to the address in your DMARC record\n\n**Example DMARC record:**\n`v=DMARC1; p=quarantine; rua=mailto:dmarc@yourdomain.com; pct=100`\n\nThis says: 'If SPF and DKIM alignment fails, quarantine the email (send to spam). Send aggregate reports to dmarc@yourdomain.com. Apply to 100% of emails.'\n\n**DMARC policy progression for cold email:**\n- Start with `p=none` to monitor without affecting delivery\n- Move to `p=quarantine` after confirming all legitimate email passes\n- Optionally escalate to `p=reject` for maximum protection\n- For cold email domains, `p=quarantine` is the recommended balance\n\n**Why DMARC is critical:**\n- Google and Yahoo require DMARC for bulk senders (as of 2024)\n- DMARC alignment is a major deliverability signal\n- Without DMARC, your domain is vulnerable to spoofing\n- Reports help identify unauthorized use of your domain"
+      }
+    ],
+    "mistakes": {
+      "title": "Common Authentication Mistakes That Kill Deliverability",
+      "items": [
+        "Missing authentication entirely. Sending cold email without SPF, DKIM, and DMARC is like showing up to a security checkpoint without ID. You're going straight to spam.",
+        "SPF record exceeding 10 lookups. Every 'include' and 'redirect' in your SPF record counts toward a 10-lookup limit. Exceeding it causes SPF to fail silently, tanking deliverability.",
+        "Misaligned DMARC. DMARC requires that SPF or DKIM domains align with the From address. If your sending service uses a different domain for SPF, alignment fails even if the SPF check itself passes.",
+        "Using 'softfail' everywhere. `~all` in SPF and `p=none` in DMARC are monitoring modes, not enforcement. For cold email, use `-all` in SPF and at least `p=quarantine` in DMARC.",
+        "Not monitoring DMARC reports. DMARC provides valuable feedback about authentication failures. Ignoring reports means you miss configuration problems until deliverability drops.",
+        "Forgetting DNS propagation time. DNS changes can take up to 48 hours to propagate globally. Don't start sending immediately after making DNS changes \u2014 verify propagation first.",
+        "Wrong DKIM key length. Keys shorter than 1024 bits are considered weak and may be flagged by modern email filters. Use 2048-bit keys whenever possible."
+      ]
+    },
+    "summary": {
+      "title": "Skip the Manual Setup: ColdRelay's Auto DNS",
+      "content": "Configuring SPF, DKIM, and DMARC manually across multiple domains is time-consuming, error-prone, and requires ongoing maintenance. ColdRelay eliminates this entirely with automated DNS configuration.\n\nWhen you order ColdRelay infrastructure, SPF, DKIM, and DMARC are configured automatically during the 2-4 hour provisioning window. Every domain gets:\n- Properly configured SPF record pointing to your dedicated sending servers\n- 2048-bit DKIM keys with correct selector configuration\n- DMARC policy set to recommended levels for cold email\n- All records verified before infrastructure is marked as ready\n\nThis means zero DNS mistakes, zero propagation surprises, and zero ongoing authentication maintenance. For teams without dedicated email operations expertise, auto DNS is the difference between weeks of configuration and hours to launch."
+    }
+  },
+  "faqs": [
+    {
+      "question": "Do I need all three \u2014 SPF, DKIM, and DMARC?",
+      "answer": "Yes. As of 2024, Google and Yahoo require all three for bulk senders. Even for smaller volume cold email, all three are strongly recommended. Missing any one significantly impacts deliverability."
+    },
+    {
+      "question": "How do I check if my SPF, DKIM, and DMARC are configured correctly?",
+      "answer": "Use free tools like MXToolbox, Mail-Tester, or Google's Check MX to verify DNS records. Send test emails to Gmail and check the 'Show original' view for authentication results."
+    },
+    {
+      "question": "Can I configure these myself without ColdRelay?",
+      "answer": "Yes, if you're comfortable with DNS management. SPF requires a TXT record, DKIM requires a CNAME or TXT record from your email provider, and DMARC requires a TXT record at _dmarc.yourdomain.com. Allow for DNS propagation time."
+    },
+    {
+      "question": "How long does DNS propagation take?",
+      "answer": "Typically 1-4 hours for most DNS providers, but it can take up to 48 hours globally. ColdRelay's auto DNS handles propagation verification as part of the provisioning process."
+    },
+    {
+      "question": "What DMARC policy should I use for cold email?",
+      "answer": "Start with p=quarantine. This sends unauthenticated email to spam while protecting your domain from spoofing. ColdRelay's auto DNS sets the recommended DMARC policy automatically."
+    }
+  ],
+  "relatedPages": {
+    "guides": [
+      "how-to-set-up-cold-email-infrastructure",
+      "how-to-avoid-email-blacklists",
+      "how-to-set-up-email-domains-for-cold-outreach"
+    ],
+    "resources": [],
+    "comparisons": [
+      "coldrelay-vs-google-workspace"
+    ],
+    "useCases": [
+      "cold-email-infrastructure-for-it-services",
+      "cold-email-infrastructure-for-agencies"
+    ]
+  }
+}

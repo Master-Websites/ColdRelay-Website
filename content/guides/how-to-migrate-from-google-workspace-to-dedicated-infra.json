@@ -1,0 +1,103 @@
+{
+  "slug": "how-to-migrate-from-google-workspace-to-dedicated-infra",
+  "title": "How to Migrate from Google Workspace to Dedicated Cold Email Infrastructure \u2014 Step-by-Step Guide",
+  "description": "A practical migration guide for moving cold email operations off Google Workspace to dedicated infrastructure. Covers when to migrate, how to transition without losing momentum, domain strategy, and avoiding common migration mistakes.",
+  "lastUpdated": "2026-03-19",
+  "sections": {
+    "intro": {
+      "title": "Why You're Reading This (And Why It's Urgent)",
+      "content": "If you're looking at this guide, you've probably already experienced one of these:\n\n- Google suspended one or more of your sending accounts\n- Your primary domain's reputation tanked from cold outreach\n- Open rates cratered and you suspect spam folder placement\n- You're scaling outreach and hitting Google's sending limits\n- You realized your entire business email is at risk\n\nGoogle Workspace was never designed for cold email. It's built for internal communication and correspondence with people who expect to hear from you. Using it for cold outreach violates Google's Acceptable Use Policy and puts your entire Google ecosystem at risk \u2014 not just the sending account, but potentially your Google Workspace admin, Drive files, Calendar, and every connected service.\n\nThe good news: migrating to dedicated infrastructure is straightforward, can be done in a single day, and will immediately reduce costs while eliminating suspension risk. This guide walks you through every step."
+    },
+    "steps": [
+      {
+        "title": "When to Migrate: Signs You've Outgrown Google Workspace",
+        "content": "**Migrate immediately if:**\n- You've had any account suspended for sending violations\n- You're sending more than 100 cold emails/day total across all accounts\n- Your business domain's email deliverability has declined\n- Clients, partners, or employees report your emails going to spam\n\n**Migrate soon if:**\n- You're planning to scale cold outreach beyond current levels\n- You're spending more than $500/month on Google Workspace seats for cold email\n- You're using warmup tools to maintain Google account health\n- You're manually rotating accounts to avoid detection\n\n**The risk equation is simple:** Every day you run cold email on Google Workspace, you risk losing access to your entire Google ecosystem. The migration effort is a few hours. The risk of not migrating is catastrophic \u2014 imagine losing access to your business email, Drive, and Calendar simultaneously."
+      },
+      {
+        "title": "Pre-Migration Checklist",
+        "content": "Before you start, gather this information:\n\n**1. Current inventory:**\n- List all domains currently used for cold email\n- List all mailboxes/accounts used for sending\n- Document current daily sending volume per account\n- Note which sequencing platform(s) you use\n\n**2. Campaign status:**\n- Export all active campaign data from your sequencing tool\n- Document prospect lists currently in active sequences\n- Note any campaigns mid-sequence that can't be interrupted\n- Record current performance benchmarks (open rates, reply rates)\n\n**3. Domain decisions:**\n- Which domains are contaminated (low reputation) and should be retired?\n- Which domains are still healthy and can be migrated?\n- Do you need new domains? (Usually yes \u2014 fresh start is cleanest)\n\n**4. Volume planning:**\n- What's your target daily sending volume after migration?\n- Calculate mailbox count needed: daily volume \u00f7 4 emails per mailbox\n- Plan domains needed: mailbox count \u00f7 100-150 per domain\n\n**5. Business email separation:**\n- Ensure your primary business domain is NOT used for cold email going forward\n- If primary domain reputation is damaged, plan recovery (reduce volume, generate positive engagement)"
+      },
+      {
+        "title": "Step 1: Set Up New Infrastructure (Day 1, Hours 1-3)",
+        "content": "Order your ColdRelay infrastructure through the self-service portal. Specify new domains (or transfer existing healthy ones), mailbox count, and naming conventions. ColdRelay provisions Microsoft 365 mailboxes on dedicated Azure tenants with dedicated IPs. Provisioning takes 2-4 hours. While waiting, proceed to Steps 2-3."
+      },
+      {
+        "title": "Step 2: Export Active Campaign Data (Day 1, Hours 1-2)",
+        "content": "From your sequencing tool, export: all prospect lists with their current sequence step, email copy and templates, sending schedules and rules, any A/B test configurations. Most tools (Instantly, Smartlead, Lemlist) support CSV export of campaigns and contacts. Document which prospects are mid-sequence \u2014 you'll need to resume them from the correct step."
+      },
+      {
+        "title": "Step 3: Prepare DNS for New Domains (Day 1, Hours 2-3)",
+        "content": "If using ColdRelay, DNS is auto-configured \u2014 SPF, DKIM, and DMARC are set up automatically. You just need to point nameservers or add the provided DNS records. If using new domains, register them now if you haven't already. ColdRelay supports any registrar."
+      },
+      {
+        "title": "Step 4: Import New Mailboxes into Sequencing Tool (Day 1, Hours 3-4)",
+        "content": "Once ColdRelay provisioning completes, you'll receive SMTP/IMAP credentials for all mailboxes. Import them into your sequencing platform via CSV or manual entry. Most platforms support bulk import. Test connectivity for 2-3 mailboxes to confirm credentials work."
+      },
+      {
+        "title": "Step 5: Migrate Active Campaigns (Day 1, Hours 4-5)",
+        "content": "Reassign active campaigns from old Google Workspace mailboxes to new ColdRelay mailboxes. Important: keep prospect-to-mailbox assignments consistent if possible. If a prospect received Step 1 from john@oldomain.com, ideally they should receive Step 2 from john@newdomain.com (same first name). Most sequencing tools let you swap sending accounts without resetting sequences."
+      },
+      {
+        "title": "Step 6: Pause and Retire Old Infrastructure (Day 1, Hour 5)",
+        "content": "Once all campaigns are running on new infrastructure: pause all sending from Google Workspace cold email accounts, set up auto-forwards on old accounts for 30 days (to catch any replies to old addresses), document which accounts to cancel after the 30-day forwarding period, do NOT delete old accounts until you're sure no active conversations depend on them."
+      },
+      {
+        "title": "Step 7: Monitor and Validate (Days 2-7)",
+        "content": "Watch the new infrastructure closely for the first week: confirm open rates are at or above previous benchmarks, check that replies are threading correctly, verify no bounce spikes or delivery issues, run inbox placement tests on new mailboxes. With ColdRelay's pre-optimized infrastructure, you should see results immediately \u2014 no warmup needed."
+      }
+    ],
+    "mistakes": {
+      "title": "Common Migration Mistakes to Avoid",
+      "items": [
+        "Mistake 1: Migrating domains with damaged reputation. If a domain's reputation is 'Bad' or 'Low' in Google Postmaster Tools, don't bother migrating it \u2014 start fresh. A bad domain will hurt deliverability on any infrastructure.",
+        "Mistake 2: Cutting over all campaigns simultaneously. If you're running 20+ campaigns, migrate in batches of 5-10. This lets you validate the new setup before going all-in and reduces risk of disrupting active conversations.",
+        "Mistake 3: Forgetting to handle replies on old accounts. Prospects who received emails from old accounts will reply to those addresses. Set up forwarding so replies reach you. Missing replies means missing deals.",
+        "Mistake 4: Not updating your sequencing tool's settings. Each platform has sending limits, warmup toggles, and schedule settings per account. Review these for new mailboxes \u2014 disable warmup features (not needed with ColdRelay) and set appropriate daily limits (3-5 per mailbox).",
+        "Mistake 5: Keeping Google Workspace seats 'just in case.' This costs $6-7/seat/month for accounts you're not using. Set a hard deadline (30 days post-migration) to cancel cold email seats. Keep only legitimate business email accounts.",
+        "Mistake 6: Not separating business email from cold email. The whole point of migration is domain isolation. Never send cold email from your primary business domain again \u2014 even 'just a few test emails.'"
+      ]
+    },
+    "summary": {
+      "title": "Post-Migration: Optimizing Your New Setup",
+      "content": "Once migration is complete and validated, optimize:\n\n**Clean up Google Workspace.** Cancel all seats that were used exclusively for cold email. If your primary domain's reputation is damaged, focus on recovery: reduce all outbound volume from that domain, send only to engaged recipients, and monitor Google Postmaster Tools for improvement.\n\n**Set up proper monitoring.** Configure Google Postmaster Tools for new domains, set up blacklist monitoring (MXToolbox, Hetrix Tools), and establish weekly inbox placement testing.\n\n**Document your infrastructure.** Create a simple spreadsheet: domain \u2192 mailboxes \u2192 sequencing tool accounts \u2192 campaigns. This becomes your infrastructure map for scaling.\n\n**Plan for scale.** With ColdRelay, adding capacity is trivial \u2014 order more mailboxes and they're provisioned in hours. Plan your scaling triggers: 'When reply rate drops below X, add Y mailboxes to reduce per-mailbox volume.'\n\n**Calculate your savings.** Compare your new monthly cost to your old Google Workspace spend. Most teams see 80-90% cost reduction. Redirect those savings to better prospect data \u2014 list quality impacts results far more than infrastructure spend."
+    }
+  },
+  "faqs": [
+    {
+      "question": "How long does the migration take?",
+      "answer": "A complete migration can be done in a single day (4-6 hours of active work). ColdRelay infrastructure provisions in 2-4 hours, and importing mailboxes into your sequencing tool takes another 1-2 hours. The 30-day forwarding period on old accounts runs passively."
+    },
+    {
+      "question": "Will I lose deliverability during the migration?",
+      "answer": "No \u2014 if anything, deliverability improves. ColdRelay mailboxes are ready to send immediately with no warmup needed. You may see a brief dip in open rates as email providers learn the new sending patterns, but this normalizes within 2-3 days."
+    },
+    {
+      "question": "Can I migrate existing domains or do I need new ones?",
+      "answer": "You can migrate healthy domains (good reputation, no blacklists). Domains with damaged reputation should be retired \u2014 a fresh domain on good infrastructure will outperform a damaged domain every time. ColdRelay works with any domain from any registrar."
+    },
+    {
+      "question": "What happens to replies sent to old Google Workspace addresses?",
+      "answer": "Set up email forwarding from old Google Workspace accounts to your new ColdRelay mailboxes (or a central inbox). Keep forwarding active for 30 days after migration. This ensures no replies are missed during the transition."
+    },
+    {
+      "question": "Should I cancel Google Workspace entirely?",
+      "answer": "Only cancel the seats used for cold email. Keep Google Workspace for your primary business domain \u2014 it's excellent for regular business communication. The goal is separation: business email on Google Workspace, cold outreach on ColdRelay."
+    }
+  ],
+  "relatedPages": {
+    "guides": [
+      "how-to-set-up-cold-email-infrastructure",
+      "how-to-set-up-email-domains-for-cold-outreach",
+      "how-to-calculate-cold-email-infrastructure-costs"
+    ],
+    "resources": [],
+    "comparisons": [
+      "coldrelay-vs-google-workspace"
+    ],
+    "useCases": [
+      "cold-email-infrastructure-for-agencies",
+      "cold-email-infrastructure-for-startups",
+      "cold-email-infrastructure-for-sales-teams"
+    ]
+  }
+}
