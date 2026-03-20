@@ -14,7 +14,7 @@ export default function ModalVideo() {
         aria-hidden="true"
       >
         <svg
-          width="1165"
+          className="max-w-none w-full" width={1165}
           height="1012"
           viewBox="0 0 1165 1012"
           fill="none"

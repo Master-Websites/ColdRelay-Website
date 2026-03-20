@@ -378,7 +378,7 @@ export default function ColdRelayEmailCalculator(props: CalculatorProps) {
 
   const outerWrapStyle: React.CSSProperties = {
     position: "relative",
-    maxWidth: 1040,
+    maxWidth: "100%",
     margin: "auto",
   };
 
