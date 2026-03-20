@@ -61,8 +61,83 @@ export default function Privacy() {
 
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Tracking &amp; Cookies Data</h3>
-            <p>We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.</p>
+            <p>We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Other tracking technologies are also used such as beacons, tags, and scripts to collect and track information and to improve and analyze our Service.</p>
             <p className="mt-3">You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
+            <p className="mt-3">Examples of Cookies we use:</p>
+            <ul className="list-disc ml-6 mt-2 space-y-2">
+              <li><strong className="text-white">Session Cookies:</strong> We use Session Cookies to operate our Service.</li>
+              <li><strong className="text-white">Preference Cookies:</strong> We use Preference Cookies to remember your preferences and various settings.</li>
+              <li><strong className="text-white">Security Cookies:</strong> We use Security Cookies for security purposes.</li>
+              <li><strong className="text-white">Advertising Cookies:</strong> Advertising Cookies are used to serve you with advertisements that may be relevant to you and your interests.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Use of Data</h2>
+            <p>ColdRelay uses the collected data for various purposes:</p>
+            <ul className="list-disc ml-6 mt-3 space-y-2">
+              <li>To provide and maintain our Service</li>
+              <li>To notify you about changes to our Service</li>
+              <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
+              <li>To provide customer support</li>
+              <li>To gather analysis or valuable information so that we can improve our Service</li>
+              <li>To monitor the usage of our Service</li>
+              <li>To detect, prevent, and address technical issues</li>
+              <li>To fulfill any other purpose for which you provide it</li>
+              <li>To carry out our obligations and enforce our rights arising from any contracts entered into between you and us, including for billing and collection</li>
+              <li>To provide you with notices about your account and/or subscription, including expiration and renewal notices, email instructions, etc.</li>
+              <li>To provide you with news, special offers, and general information about other goods, services, and events we offer similar to those that you have already purchased or enquired about unless you have opted not to receive such information</li>
+              <li>In any other way we may describe when you provide the information</li>
+              <li>For any other purpose with your consent</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Retention of Data</h2>
+            <p>We will retain your Personal Data only for as long as necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+            <p className="mt-3">We will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period, except when this data is used to strengthen the security or to improve the functionality of our Service, or we are legally obligated to retain this data for longer periods.</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Transfer of Data</h2>
+            <p>Your information, including Personal Data, may be transferred to — and maintained on — computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.</p>
+            <p className="mt-3">ColdRelay will take all the steps reasonably necessary to ensure that your data is treated securely and in accordance with this Privacy Policy.</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Disclosure of Data</h2>
+            <p>We may disclose personal information that we collect, or you provide:</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Disclosure for Law Enforcement</h3>
+            <p>Under certain circumstances, we may be required to disclose your Personal Data if required to do so by law or in response to valid requests by public authorities.</p>
+            <h3 className="text-lg font-semibold text-white mt-4 mb-2">Other Cases</h3>
+            <p>We may disclose your information also:</p>
+            <ul className="list-disc ml-6 mt-2 space-y-2">
+              <li>To contractors, service providers, and other third parties we use to support our business</li>
+              <li>To fulfill the purpose for which you provide it</li>
+              <li>With your consent in other cases</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Security of Data</h2>
+            <p>The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Your Data Protection Rights Under GDPR</h2>
+            <p>If you are a resident of the European Union (EU) and European Economic Area (EEA), you have certain data protection rights, covered by GDPR. We aim to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data.</p>
+            <p className="mt-3">If you wish to be informed about what Personal Data we hold about you and if you want it to be removed from our systems, please email us at <a href="mailto:support@coldrelay.com" className="text-[#4A73D5] hover:underline">support@coldrelay.com</a>.</p>
+            <p className="mt-3">In certain circumstances, you have the following data protection rights:</p>
+            <ul className="list-disc ml-6 mt-2 space-y-2">
+              <li><strong className="text-white">The right to access:</strong> You can request copies of your personal data.</li>
+              <li><strong className="text-white">The right to rectification:</strong> You can request correction of any inaccurate or incomplete information.</li>
+              <li><strong className="text-white">The right to object:</strong> You can object to our processing of your personal data.</li>
+              <li><strong className="text-white">The right of restriction:</strong> You can request the restriction of the processing of your personal information.</li>
+              <li><strong className="text-white">The right to data portability:</strong> You have the right to be provided with a copy of your Personal Data in a structured, machine-readable format.</li>
+              <li><strong className="text-white">The right to withdraw consent:</strong> You have the right to withdraw your consent at any time where we rely on your consent to process your personal information.</li>
+            </ul>
+            <p className="mt-3">Please note that we may ask you to verify your identity before responding to such requests. Please note, we may not be able to provide Service without some necessary data.</p>
+            <p className="mt-3">You have the right to complain to a Data Protection Authority about our collection and use of your Personal Data. For more information, please contact your local data protection authority in the European Economic Area (EEA).</p>
           </div>
 
           <div>
