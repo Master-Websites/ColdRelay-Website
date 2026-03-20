@@ -286,7 +286,7 @@ export default function SpintaxGeneratorPage() {
                 <p className="text-xs text-white/40 mb-2 font-medium">
                   Highlighted Spintax Segments
                 </p>
-                <div className="rounded-xl bg-[#0a0a0a] border border-white/[0.1] p-4 text-sm text-white/70 leading-relaxed whitespace-pre-wrap font-mono">
+                <div className="rounded-xl bg-[#0a0f1a] border border-white/[0.1] p-4 text-sm text-white/70 leading-relaxed whitespace-pre-wrap font-mono">
                   {highlightSpintax(text)}
                 </div>
               </div>

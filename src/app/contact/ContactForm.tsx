@@ -80,22 +80,22 @@ export function ContactForm() {
           How many emails/day are you looking to send?
         </label>
         <select className="w-full rounded-xl border border-white/[0.06] bg-white/[0.04] px-4 py-3 text-white outline-none focus:border-[#4A73D5]/30 focus:ring-1 focus:ring-[#4A73D5]/20 transition-all">
-          <option value="" className="bg-[#0a0a0a]">
+          <option value="" className="bg-[#0a0f1a]">
             Select a range
           </option>
-          <option value="100-500" className="bg-[#0a0a0a]">
+          <option value="100-500" className="bg-[#0a0f1a]">
             100–500 emails/day
           </option>
-          <option value="500-1000" className="bg-[#0a0a0a]">
+          <option value="500-1000" className="bg-[#0a0f1a]">
             500–1,000 emails/day
           </option>
-          <option value="1000-3000" className="bg-[#0a0a0a]">
+          <option value="1000-3000" className="bg-[#0a0f1a]">
             1,000–3,000 emails/day
           </option>
-          <option value="3000-10000" className="bg-[#0a0a0a]">
+          <option value="3000-10000" className="bg-[#0a0f1a]">
             3,000–10,000 emails/day
           </option>
-          <option value="10000+" className="bg-[#0a0a0a]">
+          <option value="10000+" className="bg-[#0a0f1a]">
             10,000+ emails/day
           </option>
         </select>

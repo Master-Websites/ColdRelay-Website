@@ -27,7 +27,7 @@ interface SignatureData {
 function generateMinimal(d: SignatureData): string {
   const lines: string[] = [];
   lines.push(`<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#333333;line-height:1.5;">`);
-  lines.push(`  <tr><td style="padding-bottom:4px;"><strong style="font-size:14px;color:#111111;">${d.name}</strong></td></tr>`);
+  lines.push(`  <tr><td style="padding-bottom:4px;"><strong style="font-size:14px;color:#111827;">${d.name}</strong></td></tr>`);
   if (d.title || d.company) {
     const titleLine = [d.title, d.company].filter(Boolean).join(" · ");
     lines.push(`  <tr><td style="color:#666666;font-size:12px;">${titleLine}</td></tr>`);
@@ -54,7 +54,7 @@ function generateProfessional(d: SignatureData): string {
   lines.push(`  <tr>`);
   lines.push(`    <td style="padding-right:16px;border-right:3px solid #4A73D5;">`);
   lines.push(`      <table cellpadding="0" cellspacing="0" border="0">`);
-  lines.push(`        <tr><td style="padding-bottom:2px;"><strong style="font-size:15px;color:#111111;">${d.name}</strong></td></tr>`);
+  lines.push(`        <tr><td style="padding-bottom:2px;"><strong style="font-size:15px;color:#111827;">${d.name}</strong></td></tr>`);
   if (d.title) lines.push(`        <tr><td style="font-size:12px;color:#4A73D5;font-weight:600;">${d.title}</td></tr>`);
   if (d.company) lines.push(`        <tr><td style="font-size:12px;color:#888888;">${d.company}</td></tr>`);
   lines.push(`      </table>`);
@@ -74,7 +74,7 @@ function generateProfessional(d: SignatureData): string {
 
 function generateBold(d: SignatureData): string {
   const lines: string[] = [];
-  lines.push(`<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;background-color:#111111;border-radius:8px;padding:16px;" bgcolor="#111111">`);
+  lines.push(`<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;background-color:#111827;border-radius:8px;padding:16px;" bgcolor="#111827">`);
   lines.push(`  <tr><td style="padding:16px;">`);
   lines.push(`    <table cellpadding="0" cellspacing="0" border="0">`);
   lines.push(`      <tr><td style="padding-bottom:8px;"><strong style="font-size:18px;color:#ffffff;letter-spacing:0.5px;">${d.name}</strong></td></tr>`);
