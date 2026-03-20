@@ -163,6 +163,14 @@ export default function CruipHeader() {
             >
               Tools
             </Link>
+            <a
+              href="https://outbound.community/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 text-sm text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/[0.04]"
+            >
+              Community
+            </a>
           </nav>
 
           {/* CTA buttons */}
@@ -300,6 +308,15 @@ export default function CruipHeader() {
           >
             Tools
           </Link>
+          <a
+            href="https://outbound.community/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block px-3 py-2 text-base text-gray-300 hover:text-white hover:bg-white/[0.04] rounded-lg transition-colors"
+            onClick={() => setMobileNavOpen(false)}
+          >
+            Community
+          </a>
 
           <div className="pt-3 border-t border-[#1e293b]/50 space-y-2">
             <a
