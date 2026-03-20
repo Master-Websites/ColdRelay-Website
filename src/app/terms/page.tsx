@@ -2,97 +2,94 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "ColdRelay terms of service. Rules and guidelines for using our platform.",
+  description: "ColdRelay Terms of Service. Read our terms and conditions for using ColdRelay cold email infrastructure.",
   alternates: { canonical: "https://coldrelay.com/terms" },
 };
 
-export default function TermsPage() {
+export default function Terms() {
   return (
-    <div className="pt-8 pb-16">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-8">
-          Terms of Service
-        </h1>
-        <p className="text-sm text-white/40 mb-8">Last updated: March 2026</p>
+    <section className="pt-32 pb-16">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
+        <h1 className="font-nacelle text-3xl font-semibold text-white mb-8">Terms of Service</h1>
+        <div className="space-y-8 text-gray-300 leading-relaxed">
 
-        <div className="prose">
-          <h2>1. Acceptance of Terms</h2>
-          <p>
-            By accessing or using ColdRelay (&quot;the Service&quot;), you agree to be bound
-            by these Terms of Service. If you do not agree, do not use the Service.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">General Information</h2>
+            <p>Welcome to ColdRelay! We&apos;re excited to help you enhance your cold email outreach and scale your business.</p>
+            <p className="mt-3">ColdRelay is a software service designed to help businesses generate and manage email accounts for cold outreach, streamlining your efforts to book more meetings and close deals.</p>
+            <p className="mt-3">By using our services, you agree to comply with and be bound by the following terms and conditions. Please review them carefully, and feel free to reach out if you have any questions.</p>
+          </div>
 
-          <h2>2. Description of Service</h2>
-          <p>
-            ColdRelay provides cold email infrastructure services, including domain
-            management, mailbox provisioning, DNS configuration, and deliverability
-            monitoring. The Service is intended for cold email outreach only.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Introduction</h2>
+            <p>Welcome to ColdRelay (&quot;Company&quot;, &quot;we&quot;, &quot;our&quot;, &quot;us&quot;). Please take a moment to carefully read through our Terms of Service (&quot;Terms&quot;, &quot;Terms of Service&quot;). These Terms govern your use of our services and website at ColdRelay.com.</p>
+            <p className="mt-3">Our Privacy Policy also governs your use of ColdRelay and explains how we collect, safeguard, and disclose information. Please read it at our <a href="/privacy" className="text-[#4A73D5] hover:underline">Privacy Policy</a> page.</p>
+            <p className="mt-3">Your agreement with us includes these Terms and our Privacy Policy (&quot;Agreements&quot;). By using our services, you acknowledge that you have read and understood these Agreements and agree to be bound by them.</p>
+            <p className="mt-3">If you do not agree, you may not use our service. For assistance, contact us at <a href="mailto:support@coldrelay.com" className="text-[#4A73D5] hover:underline">support@coldrelay.com</a>.</p>
+          </div>
 
-          <h2>3. Account Registration</h2>
-          <p>
-            You must provide accurate information when creating an account. You are
-            responsible for maintaining the security of your account credentials
-            and for all activity under your account.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Communications</h2>
+            <p>By creating an account, you agree to subscribe to newsletters and other marketing materials. You may opt out at any time by following the unsubscribe instructions.</p>
+          </div>
 
-          <h2>4. Acceptable Use</h2>
-          <p>You agree to use ColdRelay only for lawful cold email outreach. You must not:</p>
-          <ul>
-            <li>Send spam or unsolicited bulk email that violates applicable laws</li>
-            <li>Violate CAN-SPAM, GDPR, or other applicable email regulations</li>
-            <li>Send emails containing malware, phishing, or fraudulent content</li>
-            <li>Use the Service for harassment or illegal purposes</li>
-            <li>Attempt to circumvent our security measures or abuse our infrastructure</li>
-          </ul>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Purchases</h2>
+            <p>When purchasing through ColdRelay, you may need to provide personal and payment information, including your credit card details. You warrant that all information you provide is accurate, and you authorize ColdRelay to charge your selected payment method. We use third-party payment providers, like Stripe, and your information is processed under our Privacy Policy.</p>
+            <p className="mt-3">We reserve the right to refuse or cancel any order due to errors, fraud, or if your industry is prohibited (e.g., crypto or political activities).</p>
+          </div>
 
-          <h2>5. Pricing and Payment</h2>
-          <p>
-            Pricing is based on the number of mailboxes provisioned, billed monthly.
-            Domain purchases are one-time costs. We reserve the right to adjust
-            pricing with 30 days notice.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Subscriptions</h2>
+            <p>ColdRelay offers subscription-based services, billed on either a monthly or annual basis. At the end of each billing cycle, subscriptions automatically renew under the same conditions unless canceled. You may cancel through your online account or by contacting support.</p>
+            <p className="mt-3">A valid payment method is required for recurring payments. If automatic billing fails, ColdRelay will notify you to proceed manually.</p>
+          </div>
 
-          <h2>6. Deliverability Guarantee</h2>
-          <p>
-            We guarantee 95%+ deliverability for the first 14 days. If deliverability
-            falls below this threshold due to our infrastructure (not your content or
-            practices), you are entitled to a full refund for that period.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Fee Changes</h2>
+            <p>We may change our subscription fees at the end of the current billing cycle. You will receive advance notice of any fee changes. Continued use of the service constitutes acceptance of the new rates.</p>
+          </div>
 
-          <h2>7. Service Level</h2>
-          <p>
-            We strive for 99.9% uptime but do not guarantee uninterrupted service.
-            Scheduled maintenance will be communicated in advance when possible.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Refunds</h2>
+            <p>Paid subscription fees are non-refundable, except when required by law. However, if you see a deliverability score lower than 95% within the first 14 days, you are eligible for a refund. See our <a href="/refund" className="text-[#4A73D5] hover:underline">Refund Policy</a> for full details.</p>
+          </div>
 
-          <h2>8. Termination</h2>
-          <p>
-            Either party may terminate this agreement at any time. We may suspend
-            or terminate your account immediately if you violate these terms or
-            our acceptable use policy.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Prohibited Uses</h2>
+            <p>You may only use ColdRelay for lawful purposes and agree not to engage in any activity such as:</p>
+            <ul className="list-disc ml-6 mt-3 space-y-2">
+              <li>Sending spam or violating CAN-SPAM laws</li>
+              <li>Phishing or fraudulent emails</li>
+              <li>Sending malicious content like viruses</li>
+              <li>Harassing or intimidating individuals</li>
+              <li>Participating in illegal activities or prohibited industries (e.g., crypto, political)</li>
+              <li>Interfering with the functionality of ColdRelay or its users</li>
+            </ul>
+            <p className="mt-3">Violations may result in account suspension or termination. To report violations, contact <a href="mailto:support@coldrelay.com" className="text-[#4A73D5] hover:underline">support@coldrelay.com</a>.</p>
+          </div>
 
-          <h2>9. Limitation of Liability</h2>
-          <p>
-            ColdRelay&apos;s liability is limited to the amount you paid for the Service
-            in the 12 months preceding the claim. We are not liable for indirect,
-            incidental, or consequential damages.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Analytics</h2>
+            <p>We use third-party analytics services, including PostHog, to monitor and analyze the use of our service. We may also use tracking pixels for marketing purposes. These tools help us understand how users interact with ColdRelay so we can improve the experience.</p>
+          </div>
 
-          <h2>10. Changes to Terms</h2>
-          <p>
-            We may update these terms from time to time. Continued use of the Service
-            after changes constitutes acceptance of the new terms.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Accounts</h2>
+            <p>When creating an account, you must be 18 or older and provide accurate, complete information. You are responsible for safeguarding your account and password. Providing inaccurate or outdated information may result in account termination.</p>
+          </div>
 
-          <h2>11. Contact</h2>
-          <p>
-            For questions about these terms, contact us at{" "}
-            <a href="mailto:legal@coldrelay.com">legal@coldrelay.com</a>.
-          </p>
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Service Usage</h2>
+            <p>ColdRelay must be used for business purposes only, following best practices for email sending. Any violations of these guidelines may result in account suspension or termination.</p>
+          </div>
+
+          <div className="pt-4 border-t border-[#1e293b]">
+            <p className="text-sm text-gray-400">For any questions about these Terms, contact us at <a href="mailto:support@coldrelay.com" className="text-[#4A73D5] hover:underline">support@coldrelay.com</a>.</p>
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -110,6 +110,8 @@ export default function Footer() {
                 <a className="transition hover:text-[#4A73D5]" href="/terms">Terms</a>
                 <span className="text-gray-700">·</span>
                 <a className="transition hover:text-[#4A73D5]" href="/privacy">Privacy</a>
+                <span className="text-gray-700">·</span>
+                <a className="transition hover:text-[#4A73D5]" href="/refund">Refund Policy</a>
               </div>
               <ul className="mt-3 inline-flex gap-1">
                 <li>
