@@ -44,6 +44,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://coldrelay.com",
   },
+  icons: {
+    icon: [
+      { url: "/favicon-dark.png", media: "(prefers-color-scheme: light)" },
+      { url: "/favicon-light.png", media: "(prefers-color-scheme: dark)" },
+    ],
+    apple: "/favicon-dark.png",
+  },
 };
 
 export default function RootLayout({
