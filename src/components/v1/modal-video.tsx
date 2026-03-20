@@ -106,7 +106,7 @@ export default function ModalVideo() {
             </div>
           </figure>
           {/* Play icon */}
-          <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-gray-950 before:duration-300 group-hover:before:scale-110">
+          <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-[#0f172a] before:duration-300 group-hover:before:scale-110">
             <span className="relative flex items-center gap-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

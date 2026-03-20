@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 
 const mdxComponents = {
   table: (props: React.TableHTMLAttributes<HTMLTableElement>) => (
-    <div className="overflow-x-auto my-6 rounded-lg border border-gray-700">
+    <div className="overflow-x-auto my-6 rounded-lg border border-[#1e293b]">
       <table className="w-full text-sm text-left text-gray-300" {...props} />
     </div>
   ),
@@ -16,7 +16,7 @@ const mdxComponents = {
     <tbody className="divide-y divide-gray-700" {...props} />
   ),
   tr: (props: React.HTMLAttributes<HTMLTableRowElement>) => (
-    <tr className="border-b border-gray-700 hover:bg-gray-800/50" {...props} />
+    <tr className="border-b border-[#1e293b] hover:bg-[#1e293b]/50" {...props} />
   ),
   th: (props: React.ThHTMLAttributes<HTMLTableCellElement>) => (
     <th className="px-4 py-3 font-semibold text-white" {...props} />

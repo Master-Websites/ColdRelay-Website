@@ -80,7 +80,7 @@ export default function CruipHeader() {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-gray-900/90 backdrop-blur-sm border-b border-gray-800/50"
+          ? "bg-gray-900/90 backdrop-blur-sm border-b border-[#1e293b]/50"
           : "bg-transparent"
       }`}
     >
@@ -142,7 +142,7 @@ export default function CruipHeader() {
               </button>
 
               {resourcesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-48 rounded-xl bg-gray-900 border border-gray-700/50 shadow-xl shadow-black/40 overflow-hidden py-1">
+                <div className="absolute top-full left-0 mt-1 w-48 rounded-xl bg-gray-900 border border-[#1e293b]/50 shadow-xl shadow-black/40 overflow-hidden py-1">
                   {resourceLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -235,7 +235,7 @@ export default function CruipHeader() {
           mobileNavOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="border-t border-gray-800/50 bg-gray-900/95 backdrop-blur-sm px-4 py-4 space-y-1">
+        <div className="border-t border-[#1e293b]/50 bg-gray-900/95 backdrop-blur-sm px-4 py-4 space-y-1">
           <Link
             href="/features"
             className="block px-3 py-2 text-base text-gray-300 hover:text-white hover:bg-white/[0.04] rounded-lg transition-colors"
@@ -301,7 +301,7 @@ export default function CruipHeader() {
             Tools
           </Link>
 
-          <div className="pt-3 border-t border-gray-800/50 space-y-2">
+          <div className="pt-3 border-t border-[#1e293b]/50 space-y-2">
             <a
               href="https://app.coldrelay.com/auth/login"
               className="block px-3 py-2 text-base text-gray-300 hover:text-white"
