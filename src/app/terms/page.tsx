@@ -84,6 +84,20 @@ export default function Terms() {
             <p>ColdRelay must be used for business purposes only, following best practices for email sending. Any violations of these guidelines may result in account suspension or termination.</p>
           </div>
 
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Pricing and Payments</h2>
+            <p>ColdRelay offers various subscription plans. Refund requests will be considered on a case-by-case basis with our customer support team.</p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold text-white mb-3">Limitation of Liability</h2>
+            <p>ColdRelay&apos;s liability is limited to the amount you paid for our service.</p>
+          </div>
+
+          <div>
+            <p className="text-gray-400">By using ColdRelay, you acknowledge that you have read, understood, and agree to these Terms of Service.</p>
+          </div>
+
           <div className="pt-4 border-t border-[#1e293b]">
             <p className="text-sm text-gray-400">For any questions about these Terms, contact us at <a href="mailto:support@coldrelay.com" className="text-[#4A73D5] hover:underline">support@coldrelay.com</a>.</p>
           </div>
