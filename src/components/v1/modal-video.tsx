@@ -14,12 +14,12 @@ export default function ModalVideo() {
         aria-hidden="true"
       >
         <svg
-          className="max-w-none w-full" width={1165}
+          
           height="1012"
           viewBox="0 0 1165 1012"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="max-w-none opacity-30"
+          className="max-w-none w-full opacity-30"
         >
           <ellipse
             cx="582"
