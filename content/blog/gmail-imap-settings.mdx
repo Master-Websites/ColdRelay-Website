@@ -1,0 +1,260 @@
+---
+title: "Gmail IMAP Settings: Complete Setup Guide"
+description: "Exact Gmail IMAP and SMTP settings for every email client — Outlook, Apple Mail, Thunderbird, plus troubleshooting and App Password setup."
+date: "2026-04-17"
+author: "Mo Tahboub"
+tags: ["Gmail", "IMAP", "Email Setup", "SMTP"]
+slug: "gmail-imap-settings"
+---
+
+## Gmail IMAP Settings (Incoming Mail)
+
+| Setting | Value |
+|---------|-------|
+| **IMAP Server** | imap.gmail.com |
+| **Port** | 993 |
+| **Encryption** | SSL/TLS |
+| **Username** | Your full Gmail address (you@gmail.com) |
+| **Password** | App Password (see below) |
+| **Authentication** | OAuth2 or App Password |
+
+## Gmail SMTP Settings (Outgoing Mail)
+
+| Setting | Value |
+|---------|-------|
+| **SMTP Server** | smtp.gmail.com |
+| **Port** | 587 (TLS) or 465 (SSL) |
+| **Encryption** | TLS (port 587) or SSL (port 465) |
+| **Username** | Your full Gmail address |
+| **Password** | App Password |
+| **Authentication** | Required (STARTTLS or SSL) |
+
+**Use port 587 with TLS** — it's the modern standard. Port 465 (SSL) is legacy but still works.
+
+## Before You Start: Enable IMAP in Gmail
+
+IMAP might be disabled by default. Here's how to turn it on:
+
+1. Open **Gmail** in your browser
+2. Click the **gear icon** (top right) then **"See all settings"**
+3. Go to the **"Forwarding and POP/IMAP"** tab
+4. Under IMAP access, select **"Enable IMAP"**
+5. Click **"Save Changes"**
+
+**For Google Workspace accounts:** Your admin may need to enable IMAP access. Go to Admin Console then Apps then Google Workspace then Gmail then User settings.
+
+## App Passwords: Required for Most Clients
+
+If you have 2-Factor Authentication (2FA) enabled — which you should — most email clients can't use your regular Gmail password. You need an App Password.
+
+### How to Generate an App Password
+
+1. Go to **[myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords)**
+2. Sign in to your Google Account
+3. Select **"Mail"** as the app
+4. Select your device (or choose "Other" and name it)
+5. Click **"Generate"**
+6. Google gives you a **16-character password** — copy it
+7. Use this password instead of your regular password in your email client
+
+**Important:** App Passwords are only available if 2FA is enabled. If you don't see the option, enable 2FA first at myaccount.google.com/security.
+
+**Note:** Google is phasing out App Passwords for some accounts in favor of OAuth2. If your email client supports OAuth2 (Outlook, Thunderbird, Apple Mail), use that instead.
+
+## Setup: Apple Mail (Mac/iPhone)
+
+### Mac
+1. Open **Apple Mail**
+2. Go to **Mail** then **Add Account** then **Google**
+3. Sign in with your Google account (uses OAuth2 — no App Password needed)
+4. Apple Mail auto-configures IMAP and SMTP
+
+### iPhone/iPad
+1. Go to **Settings** then **Mail** then **Accounts** then **Add Account**
+2. Select **Google**
+3. Sign in with your Google account
+4. Toggle **Mail** on
+5. Done — IMAP settings are configured automatically
+
+## Setup: Microsoft Outlook
+
+### Outlook for Windows (New)
+1. Open Outlook then **File** then **Add Account**
+2. Enter your Gmail address and click **Connect**
+3. Outlook auto-detects Gmail and uses OAuth2
+4. Sign in to Google when prompted
+5. Done
+
+### Outlook for Windows (Classic/Manual)
+1. **File** then **Add Account** then **Manual setup**
+2. Select **IMAP**
+3. Enter the settings from the tables above
+4. Use your App Password for the password field
+5. Click **Next** and let Outlook test the connection
+
+### Outlook for Mac
+1. Open Outlook then **Outlook** then **Preferences** then **Accounts**
+2. Click **+** then **New Account**
+3. Enter your Gmail address
+4. Outlook auto-configures using OAuth2
+
+## Setup: Mozilla Thunderbird
+
+1. Open Thunderbird then **Account Settings** then **Account Actions** then **Add Mail Account**
+2. Enter your name, Gmail address, and App Password
+3. Thunderbird auto-detects settings (IMAP on port 993, SMTP on port 587)
+4. If auto-detect fails, click **Manual config** and enter:
+   - Incoming: imap.gmail.com, port 993, SSL/TLS
+   - Outgoing: smtp.gmail.com, port 587, STARTTLS
+5. Click **Done**
+
+## Setup: Windows Mail
+
+1. Open **Mail** app then **Settings** then **Manage Accounts** then **Add Account**
+2. Select **Google**
+3. Sign in with your Google account (OAuth2)
+4. Toggle Mail sync on
+5. Done
+
+## Setup: Third-Party Apps and Services
+
+For apps that don't support OAuth2 (older email clients, IoT devices, scripts), use the manual IMAP/SMTP settings with an App Password:
+
+```
+Incoming (IMAP):
+  Server: imap.gmail.com
+  Port: 993
+  Security: SSL/TLS
+  Username: you@gmail.com
+  Password: [16-char App Password]
+
+Outgoing (SMTP):
+  Server: smtp.gmail.com
+  Port: 587
+  Security: STARTTLS
+  Username: you@gmail.com
+  Password: [16-char App Password]
+  Authentication: Yes
+```
+
+## IMAP vs POP3: Which to Use
+
+| Feature | IMAP | POP3 |
+|---------|------|------|
+| **Sync across devices** | Yes | No (downloads to one device) |
+| **Messages stay on server** | Yes | Optional (default: delete after download) |
+| **Folder sync** | Yes (labels appear as folders) | No |
+| **Best for** | Multi-device users | Single-device, offline access |
+| **Gmail setting** | imap.gmail.com:993 | pop.gmail.com:995 |
+
+**Use IMAP** unless you have a specific reason not to. It's the modern standard.
+
+## Gmail IMAP Limits
+
+Gmail imposes limits on IMAP connections:
+
+- **Maximum simultaneous connections:** 15 per account
+- **Bandwidth limit:** ~2.5 GB/day (download) and ~500 MB/day (upload)
+- **Connection timeout:** 30 minutes of inactivity
+- **IMAP folder limit:** 10,000 labels/folders
+
+**If you hit limits:** You'll see errors like "Too many simultaneous connections" or "Bandwidth exceeded." Close unused email clients, reduce sync frequency, or sync only recent mail.
+
+## Google Workspace IMAP Settings
+
+For Google Workspace (business Gmail) accounts, the settings are identical:
+
+| Setting | Value |
+|---------|-------|
+| IMAP Server | imap.gmail.com |
+| IMAP Port | 993 (SSL) |
+| SMTP Server | smtp.gmail.com |
+| SMTP Port | 587 (TLS) |
+| Username | you@yourcompany.com |
+| Password | App Password or OAuth2 |
+
+The only difference: your admin may need to enable IMAP and/or App Passwords in the Google Admin Console.
+
+## Troubleshooting
+
+### "Authentication failed" or "Wrong password"
+
+- **Most common cause:** Using your regular Google password instead of an App Password
+- **Fix:** Generate an App Password and use that
+- **If no App Password option:** Enable 2FA first, or check if your admin disabled App Passwords
+
+### "Connection timed out" or "Cannot connect to server"
+
+- Check your internet connection
+- Verify the server address (imap.gmail.com, not imap.google.com)
+- Verify the port (993 for IMAP, 587 for SMTP)
+- Make sure SSL/TLS is selected (not "None")
+- Check if your firewall or antivirus is blocking ports 993/587
+
+### "Too many simultaneous connections"
+
+- Close email clients on other devices
+- Reduce the number of IMAP folders being synced
+- Check for stuck connections (restart your email client)
+
+### Emails not syncing
+
+- Verify IMAP is enabled in Gmail settings
+- Check that you're syncing the right folders/labels
+- Try removing and re-adding the account
+- Check Gmail storage — if you're over quota, sync may fail
+
+### Sent emails not appearing in Gmail
+
+- Make sure your client saves sent mail to "[Gmail]/Sent Mail" folder
+- In Thunderbird: Account Settings then Copies and Folders then save sent to Gmail's Sent folder
+- In Outlook: check the "Save sent items" setting
+
+## Gmail SMTP for Sending Applications
+
+If you're configuring Gmail SMTP for a web application, CRM, or automation tool:
+
+```
+Host: smtp.gmail.com
+Port: 587
+Security: TLS/STARTTLS
+Username: you@gmail.com
+Password: [App Password]
+From: you@gmail.com
+```
+
+**Gmail sending limits:**
+- Free Gmail: 500 emails/day
+- Google Workspace: 2,000 emails/day
+
+For sending beyond these limits — especially cold email — you need dedicated infrastructure.
+
+[ColdRelay](https://coldrelay.com) provides unlimited sending capacity at $1 per mailbox:
+
+- No daily sending caps like Gmail
+- Pre-configured SPF, DKIM, DMARC
+- Built for outbound volume
+- Each mailbox is independent — scale as needed
+
+Gmail SMTP works for transactional and personal email. For cold outreach at scale, dedicated infrastructure is essential.
+
+## FAQ
+
+### Can I use Gmail IMAP for free?
+Yes. Gmail IMAP is free for all Gmail accounts (personal and Workspace). The only cost is if you need Google Workspace for a custom domain ($6-18/user/month).
+
+### Does IMAP use my Gmail storage?
+Yes. IMAP keeps emails on Gmail's server, which counts toward your 15 GB free storage (or Workspace storage limit). Deleting emails in your client also deletes them from Gmail.
+
+### Can I use Gmail IMAP with multiple email clients?
+Yes. That's one of IMAP's main advantages — all clients stay in sync because they're reading from the same server.
+
+### Is Gmail IMAP secure?
+Yes, when using SSL/TLS (port 993). All data is encrypted in transit. Never use unencrypted IMAP (port 143) with Gmail.
+
+### Why does Gmail show "[Gmail]" folders in my email client?
+Gmail uses labels, not traditional folders. IMAP maps Gmail labels to folders, and system labels appear under a "[Gmail]" parent folder (Sent Mail, Drafts, Trash, etc.).
+
+---
+
+*Gmail IMAP works for personal email. When you need to send at scale, [ColdRelay](https://coldrelay.com) provides the infrastructure — $1/mailbox, no limits, full deliverability.*
