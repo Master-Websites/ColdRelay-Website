@@ -1,0 +1,238 @@
+---
+title: "How to Block an Email in Outlook (Every Method)"
+description: "How to block emails in Outlook on desktop, web, and mobile — block senders, domains, keywords, plus troubleshooting and PowerShell bulk blocking."
+date: "2026-04-17"
+author: "Mo Tahboub"
+tags: ["Outlook", "Email", "Productivity"]
+slug: "block-email-outlook"
+---
+
+## How to Block an Email in Outlook (Desktop App)
+
+### Method 1: Block a Sender Directly
+
+1. **Open Outlook** on your desktop
+2. **Right-click** on an email from the sender you want to block
+3. Select **Junk** → **Block Sender**
+4. Click **OK** on the confirmation dialog
+
+That sender's emails will now go straight to your Junk folder.
+
+### Method 2: Add to Blocked Senders List
+
+1. Go to **Home** tab → **Junk** → **Junk E-mail Options**
+2. Click the **Blocked Senders** tab
+3. Click **Add**
+4. Enter the email address or domain (e.g., @spammydomain.com)
+5. Click **OK**
+
+This method lets you block entire domains — useful when spam comes from multiple addresses at the same company.
+
+### Method 3: Create a Rule (Advanced)
+
+For more control over what gets blocked:
+
+1. Go to **Home** → **Rules** → **Create Rule**
+2. Click **Advanced Options**
+3. Set conditions (from specific sender, containing specific words, etc.)
+4. Choose action: **delete it**, **move to folder**, or **permanently delete**
+5. Name the rule and click **Finish**
+
+Rules are more powerful than simple blocking — you can filter by subject line, keywords, attachment type, and more.
+
+## How to Block an Email in Outlook on the Web (Outlook.com / Microsoft 365)
+
+### Method 1: Block from an Email
+
+1. **Open** Outlook.com or your Microsoft 365 webmail
+2. **Right-click** on the unwanted email (or click the three dots ⋯)
+3. Select **Block** → **Block [sender name]**
+4. Confirm by clicking **OK**
+
+### Method 2: Settings Approach
+
+1. Click the **gear icon** (⚙️) → **View all Outlook settings**
+2. Go to **Mail** → **Junk email**
+3. Under **Blocked senders and domains**, click **+ Add**
+4. Type the email address or domain
+5. Click **Save**
+
+### Method 3: Report and Block
+
+1. Select the unwanted email
+2. Click **Report** in the toolbar
+3. Choose **Report phishing** or **Report junk**
+4. The sender is automatically blocked and Microsoft uses your report to improve filters
+
+## How to Block an Email in Outlook Mobile (iPhone & Android)
+
+### iPhone
+
+1. Open the **Outlook app**
+2. Open the unwanted email
+3. Tap the **three dots** (⋯) in the top right
+4. Scroll down and tap **Block Sender** or **Report Junk**
+5. Confirm
+
+### Android
+
+1. Open the **Outlook app**
+2. Open the unwanted email
+3. Tap the **three dots** (⋯)
+4. Tap **Report Junk** or **Block Sender**
+5. Confirm
+
+**Note:** Mobile blocking options may be more limited than desktop. For full control, use the web or desktop version.
+
+## How to Block an Entire Domain in Outlook
+
+If you're getting spam from multiple addresses at the same domain (e.g., sales@spamco.com, info@spamco.com, marketing@spamco.com), block the whole domain:
+
+### Desktop
+1. **Home** → **Junk** → **Junk E-mail Options** → **Blocked Senders** tab
+2. Click **Add**
+3. Enter **@spamco.com** (include the @ symbol)
+4. Click **OK**
+
+### Web
+1. **Settings** → **Mail** → **Junk email**
+2. Under **Blocked senders and domains**, click **+ Add**
+3. Enter **spamco.com**
+4. Save
+
+Every email from that domain will go straight to Junk.
+
+## How to Block Emails by Subject or Keyword
+
+Sometimes you want to block emails containing specific words rather than from specific senders:
+
+1. Go to **Home** → **Rules** → **Manage Rules & Alerts**
+2. Click **New Rule**
+3. Select **"Apply rule on messages I receive"**
+4. Check **"with specific words in the subject"**
+5. Enter the keywords you want to filter
+6. Choose action: **move to Junk**, **delete**, or **move to folder**
+7. Click **Finish**
+
+This is useful for blocking:
+- Newsletter topics you can't unsubscribe from
+- Automated notification types
+- Recurring promotional themes
+
+## How to Unblock a Sender in Outlook
+
+Made a mistake? Here's how to unblock:
+
+### Desktop
+1. **Home** → **Junk** → **Junk E-mail Options**
+2. **Blocked Senders** tab
+3. Select the address/domain → click **Remove**
+
+### Web
+1. **Settings** → **Mail** → **Junk email**
+2. Find the sender under **Blocked senders and domains**
+3. Click the **trash icon** next to their name
+
+### Mobile
+You'll need to use the desktop or web version to manage your blocked list — mobile doesn't have this option.
+
+## Outlook Safe Senders: The Opposite of Blocking
+
+If important emails keep going to Junk, add the sender to your Safe Senders list:
+
+1. **Home** → **Junk** → **Junk E-mail Options**
+2. **Safe Senders** tab
+3. Click **Add** and enter the email address or domain
+4. Click **OK**
+
+Emails from Safe Senders always go to your inbox, regardless of content.
+
+## Blocking vs Unsubscribing: Which Should You Use?
+
+| Action | Use When | What Happens |
+|--------|----------|-------------|
+| **Block** | Spam, phishing, unwanted cold emails | Goes to Junk, sender doesn't know |
+| **Unsubscribe** | Legitimate newsletters you signed up for | Removed from mailing list |
+| **Report** | Phishing, scams, dangerous emails | Blocked + reported to Microsoft |
+
+**Rule of thumb:** Unsubscribe from legitimate senders. Block everything else.
+
+## Why Emails Get Through Despite Blocking
+
+Sometimes blocked senders still appear in your inbox. Common reasons:
+
+### 1. Sender Uses Multiple Addresses
+If you blocked john@company.com but they send from john.doe@company.com, it gets through. Solution: block the entire domain (@company.com).
+
+### 2. Emails Routed Through Different Servers
+Some senders use email marketing platforms that change the "from" address. Block the domain of the actual sender, not just the display name.
+
+### 3. Outlook Rules Conflict
+If you have rules that move emails to your inbox, they can override blocks. Check **Rules** → **Manage Rules & Alerts** for conflicts.
+
+### 4. Junk Filter Set Too Low
+Go to **Junk** → **Junk E-mail Options** → adjust the protection level. "High" catches more spam but may also catch legitimate emails.
+
+### 5. Shared Mailbox Limitations
+Blocks only apply to your personal mailbox. Shared or group mailboxes have separate junk settings managed by your IT admin.
+
+## Advanced: Using PowerShell to Block in Bulk (Microsoft 365 Admin)
+
+If you're an admin managing Outlook for a team:
+
+```powershell
+# Connect to Exchange Online
+Connect-ExchangeOnline -UserPrincipalName admin@company.com
+
+# Block a sender for the entire organization
+New-TransportRule -Name "Block Spammer" `
+  -FromAddressContainsWords "spammer@domain.com" `
+  -DeleteMessage $true
+
+# Block an entire domain
+New-TransportRule -Name "Block Domain" `
+  -SenderDomainIs "spamdomain.com" `
+  -DeleteMessage $true
+```
+
+This is useful for blocking persistent spammers across your entire organization.
+
+## Protecting Your Own Emails From Being Blocked
+
+If you're sending business emails and worried about being blocked by recipients, the problem is usually deliverability. Common reasons emails get blocked:
+
+- Missing SPF, DKIM, or DMARC authentication
+- Sending from a new domain without warming up
+- High spam complaint rates
+- Shared IP with bad reputation
+- Triggering content filters
+
+[ColdRelay](https://coldrelay.com) solves these problems with managed email infrastructure:
+
+- **Pre-configured authentication** — SPF, DKIM, DMARC set up from day one
+- **Dedicated sending infrastructure** — your reputation isn't shared with other senders
+- **Deliverability monitoring** — know when there's an issue before it affects your outreach
+- **$1 per mailbox** — scale your sending without scaling complexity
+
+Getting blocked by recipients is the worst outcome for any email campaign. Start with infrastructure that keeps you in the inbox.
+
+## FAQ
+
+### Does blocking someone in Outlook notify them?
+No. The sender has no idea they've been blocked. Their emails simply go to your Junk folder (or are deleted, depending on your settings).
+
+### Can I block emails on Outlook but not Gmail?
+Blocking is per email client. Blocking someone in Outlook only affects your Outlook inbox. If you also use Gmail, you'd need to block them there separately.
+
+### Is there a limit to how many senders I can block in Outlook?
+Outlook.com allows up to 1,024 addresses or domains in the blocked senders list. Desktop Outlook has a similar limit. If you're hitting this, consider domain-level blocking instead of individual addresses.
+
+### Do blocked emails count toward my storage?
+Emails in Junk still count toward your mailbox storage. They're automatically deleted after 30 days in most Outlook configurations. If you want them gone immediately, create a rule that permanently deletes instead of moving to Junk.
+
+### Can I block all external emails in Outlook?
+Not with the standard block feature, but you can create a rule. Enterprise admins can use Exchange transport rules to block all external email or restrict it to approved domains.
+
+---
+
+*Blocking unwanted email is defense. Having great deliverability is offense. [ColdRelay](https://coldrelay.com) makes sure your emails never get blocked — starting at $1/mailbox.*

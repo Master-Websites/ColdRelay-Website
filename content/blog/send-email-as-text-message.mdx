@@ -1,0 +1,198 @@
+---
+title: "How to Send an Email as a Text Message (SMS Guide)"
+description: "How to send emails that arrive as text messages — carrier gateways for every major provider, step-by-step instructions, and limitations."
+date: "2026-04-17"
+author: "Mo Tahboub"
+tags: ["Email", "SMS", "Communication"]
+slug: "send-email-as-text-message"
+---
+
+## How Email-to-SMS Works
+
+Every phone number on a major carrier has a hidden email address. When you send an email to that address, the carrier converts it to a text message and delivers it to the phone.
+
+The format is: **[10-digit phone number]@[carrier gateway]**
+
+For example, to text someone on Verizon: **5551234567@vtext.com**
+
+The recipient sees it as a regular text message. They can reply, and their response comes back to your email.
+
+## Email-to-SMS Gateways by Carrier (US)
+
+### Major US Carriers
+
+| Carrier | SMS Gateway | MMS Gateway |
+|---------|-----------|-------------|
+| **Verizon** | @vtext.com | @vzwpix.com |
+| **AT&T** | @txt.att.net | @mms.att.net |
+| **T-Mobile** | @tmomail.net | @tmomail.net |
+| **Sprint** (now T-Mobile) | @messaging.sprintpcs.com | @pm.sprint.com |
+| **US Cellular** | @email.uscc.net | @mms.uscc.net |
+| **Boost Mobile** | @sms.myboostmobile.com | @myboostmobile.com |
+| **Cricket** | @sms.cricketwireless.net | @mms.cricketwireless.net |
+| **Metro PCS** | @mymetropcs.com | @mymetropcs.com |
+| **Google Fi** | @msg.fi.google.com | @msg.fi.google.com |
+| **Mint Mobile** | Uses T-Mobile gateway | @tmomail.net |
+
+### International Carriers
+
+| Carrier | Country | SMS Gateway |
+|---------|---------|-----------|
+| **Rogers** | Canada | @pcs.rogers.com |
+| **Bell** | Canada | @txt.bell.ca |
+| **Telus** | Canada | @msg.telus.com |
+| **Vodafone** | UK | @vodafone.net |
+| **O2** | UK | @o2.co.uk |
+| **Virgin Mobile** | Multiple | @vmobl.com |
+
+**Note:** International carrier support varies. Some carriers have disabled their email-to-SMS gateways. Always test with a single message first.
+
+## Step-by-Step: Send an Email as a Text
+
+### From Gmail
+
+1. Open **Gmail** and click **Compose**
+2. In the **To** field, enter: [phone number]@[carrier gateway]
+   - Example: 5551234567@vtext.com
+3. **Subject line:** Keep it short or leave blank (some carriers include it in the text)
+4. **Body:** Write your message. Keep it under 160 characters for SMS
+5. Click **Send**
+
+### From Outlook
+
+1. Click **New Email**
+2. In **To**, enter: [phone number]@[carrier gateway]
+3. Write a short message (under 160 characters)
+4. Click **Send**
+
+### From Any Email Client
+
+The process is the same — just use the carrier's email-to-SMS gateway as the recipient address. It works from any email client that can send to standard email addresses.
+
+## SMS vs MMS: Which Gateway to Use
+
+**SMS gateways** (@vtext.com, @txt.att.net, etc.):
+- Text only, no images
+- 160 character limit per message
+- Longer messages may be split into multiple texts
+- Most reliable
+
+**MMS gateways** (@vzwpix.com, @mms.att.net, etc.):
+- Supports images, audio, and video attachments
+- Longer text messages allowed
+- Subject line is included
+- Less reliable — some carriers limit or filter MMS from email
+
+**When to use which:**
+- Quick text notification → SMS gateway
+- Need to send an image or longer message → MMS gateway
+
+## Limitations You Need to Know
+
+### 1. You Need to Know the Carrier
+This is the biggest limitation. You need to know which carrier the recipient uses to select the right gateway. There's no universal address that works for all carriers.
+
+**How to find someone's carrier:**
+- Ask them directly
+- Use a free carrier lookup tool like [FreeCarrierLookup.com](https://freecarrierlookup.com)
+- Send a test to the most common carriers (Verizon, AT&T, T-Mobile) and see which one delivers
+
+### 2. Character Limits
+SMS messages are limited to 160 characters. Your email subject line may count toward this limit on some carriers. If your message exceeds 160 characters, it may:
+- Get split into multiple texts
+- Get truncated
+- Fail to deliver entirely
+
+### 3. Attachments Are Limited
+Email attachments don't convert well to SMS. If you need to send files, use the MMS gateway — but even then, there are size limits (usually 300KB-1MB depending on the carrier).
+
+### 4. Formatting Gets Stripped
+All HTML formatting, signatures, and rich text gets stripped. The recipient receives plain text only. Those fancy email signatures? They'll show up as garbled text in the SMS.
+
+### 5. No Delivery Confirmation
+Unlike regular email, you don't get read receipts or delivery notifications. You won't know if the text was received unless they reply.
+
+### 6. Spam Filters
+Carriers increasingly filter email-to-SMS messages as spam, especially if:
+- You're sending from a new or unknown email address
+- The message looks promotional
+- You're sending to multiple numbers at once
+- The content contains links
+
+### 7. Some Carriers Have Disabled It
+Not all carriers still support email-to-SMS. It's becoming less common internationally, and even some US carriers may throttle or filter these messages.
+
+## When to Use Email-to-SMS
+
+### Good Use Cases
+- **Emergency notifications** — server down, urgent schedule change
+- **Quick alerts to someone who doesn't use email** — delivery updates, appointment reminders
+- **Two-factor verification workarounds** — when you need to receive codes via email
+- **Personal one-off messages** — texting someone when you only have their phone number and carrier
+
+### Bad Use Cases
+- **Marketing or bulk messaging** — carriers will block you. Use proper SMS platforms instead
+- **Ongoing conversations** — the experience is clunky compared to regular texting
+- **Anything requiring formatting** — images, links, and HTML all break
+- **International messaging** — gateway support is unreliable
+
+## Better Alternatives for Business Communication
+
+Email-to-SMS works for occasional one-off messages. For anything at scale, use a proper platform:
+
+### SMS Platforms
+- **Twilio** — API-based SMS for developers
+- **Plivo** — Twilio alternative, often cheaper
+- **Textedly** — Simple bulk SMS platform
+- **SimpleTexting** — SMS marketing with automation
+
+### Business Messaging
+- **Slack/Teams** — internal team communication
+- **WhatsApp Business** — customer-facing messaging
+- **Intercom** — customer support messaging
+
+### Cold Outreach
+For professional outreach, email remains the most scalable channel — when done right:
+
+[ColdRelay](https://coldrelay.com) provides email infrastructure purpose-built for outbound communication:
+
+- **Reach inboxes, not spam** — deliverability-first architecture
+- **$1 per mailbox** — add sending capacity as you grow
+- **No carrier guesswork** — email works universally, unlike SMS gateways
+
+If you're reaching out to prospects, email with proper infrastructure beats email-to-SMS every time.
+
+## How to Receive Text Messages as Email
+
+The reverse also works. When someone texts your phone, you can have it forwarded to email:
+
+### Most Carriers
+Reply to any email-to-SMS message, and the reply goes back to the sender's email. But for automatic forwarding of all texts to email, options are limited:
+
+- **Google Voice** — forwards texts to your Gmail
+- **Carrier-specific apps** — some carriers offer text-to-email forwarding in their account settings
+- **Third-party apps** — IFTTT, Tasker (Android), or Shortcuts (iOS) can automate text-to-email
+
+## FAQ
+
+### Can I send a text from email without knowing the carrier?
+Not reliably with the email-to-SMS method. You need the carrier-specific gateway address. Alternatives: use a service like Google Voice or an SMS API (Twilio) that handles carrier detection automatically.
+
+### Is sending email to SMS free?
+From your side, it costs nothing beyond your normal email. The recipient may be charged for the incoming text depending on their phone plan (most unlimited plans include it).
+
+### Can I send a group text via email?
+Technically, you can add multiple [number]@[gateway] addresses in the To/CC field. But each recipient needs to be on the same carrier OR you need different gateway addresses for each. And carriers may flag multi-recipient email-to-SMS as spam.
+
+### Do email-to-SMS messages show my email address?
+Usually yes. The recipient sees your email address as the sender, not a phone number. Some carriers display it differently, but expect your email to be visible.
+
+### Can I schedule an email-to-SMS?
+Yes — use Gmail's schedule send feature (or any email client's scheduling). Schedule the email for the time you want the text to arrive. There may be a slight delay for carrier processing.
+
+### Will this work for sending verification codes?
+No. Verification codes are sent via SMS platforms (like Twilio), not email-to-SMS gateways. You can't trigger a verification code by emailing a phone number.
+
+---
+
+*Email is still the most reliable channel for professional outreach. Skip the carrier gateway guesswork. [ColdRelay](https://coldrelay.com) delivers your emails to the inbox — $1/mailbox, no complexity.*
