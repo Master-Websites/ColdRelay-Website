@@ -1,0 +1,209 @@
+---
+title: "Outlook Attachment Size Limit: How to Send Large Files"
+description: "Outlook attachment limits by version and 6 methods to send large files — OneDrive, compression, cloud links, file splitting, and admin configuration."
+date: "2026-04-20"
+author: "Mo Tahboub"
+tags: ["Outlook", "Email", "Attachments", "Productivity"]
+slug: "outlook-attachment-size-limit"
+---
+
+## Outlook Attachment Size Limits
+
+| Outlook Version | Maximum Attachment Size |
+|----------------|----------------------|
+| Outlook.com (personal) | 20 MB |
+| Outlook desktop (Exchange) | 25 MB (default, admin-configurable) |
+| Microsoft 365 (web) | 20 MB (direct), 2 GB via OneDrive link |
+| Outlook for Mac | 25 MB |
+| Outlook mobile (iOS/Android) | 25 MB |
+
+**Important:** These limits apply to the TOTAL size of all attachments combined, not per file. A 15 MB file + a 10 MB file = 25 MB total, which may exceed the limit on some Outlook versions.
+
+**Also note:** The receiving server may have its own limits. Even if Outlook lets you send 25 MB, the recipient's email system might reject anything over 10 MB.
+
+## Method 1: Share via OneDrive (Best Option)
+
+Microsoft's recommended solution for large files:
+
+### From Outlook Desktop
+
+1. Click **New Email**
+2. Click **Attach File** → select your file
+3. If the file exceeds the limit, Outlook automatically prompts: **"Upload to OneDrive"**
+4. Click **Upload** — the file uploads to OneDrive
+5. A shareable link is inserted in your email instead of the attachment
+6. Send the email — recipients click the link to download
+
+### From Outlook Web
+
+1. Compose a new email
+2. Click the **paperclip icon** → **Browse this computer**
+3. Select your file
+4. Choose **"Upload and share as a OneDrive link"** (for files over 20 MB, this is automatic)
+5. Set permissions (anyone with link, or specific people)
+6. Send
+
+### Advantages of OneDrive Links
+- Files up to **250 GB** can be shared
+- You control permissions (view only, edit, download)
+- You can revoke access after they download
+- No attachment size conflicts with the receiving server
+- Version control — if you update the file, they see the latest
+
+## Method 2: Compress the File
+
+If the file is slightly over the limit, compression might bring it under:
+
+### Windows
+1. Right-click the file → **Send to** → **Compressed (zipped) folder**
+2. Attach the .zip file instead
+
+### Mac
+1. Right-click the file → **Compress [filename]**
+2. Attach the .zip file
+
+### Expected Compression Rates
+
+| File Type | Typical Compression | Worth Trying? |
+|-----------|-------------------|---------------|
+| Word/Excel/PowerPoint | 30-50% smaller | ✅ Yes |
+| PDF | 10-30% smaller | ⚠️ Maybe |
+| Images (PNG, BMP) | 50-80% smaller | ✅ Yes |
+| Images (JPG) | 5-10% | ❌ Already compressed |
+| Video | 5-10% | ❌ Already compressed |
+| ZIP/RAR | 0% | ❌ Already compressed |
+
+**If compression doesn't get you under the limit**, use OneDrive/cloud links instead.
+
+## Method 3: Google Drive / Dropbox / Other Cloud Storage
+
+Not everyone uses OneDrive. Other options:
+
+### Google Drive
+1. Upload your file to **drive.google.com**
+2. Right-click → **Share** → **Get link**
+3. Set permissions to "Anyone with the link"
+4. Paste the link in your Outlook email
+
+### Dropbox
+1. Upload to Dropbox
+2. Click **Share** → **Copy link**
+3. Paste in your email
+
+### WeTransfer
+1. Go to **wetransfer.com**
+2. Upload file (up to 2 GB free)
+3. Enter your email and recipient's email
+4. WeTransfer sends the download link directly
+
+## Method 4: Split the File
+
+For very large files that can't be cloud-shared (restricted environments):
+
+### Split a ZIP File (Windows — 7-Zip)
+1. Right-click file → **7-Zip** → **Add to archive**
+2. Set **"Split to volumes"** to 20 MB (or 20000000 bytes)
+3. 7-Zip creates multiple parts: file.zip.001, file.zip.002, etc.
+4. Send each part in a separate email
+5. Recipient saves all parts to one folder and extracts
+
+**Limitation:** Confusing for non-technical recipients. Use cloud links if possible.
+
+## Method 5: Resize Images and Videos
+
+If you're sending media files that are too large:
+
+### Images
+- **Outlook built-in:** When attaching large images, Outlook offers "Resize to fit email"
+- **Manual:** Use an image editor to reduce resolution (1920px wide is usually sufficient for email)
+- **Batch resize:** Tools like ImageOptim (Mac) or TinyPNG (web)
+
+### Videos
+- **Don't email videos** — they're almost always too large
+- **Upload to OneDrive/Google Drive** and share a link
+- **Use a video platform** (Loom, YouTube unlisted, Vimeo)
+- **Compress with HandBrake** (free) if you must attach
+
+## Method 6: Change Outlook's Attachment Limit (Admin)
+
+For Exchange/Microsoft 365 administrators who need to increase the limit:
+
+### Exchange Online (Microsoft 365 Admin)
+
+The maximum configurable limit is **150 MB** for Exchange Online:
+
+1. Go to **Exchange Admin Center**
+2. Navigate to **Mail flow** → **Rules**
+3. Create a transport rule OR
+4. Use PowerShell:
+
+```powershell
+Set-Mailbox -Identity user@company.com -MaxSendSize 50MB -MaxReceiveSize 50MB
+```
+
+For organization-wide:
+```powershell
+Set-TransportConfig -MaxSendSize 50MB -MaxReceiveSize 50MB
+```
+
+**Note:** Increasing limits can cause problems — large attachments slow servers and fill mailboxes quickly. Cloud links are the better long-term solution.
+
+## What Happens When You Exceed the Limit
+
+| Scenario | What Happens |
+|----------|-------------|
+| Outlook desktop (over limit) | Error message — email won't send |
+| Outlook web (over 20 MB) | Auto-suggests OneDrive upload |
+| Recipient's server rejects | Bounce-back email (NDR) |
+| Gmail receiving | Rejected if over 25 MB |
+
+**The worst case:** Your email appears to send successfully but bounces back hours later. Always check your inbox for bounce notifications after sending large attachments.
+
+## Best Practices for Attachments
+
+1. **Use cloud links by default** for anything over 5 MB
+2. **Name files descriptively** — "Q2-Report-April-2026.pdf" not "doc1.pdf"
+3. **Compress before attaching** — it's a courtesy
+4. **Mention the attachment in your email body** — "Attached is the [file]" prevents confusion
+5. **Don't send more than 3 attachments** — use a ZIP or cloud folder
+6. **Use PDF for documents** — universal compatibility
+7. **Test with a colleague first** for critical large files
+
+## Sending Files in Cold Email
+
+For cold outreach, attachment rules are different:
+
+- **Never attach files in the first cold email** — triggers spam filters
+- **Links to hosted content** are better (but even links increase spam scores)
+- **Offer to send** rather than attaching: "I have a case study that's relevant — want me to send it over?"
+- **If you must share files**, use a link to a landing page or hosted PDF
+
+[ColdRelay](https://coldrelay.com) provides cold email infrastructure where deliverability is the priority:
+
+- **$1 per mailbox** — purpose-built for outbound
+- **Deliverability-first** — no unnecessary attachments, clean sends
+- **SPF, DKIM, DMARC** — authentication handled
+- **Best practice guidance** — infrastructure designed for how cold email actually works
+
+Keep your cold emails clean, short, and attachment-free. Save the files for after they reply.
+
+## FAQ
+
+### Can I increase Outlook.com's 20 MB limit?
+No. Outlook.com (personal accounts) has a fixed 20 MB limit that can't be changed. Use OneDrive links for larger files.
+
+### Does compressing a PDF reduce quality?
+Zipping a PDF doesn't change its quality — it's lossless compression. However, using PDF compression tools (like Adobe's "Reduce File Size") may slightly reduce image quality within the PDF.
+
+### Can the recipient download OneDrive files without a Microsoft account?
+Yes — if you set permissions to "Anyone with the link can view/download." They don't need a Microsoft account.
+
+### Why did my 20 MB file get rejected even though the limit is 25 MB?
+Email encoding (MIME/Base64) increases file size by ~33%. A 20 MB file becomes ~26.7 MB after encoding. The actual limit for the raw file is roughly 19 MB for a 25 MB email size limit.
+
+### Is there a way to auto-compress attachments in Outlook?
+Not built-in. Some add-ins (like AutoZip) can automatically compress attachments before sending. For images specifically, Outlook offers resize on attach.
+
+---
+
+*Don't let attachment limits slow you down. And when you're sending outreach, skip attachments entirely. [ColdRelay](https://coldrelay.com) — clean cold email infrastructure at $1/mailbox.*

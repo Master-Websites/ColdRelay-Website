@@ -1,0 +1,228 @@
+---
+title: "Verizon Email Settings: IMAP, SMTP and POP3 Setup"
+description: "Exact Verizon email IMAP, SMTP, and POP3 settings for Outlook, Apple Mail, Thunderbird, and mobile — plus App Password setup and troubleshooting."
+date: "2026-04-20"
+author: "Mo Tahboub"
+tags: ["Verizon", "IMAP", "Email Setup", "SMTP"]
+slug: "verizon-email-settings"
+---
+
+## Verizon Email (AOL) Settings — Quick Reference
+
+After Verizon sold its email service to AOL (now part of Yahoo), all Verizon.net email accounts are managed through AOL's infrastructure. The settings below reflect this.
+
+### IMAP Settings (Incoming Mail — Recommended)
+
+| Setting | Value |
+|---------|-------|
+| **Server** | imap.aol.com |
+| **Port** | 993 |
+| **Encryption** | SSL/TLS |
+| **Username** | Your full Verizon email (you@verizon.net) |
+| **Password** | App Password (see below) |
+
+### POP3 Settings (Incoming Mail — Legacy)
+
+| Setting | Value |
+|---------|-------|
+| **Server** | pop.aol.com |
+| **Port** | 995 |
+| **Encryption** | SSL/TLS |
+| **Username** | Your full Verizon email |
+| **Password** | App Password |
+
+### SMTP Settings (Outgoing Mail)
+
+| Setting | Value |
+|---------|-------|
+| **Server** | smtp.aol.com |
+| **Port** | 465 (SSL) or 587 (TLS) |
+| **Encryption** | SSL (465) or STARTTLS (587) |
+| **Username** | Your full Verizon email |
+| **Password** | App Password |
+| **Authentication** | Required |
+
+## Why Verizon Email Uses AOL Settings
+
+In 2017, Verizon sold its email service to AOL (which Verizon had previously acquired, and which is now part of Yahoo). All @verizon.net email addresses are now hosted on AOL's mail servers.
+
+This means:
+- You manage your Verizon email through AOL Mail (mail.aol.com)
+- Server settings use AOL's infrastructure
+- You need an AOL App Password for third-party clients
+- Your @verizon.net address still works — only the backend changed
+
+## How to Generate an App Password
+
+Most email clients require an App Password instead of your regular password (especially if you have 2-step verification enabled).
+
+### Steps:
+
+1. Go to **[login.aol.com](https://login.aol.com)** and sign in with your Verizon email
+2. Click your **profile icon** (top right) → **Account Security**
+3. Scroll to **"Generate app password"** (or "Other ways to sign in")
+4. Select **"Other App"** and name it (e.g., "Outlook" or "iPhone")
+5. Click **Generate**
+6. Copy the **App Password** — use this in your email client
+
+**Important:** If you don't see the App Password option, you may need to enable 2-step verification first.
+
+## Setup: Microsoft Outlook
+
+### Outlook (Windows — New)
+1. Open Outlook → **File** → **Add Account**
+2. Enter your @verizon.net email address
+3. If auto-detect fails, select **Advanced options** → **Let me set up my account manually**
+4. Choose **IMAP**
+5. Enter the settings from the tables above
+6. Use your App Password
+7. Click **Connect**
+
+### Outlook (Mac)
+1. **Outlook** → **Preferences** → **Accounts** → **+**
+2. Enter your Verizon email
+3. Select **IMAP** if prompted
+4. Enter server settings manually
+5. Use App Password
+
+## Setup: Apple Mail
+
+### iPhone / iPad
+1. **Settings** → **Mail** → **Accounts** → **Add Account**
+2. Select **Other** (not AOL — this ensures manual setup)
+3. Select **Add Mail Account**
+4. Enter your name, Verizon email, App Password, and a description
+5. Select **IMAP**
+6. Enter incoming server: imap.aol.com (port 993, SSL)
+7. Enter outgoing server: smtp.aol.com (port 465, SSL)
+8. Tap **Save**
+
+### Mac
+1. **Apple Mail** → **Mail** → **Add Account** → **Other Mail Account**
+2. Enter name, Verizon email, and App Password
+3. If auto-detect fails, enter IMAP settings manually
+4. Incoming: imap.aol.com, port 993, SSL
+5. Outgoing: smtp.aol.com, port 465, SSL
+
+## Setup: Mozilla Thunderbird
+
+1. Open Thunderbird → **Account Settings** → **Account Actions** → **Add Mail Account**
+2. Enter your name, Verizon email, and App Password
+3. Click **Manual config** if auto-detect fails
+4. Incoming: IMAP, imap.aol.com, port 993, SSL/TLS
+5. Outgoing: SMTP, smtp.aol.com, port 465, SSL/TLS
+6. Authentication: Normal password
+7. Username: full @verizon.net email
+8. Click **Done**
+
+## Setup: Samsung Email (Android)
+
+1. Open **Email** app → **Settings** → **Add Account**
+2. Select **Other**
+3. Enter your Verizon email and App Password
+4. Select **IMAP** when prompted
+5. Incoming server: imap.aol.com, port 993, Security: SSL/TLS
+6. Outgoing server: smtp.aol.com, port 465, Security: SSL/TLS
+7. Tap **Sign In**
+
+## IMAP vs POP3: Which to Choose
+
+| Feature | IMAP | POP3 |
+|---------|------|------|
+| Syncs across devices | ✅ Yes | ❌ No |
+| Emails stay on server | ✅ Yes | ❌ Downloaded and optionally deleted |
+| Folder sync | ✅ Yes | ❌ No |
+| Best for | Multiple devices | Single device, offline access |
+
+**Recommendation:** Use IMAP unless you only check email on one device and want local-only storage.
+
+## Verizon Email Sending Limits
+
+| Limit | Value |
+|-------|-------|
+| Max recipients per email | 100 |
+| Daily sending limit | ~500 emails |
+| Attachment size limit | 25 MB |
+| Mailbox storage | 1 TB (AOL) |
+
+These limits are fine for personal email. For business outreach, you'll hit these quickly.
+
+## Troubleshooting
+
+### "Authentication failed" or "Invalid password"
+
+- **Most common fix:** Generate an App Password and use that instead of your regular password
+- Make sure you're using the full email address as username (you@verizon.net)
+- Check if 2-step verification is enabled — if so, an App Password is mandatory
+
+### "Cannot connect to server"
+
+- Verify server addresses: imap.aol.com (not imap.verizon.net or mail.verizon.com — those no longer work)
+- Check ports: 993 for IMAP, 465 or 587 for SMTP
+- Ensure SSL/TLS is enabled
+- Check your firewall isn't blocking ports 993/465/587
+
+### Emails not sending (SMTP error)
+
+- Use smtp.aol.com (not smtp.verizon.net)
+- Port 465 with SSL, OR port 587 with STARTTLS
+- Authentication must be enabled
+- Username = full @verizon.net email address
+
+### Not receiving new emails
+
+- Check if IMAP is enabled in your AOL account settings (login.aol.com → Settings → Account Security)
+- Verify your email client is checking the correct folders
+- Check spam/junk folder in AOL webmail
+- Make sure storage isn't full
+
+### "Less secure apps" blocked
+
+AOL may block connections from apps it considers insecure. The fix:
+- Generate and use an App Password (this bypasses the security check)
+- Enable 2-step verification (this unlocks App Passwords)
+
+## Accessing Verizon Email on the Web
+
+You can always access your Verizon email via webmail:
+
+1. Go to **[mail.aol.com](https://mail.aol.com)**
+2. Sign in with your @verizon.net email address
+3. Full inbox access without any client setup
+
+## Moving Beyond Verizon Email
+
+Verizon email works for personal communication. For professional or business use, consider:
+
+- **Google Workspace** — custom domain email, modern interface, 30 GB+ storage
+- **Microsoft 365** — Outlook + Office suite, enterprise features
+- **Zoho Mail** — affordable custom domain email
+
+For cold email outreach specifically, consumer email services (Verizon, Gmail, Outlook.com) aren't designed for outbound volume and will restrict your account.
+
+[ColdRelay](https://coldrelay.com) provides dedicated email infrastructure for outreach:
+
+- **$1 per mailbox** — purpose-built for outbound
+- **No daily limits** like consumer email
+- **SPF, DKIM, DMARC** pre-configured
+- **Deliverability-first** — designed for cold email, not personal correspondence
+
+Use Verizon for personal email. Use ColdRelay for outreach.
+
+## FAQ
+
+### Can I still use my @verizon.net email address?
+Yes. Your @verizon.net address still works — it's just managed by AOL's infrastructure now. You can send and receive normally.
+
+### Do I need a Verizon phone plan to keep my Verizon email?
+No. Your email account continues to work even if you leave Verizon's cellular service.
+
+### Why do old Verizon email settings no longer work?
+Verizon transferred all email accounts to AOL in 2017. Old servers like incoming.verizon.net and outgoing.verizon.net have been decommissioned. Use imap.aol.com and smtp.aol.com.
+
+### Can I use Verizon email for business?
+Technically yes, but it's not recommended. No custom domain, limited sending capacity, and no business features. Use Google Workspace or Microsoft 365 for business email.
+
+---
+
+*Consumer email isn't built for outreach. [ColdRelay](https://coldrelay.com) is — $1/mailbox, no limits, purpose-built deliverability for cold email.*
